@@ -7,12 +7,14 @@ import threading
 import logging
 import config
 import sys
+import pickle
 
 logging.basicConfig(
     filename="server.log",
     level=logging.DEBUG,
     format='%(asctime)s %(levelname)-8s %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S')
+
 
 class PongServer():
     def __init__(self, ip, port):
@@ -30,27 +32,24 @@ class PongServer():
             logging.error("Socket error while binding: {}".format(e))
             sys.exit(1)
 
-    def send_data(self, data, addr):
-        logging.info("Sending {} to {}".format(str(data), addr))
-
-        self.server.sendto("ok".encode(), addr)
-
     def listen(self):
         run = True
         try:
             while(run):
                 conn, addr = self.server.accept()
-                threading.Thread(target=self.run_client, args=(conn,))
+                logging.info("Connection established with {}".format(addr))    
+                client_thread = threading.Thread(target=self.run_client, args=(conn,))
+                client_thread.start()
+
         except KeyboardInterrupt:
             logging.warning("Interrupted form keyboard")
 
     def run_client(self, conn):
-        reply = ""
-
         while True:
             try:
-                data = conn.recv(config.BUFF_SIZE)
-                reply = data.decode("utf-8")
+                data = pickle.loads(conn.recv(config.BUFF_SIZE))
+
+                reply = data
 
                 if not data:
                     logging.info("Client {} disconnected".format(conn))
@@ -59,16 +58,16 @@ class PongServer():
                     logging.info("Received {} from {}".format(str(reply), conn))
                     print("Sending: ", reply)
 
-                conn.send(reply.encode())
+                conn.send(pickle.dumps(reply))
             except Exception as e:
                 logging.error("Error at run_client(): {}".format(e))
+                sys.exit(1)
             
 
 def main():
     pongServer = PongServer(config.LOCALHOST, config.PORT)
     pongServer.listen()
     
+
 if __name__ == "__main__":
     main()
-
-

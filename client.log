@@ -1,0 +1,9 @@
+2019-10-22 15:35:32 INFO     Connected to ('127.0.0.1', 1235)
+2019-10-22 15:37:01 ERROR    Could not connect to ('127.0.0.1', 1235): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-10-22 15:37:01 ERROR    Could not connect to ('127.0.0.1', 1235): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-10-22 15:43:13 INFO     Connected to ('127.0.0.1', 1235)
+2019-10-22 15:46:38 INFO     Connected to ('127.0.0.1', 1235)
+2019-10-22 15:53:40 INFO     Connected to ('127.0.0.1', 1235)
+2019-10-22 16:53:45 ERROR    Could not connect to ('127.0.0.1', 1235): [WinError 10061] No connection could be made because the target machine actively refused it
+2019-10-22 17:11:32 ERROR    Could not connect to ('127.0.0.1', 1235): [WinError 10061] No connection could be made because the target machine actively refused it
+2019-10-22 17:13:04 INFO     Connected to ('127.0.0.1', 1235)
