@@ -5,9 +5,16 @@ import logging
 import threading
 import config
 
-pongClient = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
+logging.basicConfig(
+    filename="client.log",
+    level=logging.DEBUG,
+    format='%(asctime)s %(levelname)-8s %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S')
+
+pygame.init()
+
+pongClient = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
 pongClient.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-pongClient.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
 
 width = 500
 height = 500
@@ -16,6 +23,23 @@ window = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Client")
 
 clientNumber = 0  
+
+class Client():
+    def __init__(self):
+        self.client = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
+        self.serverAdrr = (config.LOCALHOST, config.PORT)
+
+        self.id = self.connect()
+        print(self.id)
+
+    def connect(self):
+        try:
+            self.client.connect(self.serverAdrr)
+            return self.client.recv(config.BUFF_SIZE).decode()
+        except Exception as e:
+            pass
+
+
 
 class Player():
     def __init__(self, x, y, width, height, color):
@@ -65,9 +89,7 @@ def main():
                 pygame.quit()
 
         player.move()
-
         redrawWindow(player)
-
 
     pongClient.sendto("hello".encode(), (config.LOCALHOST, config.PORT))
 

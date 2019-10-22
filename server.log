@@ -1,6 +1,4 @@
-INFO:root:Initialized PONG server at 127.0.0.1:1234
-INFO:root:Initialized PONG server at 127.0.0.1:1234
-INFO:root:Initialized PONG server at 127.0.0.1:1234
-INFO:root:Received b'hello' from ('127.0.0.1', 53227)
-INFO:root:Initialized PONG server at 127.0.0.1:1234
-WARNING:root:Interrupted form keyboard
+2019-10-22 13:55:33 ERROR    Socket error while binding: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-10-22 13:57:28 ERROR    Socket error while binding: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-10-22 14:00:37 ERROR    Socket error while binding: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-10-22 14:03:11 INFO     Initialized PONG server at 127.0.0.1:1234
