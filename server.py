@@ -15,6 +15,17 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)-8s %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S')
 
+_pos = [(0,0), (100,100)]
+
+
+def read_pos(pos):
+    pos = pos.split(",")
+    return int(pos[0]), int(pos[1])
+
+
+def make_pos(tup):
+    return str(tup[0]) + "," + str(tup[1]) 
+
 
 class PongServer():
     def __init__(self, ip, port):
@@ -34,31 +45,43 @@ class PongServer():
 
     def listen(self):
         run = True
+        current_player = 0
+
         try:
             while(run):
                 conn, addr = self.server.accept()
                 logging.info("Connection established with {}".format(addr))    
-                client_thread = threading.Thread(target=self.run_client, args=(conn,))
+                client_thread = threading.Thread(target=self.run_client, args=(conn, current_player,))
                 client_thread.start()
+
+                current_player += 1
 
         except KeyboardInterrupt:
             logging.warning("Interrupted form keyboard")
 
-    def run_client(self, conn):
+    def run_client(self, conn, player):
+        print("player #:", player)
+        conn.send(make_pos(_pos[player]).encode())
+
         while True:
             try:
-                data = pickle.loads(conn.recv(config.BUFF_SIZE))
-
-                reply = data
+                data = read_pos(conn.recv(config.BUFF_SIZE).decode())
+                _pos[player] = data
 
                 if not data:
                     logging.info("Client {} disconnected".format(conn))
                 else:
-                    print("Received: ", reply)
+                    if player == 1:
+                        reply = _pos[0]
+                    else:
+                        reply = _pos[1]
+
+
+                    print("Received: ", data)
                     logging.info("Received {} from {}".format(str(reply), conn))
                     print("Sending: ", reply)
 
-                conn.send(pickle.dumps(reply))
+                conn.sendall(make_pos(reply).encode())
             except Exception as e:
                 logging.error("Error at run_client(): {}".format(e))
                 sys.exit(1)
