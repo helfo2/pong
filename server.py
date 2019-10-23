@@ -5,9 +5,10 @@ PONG server
 import socket
 import threading
 import logging
-import config
+from config import *
 import sys
 import pickle
+from player import Player
 
 logging.basicConfig(
     filename="server.log",
@@ -15,17 +16,7 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)-8s %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S')
 
-_pos = [(0,0), (100,100)]
-
-
-def read_pos(pos):
-    pos = pos.split(",")
-    return int(pos[0]), int(pos[1])
-
-
-def make_pos(tup):
-    return str(tup[0]) + "," + str(tup[1]) 
-
+players = [Player(0,0,50,50,RED), Player(100,100,50,50,BLUE)]
 
 class PongServer():
     def __init__(self, ip, port):
@@ -59,36 +50,37 @@ class PongServer():
         except KeyboardInterrupt:
             logging.warning("Interrupted form keyboard")
 
+
     def run_client(self, conn, player):
         print("player #:", player)
-        conn.send(make_pos(_pos[player]).encode())
+        conn.send(pickle.dumps(players[player]))
 
         while True:
             try:
-                data = read_pos(conn.recv(config.BUFF_SIZE).decode())
-                _pos[player] = data
+                data = pickle.loads(conn.recv(BUFF_SIZE))
+                players[player] = data
 
                 if not data:
                     logging.info("Client {} disconnected".format(conn))
                 else:
                     if player == 1:
-                        reply = _pos[0]
+                        reply = players[0]
                     else:
-                        reply = _pos[1]
+                        reply = players[1]
 
 
                     print("Received: ", data)
                     logging.info("Received {} from {}".format(str(reply), conn))
                     print("Sending: ", reply)
 
-                conn.sendall(make_pos(reply).encode())
+                conn.sendall(pickle.dumps(reply))
             except Exception as e:
                 logging.error("Error at run_client(): {}".format(e))
                 sys.exit(1)
             
 
 def main():
-    pongServer = PongServer(config.LOCALHOST, config.PORT)
+    pongServer = PongServer(LOCALHOST, PORT)
     pongServer.listen()
     
 
