@@ -9,6 +9,7 @@ from config import *
 import sys
 import pickle
 from player import Player
+from packet import Packet
 
 logging.basicConfig(
     filename="server.log",
