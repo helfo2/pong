@@ -1,7 +1,8 @@
 import socket
 import logging
 from config import *
-import pickle
+import struct
+import sys
 
 logging.basicConfig(
     filename="client.log",
@@ -26,13 +27,35 @@ class Client():
             return pickle.loads(self.client.recv(BUFF_SIZE))
         except socket.error as e:
             logging.error("Could not connect to {}: {}".format(self.serverAddr, e))
+            sys.exit(1)
 
-    def send(self, data):
+    def make_pkt(self, msg_type, data):
+        if msg_type == MsgTypes.POS.value:
+            """ data is location type [x,y] """
+            return struct.pack("Hii", msg_type, data[0], data[1])
+        else:
+            logging.warning("make_pkt: Dont know the type of message")
+
+    def unmake_pkt(self, msg_type, pkt):
+        if msg_type == MsgTypes.POS.value:
+            """ data is location type [x,y] """
+            msg = struct.unpack("Hii", pkt)
+
+            return msg[1], msg[2] # x and y
+        else:
+            logging.warning("unmake_pkt: Dont know the type of message")
+
+    def send(self, msg_type, data):
         try:
-            self.client.send(pickle.dumps(data))
+            pkt = self.make_pkt(msg_type, data)
+
+            self.client.send(pkt)
             return pickle.loads(self.client.recv(BUFF_SIZE))
         except socket.error as e:
-            logging.error("Could not connect to {}: {}".format(self.serverAddr, e))
+            logging.error("Error sending {}: {}".format(data, e))
+
+    def send_position(self, pos):
+        pass
 
     def get_player(self):
         return self.player

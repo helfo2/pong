@@ -16,7 +16,14 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)-8s %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S')
 
-players = [Player(0,0,50,50,RED), Player(100,100,50,50,BLUE)]
+location_player1 = [WINDOW_MARGIN, WINDOW_HEIGHT/2 - 100]
+location_player2 = [WINDOW_WIDTH-WINDOW_MARGIN-PADDLE_SIZE[0], WINDOW_HEIGHT/2 - 100]
+
+# players = [location_player1, location_player2]
+players = [Player(location=location_player1,color=RED), Player(location=location_player2,color=BLUE)]
+
+player1_win = False
+player2_win = False
 
 class PongServer():
     def __init__(self, ip, port):

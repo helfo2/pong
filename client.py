@@ -16,15 +16,12 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S')
 
 
-PADDLE_SPEED = 10
-
-
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption("Client")
 
 
 def redraw_window(player1, player2):
-    window.fill((255,255,255))
+    window.fill(WHITE)
     player1.draw(window)
     player2.draw(window)
 
