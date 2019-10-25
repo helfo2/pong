@@ -9,7 +9,7 @@ from config import *
 import sys
 import pickle
 from player import Player
-from packet import Packet
+from packet import *
 
 logging.basicConfig(
     filename="server.log",
@@ -17,11 +17,11 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)-8s %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S')
 
-location_player1 = [WINDOW_MARGIN, WINDOW_HEIGHT/2 - 100]
-location_player2 = [WINDOW_WIDTH-WINDOW_MARGIN-PADDLE_SIZE[0], WINDOW_HEIGHT/2 - 100]
+location_player1 = PLAYER_1_POS
+location_player2 = PLAYER_2_POS
 
-# players = [location_player1, location_player2]
-players = [Player(location=location_player1,color=RED), Player(location=location_player2,color=BLUE)]
+players = [location_player1, location_player2]
+#players = [Player(location=location_player1,color=RED), Player(location=location_player2,color=BLUE)]
 
 player1_win = False
 player2_win = False
@@ -34,7 +34,7 @@ class PongServer():
         try:
             self.server = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
             self.server.bind((self.ip, self.port))
-            self.clients = []
+            self.clients = players
             self.server.listen(2)
 
             logging.info("Initialized PONG server at {}:{}".format(ip, str(port)))
@@ -49,7 +49,7 @@ class PongServer():
         try:
             while(run):
                 conn, addr = self.server.accept()
-                logging.info("Connection established with {}".format(addr))    
+                logging.info("Connection established with {}".format(addr))
                 client_thread = threading.Thread(target=self.run_client, args=(conn, current_player,))
                 client_thread.start()
 
@@ -59,21 +59,25 @@ class PongServer():
             logging.warning("Interrupted form keyboard")
 
 
-    def run_client(self, conn, player):
-        print("player #:", player)
-        conn.send(pickle.dumps(players[player]))
+    def run_client(self, conn, player_num):
+        print("player #:", player_num)
+        print("player (x, y): {}".format(players[player_num]))
+
+        conn.send(make_pkt(MsgTypes.POS.value, players[player_num]))
 
         while True:
             try:
-                data = pickle.loads(conn.recv(BUFF_SIZE))
-                players[player] = data
+                data = unmake_pkt(MsgTypes.POS.value, conn.recv(BUFF_SIZE))
+                players[player_num] = data
 
                 if not data:
-                    logging.info("Client {} disconnected".format(conn))
+                    logging.warning("Client {} disconnected".format(conn))
                 else:
-                    if player == 1:
+                    if player_num == 1:
+                        print("recv player 1")
                         reply = players[0]
                     else:
+                        print("recv player 2")
                         reply = players[1]
 
 
@@ -81,7 +85,7 @@ class PongServer():
                     logging.info("Received {} from {}".format(str(reply), conn))
                     print("Sending: ", reply)
 
-                conn.sendall(pickle.dumps(reply))
+                conn.sendall(make_pkt(MsgTypes.POS.value, reply))
             except Exception as e:
                 logging.error("Error at run_client(): {}".format(e))
                 sys.exit(1)

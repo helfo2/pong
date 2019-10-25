@@ -79,14 +79,17 @@ class Player():
         if keys[pygame.K_DOWN] and (self.y + self.height < WINDOW_HEIGHT-WINDOW_MARGIN):
             self.y += self.vel
 
-        self.update()
+        self.update_internal()
 
-    def update(self):
+    def update(self, pos):
+        self.x = pos[0]
+        self.y = pos[1]
+
+        self.update_internal()
+
+    def update_internal(self):
         self.rect = (self.x, self.y, self.width, self.height)
 
+    def get_pos(self):
+        return [self.x, self.y]
 
-def main():
-    pass
-
-if __name__ == "__main__":
-    main()

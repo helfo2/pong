@@ -3,7 +3,7 @@ import logging
 from config import *
 import struct
 import sys
-from packet import Packet
+from packet import *
 
 logging.basicConfig(
     filename="client.log",
@@ -16,7 +16,7 @@ class Client():
         self.client = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
         self.serverAddr = (LOCALHOST, PORT)
 
-        self.player = self.connect()
+        self.player_pos = self.connect()
 
     def connect(self):
         try:
@@ -24,22 +24,22 @@ class Client():
 
             logging.info("Connected to {}".format(self.serverAddr))
 
-            return self.unmake_pkt(self.client.recv(BUFF_SIZE))
+            return self.recv_pos()
         except socket.error as e:
             logging.error("Could not connect to {}: {}".format(self.serverAddr, e))
             sys.exit(1)
 
-    def send(self, msg_type, data):
+    def recv_pos(self):
+        return unmake_pkt(MsgTypes.POS.value, self.client.recv(BUFF_SIZE))
+
+    def send_pos(self, data):
         try:
-            pkt = self.make_pkt(msg_type, data)
+            pkt = make_pkt(MsgTypes.POS.value, data)
 
             self.client.send(pkt)
-            return self.unmake_pkt(self.client.recv(BUFF_SIZE))
+            return unmake_pkt(MsgTypes.POS.value, self.client.recv(BUFF_SIZE))
         except socket.error as e:
             logging.error("Error sending {}: {}".format(data, e))
 
-    def send_position(self, pos):
-        pass
-
-    def get_player(self):
-        return self.player
+    def get_player_pos(self):
+        return self.player_pos
