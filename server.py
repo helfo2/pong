@@ -4,40 +4,21 @@ PONG server
 
 import socket
 import threading
-import logging
 from config import *
+from log import Log
 import sys
-import pickle
 from player import Player
 from packet import *
 import time
 
-logging.basicConfig(
-    filename="server.log",
-    level=logging.DEBUG,
-    format='%(asctime)s %(levelname)-8s %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S')
+server_log = Log("server.log")
 
-logger = logging.getLogger("server")
-logger.setLevel(logging.DEBUG)
-fh = logging.FileHandler("server.log")
-fh.setLevel(logging.DEBUG)
-formatter = logging.Formatter("%(asctime)s %(levelname)-8s %(message)s")
-fh.setFormatter(formatter)
-logger.addHandler(fh)
-
-position_player1 = PLAYER_1_POS
-position_player2 = PLAYER_2_POS
-
-players_pos = [position_player1, position_player2]
-#players = [Player(location=location_player1,color=RED), Player(location=location_player2,color=BLUE)]
+players_pos = [PLAYER_1_POS, PLAYER_2_POS]
 
 player1_win = False
 player2_win = False
 
 PLAYER_COUNT = 0
-
-clients = []
 
 class PongServer():
     def __init__(self, ip, port):
@@ -49,9 +30,9 @@ class PongServer():
             self.server.bind((self.ip, self.port))
             self.server.listen(2)
 
-            logger.info("Initialized PONG server at {}:{}".format(ip, str(port)))
+            server_log.log(LogLevels.INFO.value, "Initialized PONG server at {}:{}".format(ip, str(port)))
         except socket.error as e:
-            logger.error("Socket error while binding: {}".format(e))
+            server_log.log(LogLevels.ERROR.value, "Socket error while binding: {}".format(e))
             sys.exit(1)
 
     def listen(self):
@@ -63,15 +44,13 @@ class PongServer():
                 conn, addr = self.server.accept()
                 PLAYER_COUNT += 1
                 
-                logger.info("Connection established with {}".format(addr))
-
-                clients.append(conn)
+                server_log.log(LogLevels.INFO.value, "Connection established with {}".format(addr))
 
                 client_thread = threading.Thread(target=self.run_client, args=(conn, PLAYER_COUNT-1,))
                 client_thread.start()
                 
         except KeyboardInterrupt:
-            logger.warning("Interrupted form keyboard")
+            server_log.log(LogLevels.WARNING.value, "Interrupted form keyboard")
 
 
     def run_client(self, conn, player_num):
@@ -100,7 +79,7 @@ class PongServer():
                 data = unmake_pkt(MsgTypes.POS.value, conn.recv(BUFF_SIZE))
 
                 if not data:
-                    logger.warning("Client {} disconnected".format(conn))
+                    server_log.log(LogLevels.WARNING.value, "Client {} disconnected".format(conn))
                 else:
                     players_pos[player_num] = data
                 
@@ -116,7 +95,7 @@ class PongServer():
                 # print("Received: ", data)
                 print("Sending: ", reply)
             except Exception as e:
-                logger.error("Error at run_client(): {}".format(e))
+                server_log.log(LogLevels.ERROR.value, "Error at run_client(): {}".format(e))
                 sys.exit(1)
             
 

@@ -29,3 +29,9 @@ FLAG_POS = [-1,-1]
 """ Network """
 class MsgTypes(Enum):
     POS = 1
+
+""" Log """
+class LogLevels(Enum):
+    INFO = 1
+    WARNING = 2
+    ERROR = 3

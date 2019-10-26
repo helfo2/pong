@@ -1,21 +1,9 @@
-import socket
-import logging
-import threading
 from config import *
-import pickle
 from player import Player
 from network import Client
 import pygame
 
 pygame.init()
-
-logging.basicConfig(
-    filename="client.log",
-    level=logging.DEBUG,
-    format='%(asctime)s %(levelname)-8s %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S')
-
-logger = logging.getLogger()
 
 display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption("Client")
@@ -44,11 +32,8 @@ def main():
     # Gets the initial position
     client = Client()
 
-
-    current_player = Player(client.get_player_initial_pos(), WHITE)
+    current_player = Player(client.get_player_initial_pos())
     print(current_player.get_pos())
-
-    # client.send_pos(client.get_player_pos())
 
     # Wait event
     wait = True
@@ -74,7 +59,7 @@ def main():
     print("opposite_pos: ", opposite_pos)
 
     # opposite_pos = client.recv_pos()
-    opposite_player = Player(opposite_pos, WHITE)
+    opposite_player = Player(opposite_pos)
 
     # Game event
     run = True
