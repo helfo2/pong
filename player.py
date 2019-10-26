@@ -5,12 +5,6 @@ import logging
 
 pygame.init()
 
-logging.basicConfig(
-    filename="player.log",
-    level=logging.DEBUG,
-    format='%(asctime)s %(levelname)-8s %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S')
-
 # class Paddle(pygame.sprite.Sprite):
 #     def __init__(self, number, color):
 #         pygame.sprite.Sprite.__init__(self)
@@ -46,15 +40,6 @@ logging.basicConfig(
 #             self.rect.y -= self.speed
 #         elif keys[pygame.K_DOWN] and (self.rect.bottom < WINDOW_HEIGHT-WINDOW_MARGIN):
 #             self.rect.y += self.speed
-    
-
-
-        
-
-
-
-
-
 
 class Player():
     def __init__(self, position, color):

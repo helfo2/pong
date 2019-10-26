@@ -1,5 +1,4 @@
 import socket
-import logging
 import threading
 from config import *
 import pickle
@@ -8,14 +7,6 @@ from network import Client
 import pygame
 
 pygame.init()
-
-logging.basicConfig(
-    filename="client.log",
-    level=logging.DEBUG,
-    format='%(asctime)s %(levelname)-8s %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S')
-
-logger = logging.getLogger()
 
 display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption("Client")

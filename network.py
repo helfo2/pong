@@ -1,15 +1,11 @@
 import socket
-import logging
+from log import Log
 from config import *
 import struct
 import sys
 from packet import *
 
-logging.basicConfig(
-    filename="client.log",
-    level=logging.DEBUG,
-    format='%(asctime)s %(levelname)-8s %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S')
+client_log = Log("client.log")
 
 class Client():
     def __init__(self):
@@ -22,11 +18,11 @@ class Client():
         try:
             self.client.connect(self.serverAddr)
 
-            logging.info("Connected to {}".format(self.serverAddr))
+            client_log.log(LogLevels.INFO.value, "Connected to {}".format(self.serverAddr))
 
             return self.recv_pos()
         except socket.error as e:
-            logging.error("Could not connect to {}: {}".format(self.serverAddr, e))
+            client_log.log(LogLevels.ERROR.value, "Could not connect to {}: {}".format(self.serverAddr, e))
             sys.exit(1)
 
     def recv_pos(self):
@@ -39,7 +35,7 @@ class Client():
             self.client.send(pkt)
             return unmake_pkt(MsgTypes.POS.value, self.client.recv(BUFF_SIZE))
         except socket.error as e:
-            logging.error("Error sending {}: {}".format(data, e))
+            client_log.log(LogLevels.ERROR.value, "Error sending {}: {}".format(data, e))
 
     def get_player_initial_pos(self):
         return self.player_initial_pos
