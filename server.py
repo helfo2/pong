@@ -7,25 +7,18 @@ import threading
 from config import *
 from log import Log
 import sys
-import pickle
 from player import Player
 from packet import *
 import time
 
 server_log = Log("server.log")
 
-position_player1 = PLAYER_1_POS
-position_player2 = PLAYER_2_POS
-
-players_pos = [position_player1, position_player2]
-#players = [Player(location=location_player1,color=RED), Player(location=location_player2,color=BLUE)]
+players_pos = [PLAYER_1_POS, PLAYER_2_POS]
 
 player1_win = False
 player2_win = False
 
 PLAYER_COUNT = 0
-
-clients = []
 
 class PongServer():
     def __init__(self, ip, port):

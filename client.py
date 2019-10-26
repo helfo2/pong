@@ -1,7 +1,4 @@
-import socket
-import threading
 from config import *
-import pickle
 from player import Player
 from network import Client
 import pygame
@@ -35,11 +32,8 @@ def main():
     # Gets the initial position
     client = Client()
 
-
-    current_player = Player(client.get_player_initial_pos(), WHITE)
+    current_player = Player(client.get_player_initial_pos())
     print(current_player.get_pos())
-
-    # client.send_pos(client.get_player_pos())
 
     # Wait event
     wait = True
@@ -65,7 +59,7 @@ def main():
     print("opposite_pos: ", opposite_pos)
 
     # opposite_pos = client.recv_pos()
-    opposite_player = Player(opposite_pos, WHITE)
+    opposite_player = Player(opposite_pos)
 
     # Game event
     run = True

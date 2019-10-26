@@ -42,13 +42,13 @@ pygame.init()
 #             self.rect.y += self.speed
 
 class Player():
-    def __init__(self, position, color):
+    def __init__(self, position):
         self.x = position[0]
         self.y = position[1]
         self.width = PADDLE_SIZE[0]
         self.height = PADDLE_SIZE[1]
         
-        self.color = color
+        self.color = WHITE
         self.rect = (self.x, self.y, self.width, self.height)
         self.vel = 3
 
