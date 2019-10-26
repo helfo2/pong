@@ -1,7 +1,9 @@
 import socket
 import logging
 from config import *
-import pickle
+import struct
+import sys
+from packet import *
 
 logging.basicConfig(
     filename="client.log",
@@ -9,13 +11,12 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)-8s %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S')
 
-
 class Client():
     def __init__(self):
         self.client = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
         self.serverAddr = (LOCALHOST, PORT)
 
-        self.player = self.connect()
+        self.player_initial_pos = self.connect()
 
     def connect(self):
         try:
@@ -23,16 +24,22 @@ class Client():
 
             logging.info("Connected to {}".format(self.serverAddr))
 
-            return pickle.loads(self.client.recv(BUFF_SIZE))
+            return self.recv_pos()
         except socket.error as e:
             logging.error("Could not connect to {}: {}".format(self.serverAddr, e))
+            sys.exit(1)
 
-    def send(self, data):
+    def recv_pos(self):
+        return unmake_pkt(MsgTypes.POS.value, self.client.recv(BUFF_SIZE))
+
+    def send_pos(self, data):
         try:
-            self.client.send(pickle.dumps(data))
-            return pickle.loads(self.client.recv(BUFF_SIZE))
-        except socket.error as e:
-            logging.error("Could not connect to {}: {}".format(self.serverAddr, e))
+            pkt = make_pkt(MsgTypes.POS.value, data)
 
-    def get_player(self):
-        return self.player
+            self.client.send(pkt)
+            return unmake_pkt(MsgTypes.POS.value, self.client.recv(BUFF_SIZE))
+        except socket.error as e:
+            logging.error("Error sending {}: {}".format(data, e))
+
+    def get_player_initial_pos(self):
+        return self.player_initial_pos
