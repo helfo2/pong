@@ -57,9 +57,9 @@ logging.basicConfig(
 
 
 class Player():
-    def __init__(self, location, color):
-        self.x = location[0]
-        self.y = location[1]
+    def __init__(self, position, color):
+        self.x = position[0]
+        self.y = position[1]
         self.width = PADDLE_SIZE[0]
         self.height = PADDLE_SIZE[1]
         

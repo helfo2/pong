@@ -10,10 +10,10 @@ def make_pkt(msg_type, data):
         logging.warning("make_pkt: Dont know the type of message")
 
     
-def unmake_pkt(msg_type, pkt):
+def unmake_pkt(msg_type,  data):
     if msg_type == MsgTypes.POS.value:
         """ data is location type [x,y] """
-        msg = struct.unpack("Hff", pkt)
+        msg = struct.unpack("Hff", data)
 
         return [msg[1], msg[2]] # x and y
     else:

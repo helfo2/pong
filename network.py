@@ -16,7 +16,7 @@ class Client():
         self.client = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
         self.serverAddr = (LOCALHOST, PORT)
 
-        self.player_pos = self.connect()
+        self.player_initial_pos = self.connect()
 
     def connect(self):
         try:
@@ -41,5 +41,5 @@ class Client():
         except socket.error as e:
             logging.error("Error sending {}: {}".format(data, e))
 
-    def get_player_pos(self):
-        return self.player_pos
+    def get_player_initial_pos(self):
+        return self.player_initial_pos

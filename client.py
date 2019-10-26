@@ -15,47 +15,86 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)-8s %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S')
 
+logger = logging.getLogger()
 
-window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
+display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption("Client")
 
+font = pygame.font.Font("freesansbold.ttf", 32) 
+  
+wait_text = font.render("Waiting for the other player...", True, WHITE, BLACK)   
+wait_text_rect = wait_text.get_rect()  
+wait_text_rect.center = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2) 
+
+def is_flag_pos(pos):
+    return pos[0] == -1 and pos[1] == -1
+
+
 def redraw_window(player1, player2):
-    window.fill(WHITE)
-    player1.draw(window)
-    player2.draw(window)
+    display_surface.fill(BLACK)
+    player1.draw(display_surface)
+    player2.draw(display_surface)
 
     pygame.display.update()
 
 
 def main():
-    run = True
-    client = Client()
-
-    player1_pos = client.get_player_pos()
-    player1 = Player(player1_pos, RED)
-
-    player2 = Player(PLAYER_2_POS, BLUE)
-
-    print("player1 = ", player1_pos)
-
     clock = pygame.time.Clock()
 
+    # Gets the initial position
+    client = Client()
+
+
+    current_player = Player(client.get_player_initial_pos(), WHITE)
+    print(current_player.get_pos())
+
+    # client.send_pos(client.get_player_pos())
+
+    # Wait event
+    wait = True
+    while(wait):
+        opposite_pos = client.recv_pos()
+
+        if not is_flag_pos(opposite_pos):
+            print("Wait stopped")
+            wait = False 
+            break
+
+        display_surface.fill(WHITE) 
+  
+        display_surface.blit(wait_text, wait_text_rect)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                exit(0)
+
+            pygame.display.update()
+
+    print("opposite_pos: ", opposite_pos)
+
+    # opposite_pos = client.recv_pos()
+    opposite_player = Player(opposite_pos, WHITE)
+
+    # Game event
+    run = True
     while(run):
         clock.tick(60)
-        player2_pos = client.send_pos(player1_pos)
-        print("player2_pos: ", player2_pos)
-        player2.update(player2_pos)
+
+        opposite_pos = client.send_pos(current_player.get_pos())
+        print("player2_pos: ", opposite_pos)
+        opposite_player.update(opposite_pos)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
                 pygame.quit()
 
-        player1.move()
+        current_player.move()
 
-        print("player1_pos: ", player1.get_pos())
+        print("player1_pos: ", current_player.get_pos())
 
-        redraw_window(player1, player2)
+        redraw_window(current_player, opposite_player)
 
 
 
