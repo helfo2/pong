@@ -9,15 +9,21 @@ from log import Log
 import sys
 from packet import *
 import time
+from ball import Ball
 
 server_log = Log("server.log")
 
 players_pos = [PLAYER_1_POS, PLAYER_2_POS]
 
+player1_score = 0
+player2_score = 0
+
 player1_win = False
 player2_win = False
 
 PLAYER_COUNT = 0
+
+ball = Ball()
 
 class PongServer():
     def __init__(self, ip, port):

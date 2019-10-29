@@ -6,7 +6,6 @@ from random import *
 
 pygame.init()
 
-
 def _map_new_range(value, start, end, new_start, new_end):
     return new_start + (new_end - new_start) * ((value - start) / (end - start))
 
@@ -17,7 +16,7 @@ class Ball():
         self.y = 0
         self.size = BALL_LEN
         self.color = WHITE
-        self.rect = (x, y, self.size, self.size)
+        self.rect = (self.x, self.y, self.size, self.size)
 
         self.reset()
         
@@ -25,12 +24,12 @@ class Ball():
         self.x = WINDOW_WIDTH/2
         self.y = WINDOW_HEIGHT/2
 
-        angle = random(-pi/4, pi/4)
+        angle = uniform(-pi/4, pi/4)
 
         self.xspeed = 5 * cos(angle)
         self.yspeed = 5 * sin(angle)
 
-        if random(1) < 0.5:
+        if randrange(1) < 0.5:
             self.xspeed *= -1
 
     def draw(self, window):
