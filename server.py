@@ -7,7 +7,6 @@ import threading
 from config import *
 from log import Log
 import sys
-from player import Player
 from packet import *
 import time
 
@@ -57,6 +56,8 @@ class PongServer():
         print("player #:", player_num)
         print("player (x, y): {}".format(players_pos[player_num]))
         
+        time.sleep(1)
+
         initial_pos = players_pos[player_num]
         # After connect, send initial position
         conn.send(make_pkt(MsgTypes.POS.value, initial_pos))
