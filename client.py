@@ -39,7 +39,8 @@ def main():
     wait = True
     while(wait):
         opposite_pos = client.recv_pos()
-
+        
+        # if opposite_pos is [-1,-1]
         if not is_flag_pos(opposite_pos):
             print("Wait stopped")
             wait = False 
@@ -64,7 +65,7 @@ def main():
     # Game event
     run = True
     while(run):
-        clock.tick(60)
+        dt = clock.tick(30)
 
         opposite_pos = client.send_pos(current_player.get_pos())
         print("player2_pos: ", opposite_pos)
@@ -75,7 +76,7 @@ def main():
                 run = False
                 pygame.quit()
 
-        current_player.move()
+        current_player.move(dt)
 
         print("player1_pos: ", current_player.get_pos())
 

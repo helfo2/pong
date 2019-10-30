@@ -50,19 +50,19 @@ class Player():
         
         self.color = WHITE
         self.rect = (self.x, self.y, self.width, self.height)
-        self.vel = 3
+        self.vel = 1
 
     def draw(self, window):
         pygame.draw.rect(window, self.color, self.rect)
 
-    def move(self):
+    def move(self, dt):
         keys = pygame.key.get_pressed()
 
         if keys[pygame.K_UP] and (self.y > WINDOW_MARGIN):
-            self.y -= self.vel
+            self.y -= self.vel * dt
 
         if keys[pygame.K_DOWN] and (self.y + self.height < WINDOW_HEIGHT-WINDOW_MARGIN):
-            self.y += self.vel
+            self.y += self.vel * dt
 
         self.update_internal()
 

@@ -23,7 +23,7 @@ player2_win = False
 
 PLAYER_COUNT = 0
 
-ball = Ball()
+#ball = Ball()
 
 class PongServer():
     def __init__(self, ip, port):

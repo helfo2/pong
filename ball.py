@@ -1,14 +1,8 @@
 from config import *
 from log import Log
 import pygame
-from math import *
-from random import *
 
 pygame.init()
-
-def _map_new_range(value, start, end, new_start, new_end):
-    return new_start + (new_end - new_start) * ((value - start) / (end - start))
-
 
 class Ball():
     def __init__(self):
