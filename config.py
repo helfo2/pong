@@ -1,6 +1,6 @@
 from enum import Enum
 
-LOCALHOST = "127.0.0.1"
+SERVER_IP = "127.0.0.1"
 PORT = 1235
 
 BUFF_SIZE = 2048
@@ -23,7 +23,6 @@ PADDLE_SPEED = 8
 
 """ Ball """
 BALL_LEN = 20
-
 
 """ Initial locations """
 PLAYER_1_POS = [WINDOW_MARGIN, WINDOW_HEIGHT/2 - 100]

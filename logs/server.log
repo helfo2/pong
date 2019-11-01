@@ -210,3 +210,197 @@
 2019-10-30 12:46:17 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
 2019-10-30 12:46:18,235 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
 2019-10-30 12:46:18 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:54:48,074 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 10:54:48 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 10:54:54,791 INFO     Connection established with ('127.0.0.1', 64590)
+2019-10-31 10:54:54 INFO     Connection established with ('127.0.0.1', 64590)
+2019-10-31 10:55:11,431 INFO     Connection established with ('127.0.0.1', 64609)
+2019-10-31 10:55:11 INFO     Connection established with ('127.0.0.1', 64609)
+2019-10-31 10:56:31,407 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:56:31 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:56:32,247 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:56:32 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:56:52,260 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 10:56:52 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 10:56:56,770 INFO     Connection established with ('127.0.0.1', 64730)
+2019-10-31 10:56:56 INFO     Connection established with ('127.0.0.1', 64730)
+2019-10-31 10:56:59,951 INFO     Connection established with ('127.0.0.1', 64734)
+2019-10-31 10:56:59 INFO     Connection established with ('127.0.0.1', 64734)
+2019-10-31 10:57:16,353 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:57:16 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:57:17,433 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:57:17 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:58:43,784 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 10:58:43 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 10:58:46,672 INFO     Connection established with ('127.0.0.1', 64853)
+2019-10-31 10:58:46 INFO     Connection established with ('127.0.0.1', 64853)
+2019-10-31 10:58:49,764 INFO     Connection established with ('127.0.0.1', 64860)
+2019-10-31 10:58:49 INFO     Connection established with ('127.0.0.1', 64860)
+2019-10-31 10:59:40,568 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:59:40 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:59:42,075 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:59:42 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 10:59:54,238 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 10:59:54 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:00:03,497 INFO     Connection established with ('127.0.0.1', 64950)
+2019-10-31 11:00:03 INFO     Connection established with ('127.0.0.1', 64950)
+2019-10-31 11:00:08,157 INFO     Connection established with ('127.0.0.1', 64957)
+2019-10-31 11:00:08 INFO     Connection established with ('127.0.0.1', 64957)
+2019-10-31 11:00:15,993 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:00:15 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:00:17,339 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:00:17 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:00:46,770 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:00:46 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:00:53,463 INFO     Connection established with ('127.0.0.1', 65007)
+2019-10-31 11:00:53 INFO     Connection established with ('127.0.0.1', 65007)
+2019-10-31 11:00:56,979 INFO     Connection established with ('127.0.0.1', 65014)
+2019-10-31 11:00:56 INFO     Connection established with ('127.0.0.1', 65014)
+2019-10-31 11:03:39,762 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:03:39 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:03:41,454 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:03:41 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:04:00,680 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:04:00 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:04:10,937 INFO     Connection established with ('127.0.0.1', 65263)
+2019-10-31 11:04:10 INFO     Connection established with ('127.0.0.1', 65263)
+2019-10-31 11:04:14,827 INFO     Connection established with ('127.0.0.1', 65268)
+2019-10-31 11:04:14 INFO     Connection established with ('127.0.0.1', 65268)
+2019-10-31 11:08:31,356 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:08:31 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:08:33,102 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:08:33 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:08:45,855 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:08:45 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:08:51,495 INFO     Connection established with ('127.0.0.1', 49241)
+2019-10-31 11:08:51 INFO     Connection established with ('127.0.0.1', 49241)
+2019-10-31 11:08:59,309 INFO     Connection established with ('127.0.0.1', 49252)
+2019-10-31 11:08:59 INFO     Connection established with ('127.0.0.1', 49252)
+2019-10-31 11:09:40,073 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:09:40 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:09:41,507 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:09:41 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:09:51,196 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:09:51 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:10:11,654 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:10:11 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:10:14,708 INFO     Connection established with ('127.0.0.1', 49368)
+2019-10-31 11:10:14 INFO     Connection established with ('127.0.0.1', 49368)
+2019-10-31 11:10:17,676 INFO     Connection established with ('127.0.0.1', 49377)
+2019-10-31 11:10:17 INFO     Connection established with ('127.0.0.1', 49377)
+2019-10-31 11:13:29,731 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:13:29 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:13:40,187 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:13:40 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:13:43,695 INFO     Connection established with ('127.0.0.1', 49628)
+2019-10-31 11:13:43 INFO     Connection established with ('127.0.0.1', 49628)
+2019-10-31 11:13:46,908 INFO     Connection established with ('127.0.0.1', 49632)
+2019-10-31 11:13:46 INFO     Connection established with ('127.0.0.1', 49632)
+2019-10-31 11:14:12,079 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:14:12 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:14:12,724 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:14:12 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:14:20,568 INFO     Connection established with ('127.0.0.1', 49697)
+2019-10-31 11:14:20 INFO     Connection established with ('127.0.0.1', 49697)
+2019-10-31 11:14:35,294 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:14:35 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:14:41,985 INFO     Connection established with ('127.0.0.1', 49731)
+2019-10-31 11:14:41 INFO     Connection established with ('127.0.0.1', 49731)
+2019-10-31 11:14:45,930 INFO     Connection established with ('127.0.0.1', 49737)
+2019-10-31 11:14:45 INFO     Connection established with ('127.0.0.1', 49737)
+2019-10-31 11:15:00,084 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:15:00 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:15:00,959 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:15:00 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:15:18,717 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:15:18 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:15:22,279 INFO     Connection established with ('127.0.0.1', 49765)
+2019-10-31 11:15:22 INFO     Connection established with ('127.0.0.1', 49765)
+2019-10-31 11:15:26,224 INFO     Connection established with ('127.0.0.1', 49769)
+2019-10-31 11:15:26 INFO     Connection established with ('127.0.0.1', 49769)
+2019-10-31 11:15:58,529 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:15:58 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:16:01,245 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:16:01 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:16:20,996 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:16:20 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:16:23,837 INFO     Connection established with ('127.0.0.1', 49856)
+2019-10-31 11:16:23 INFO     Connection established with ('127.0.0.1', 49856)
+2019-10-31 11:16:26,058 INFO     Connection established with ('127.0.0.1', 49860)
+2019-10-31 11:16:26 INFO     Connection established with ('127.0.0.1', 49860)
+2019-10-31 11:16:27,008 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:16:27 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:16:27,504 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:16:27 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:16:44,737 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:16:44 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:16:51,856 INFO     Connection established with ('127.0.0.1', 49895)
+2019-10-31 11:16:51 INFO     Connection established with ('127.0.0.1', 49895)
+2019-10-31 11:16:54,478 INFO     Connection established with ('127.0.0.1', 49896)
+2019-10-31 11:16:54 INFO     Connection established with ('127.0.0.1', 49896)
+2019-10-31 11:17:16,747 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:17:16 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:17:18,087 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:17:18 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:17:48,452 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:17:48 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:17:51,609 INFO     Connection established with ('127.0.0.1', 49967)
+2019-10-31 11:17:51 INFO     Connection established with ('127.0.0.1', 49967)
+2019-10-31 11:17:53,760 INFO     Connection established with ('127.0.0.1', 49974)
+2019-10-31 11:17:53 INFO     Connection established with ('127.0.0.1', 49974)
+2019-10-31 11:18:25,419 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:18:25 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:18:26,106 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:18:26 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:18:55,581 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:18:55 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:19:16,946 ERROR    Socket error while binding: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-10-31 11:19:16 ERROR    Socket error while binding: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-10-31 11:19:23,317 INFO     Connection established with ('127.0.0.1', 50066)
+2019-10-31 11:19:23 INFO     Connection established with ('127.0.0.1', 50066)
+2019-10-31 11:19:25,469 INFO     Connection established with ('127.0.0.1', 50070)
+2019-10-31 11:19:25 INFO     Connection established with ('127.0.0.1', 50070)
+2019-10-31 11:20:01,255 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:20:01 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:20:03,015 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:20:03 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:20:19,731 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:20:19 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:20:22,219 INFO     Connection established with ('127.0.0.1', 50121)
+2019-10-31 11:20:22 INFO     Connection established with ('127.0.0.1', 50121)
+2019-10-31 11:20:24,475 INFO     Connection established with ('127.0.0.1', 50123)
+2019-10-31 11:20:24 INFO     Connection established with ('127.0.0.1', 50123)
+2019-10-31 11:26:49,197 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:26:49 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:26:50,336 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:26:50 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:27:04,330 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:27:04 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:27:09,864 INFO     Connection established with ('127.0.0.1', 50595)
+2019-10-31 11:27:09 INFO     Connection established with ('127.0.0.1', 50595)
+2019-10-31 11:27:22,543 INFO     Connection established with ('127.0.0.1', 50614)
+2019-10-31 11:27:22 INFO     Connection established with ('127.0.0.1', 50614)
+2019-10-31 11:28:24,848 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:28:24 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:28:31,496 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:28:31 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:28:40,255 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:28:40 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:28:45,465 INFO     Connection established with ('127.0.0.1', 50707)
+2019-10-31 11:28:45 INFO     Connection established with ('127.0.0.1', 50707)
+2019-10-31 11:28:48,310 INFO     Connection established with ('127.0.0.1', 50712)
+2019-10-31 11:28:48 INFO     Connection established with ('127.0.0.1', 50712)
+2019-10-31 11:31:00,231 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:31:00 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:31:02,269 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:31:02 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:39:03,627 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:39:03 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-10-31 11:39:07,302 INFO     Connection established with ('127.0.0.1', 51598)
+2019-10-31 11:39:07 INFO     Connection established with ('127.0.0.1', 51598)
+2019-10-31 11:39:09,496 INFO     Connection established with ('127.0.0.1', 51601)
+2019-10-31 11:39:09 INFO     Connection established with ('127.0.0.1', 51601)
+2019-10-31 11:41:04,906 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:41:04 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-10-31 11:41:16,424 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-10-31 11:41:16 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host

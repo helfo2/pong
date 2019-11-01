@@ -3,6 +3,8 @@ from player import Player
 from network import Client
 import pygame
 
+FPS = 30
+
 pygame.init()
 
 display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
@@ -65,7 +67,7 @@ def main():
     # Game event
     run = True
     while(run):
-        dt = clock.tick(30)
+        dt = clock.tick(FPS)
 
         opposite_pos = client.send_pos(current_player.get_pos())
         print("player2_pos: ", opposite_pos)

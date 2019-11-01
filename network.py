@@ -10,7 +10,7 @@ client_log = Log("client.log")
 class Client():
     def __init__(self):
         self.client = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
-        self.serverAddr = (LOCALHOST, PORT)
+        self.serverAddr = (SERVER_IP, PORT)
 
         self.player_initial_pos = self.connect()
 

@@ -107,7 +107,7 @@ class PongServer():
             
 
 def main():
-    pongServer = PongServer(LOCALHOST, PORT)
+    pongServer = PongServer(SERVER_IP, PORT)
     pongServer.listen()
     
 
