@@ -22,7 +22,7 @@ PADDLE_SIZE = [15,200]
 PADDLE_SPEED = 8
 
 """ Ball """
-BALL_LEN = 20
+BALL_SIZE = 20
 
 """ Initial locations """
 PLAYER_1_POS = [WINDOW_MARGIN, WINDOW_HEIGHT/2 - 100]

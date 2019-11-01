@@ -23,7 +23,7 @@ player2_win = False
 
 PLAYER_COUNT = 0
 
-#ball = Ball()
+ball = Ball()
 
 class PongServer():
     def __init__(self, ip, port):
@@ -65,6 +65,7 @@ class PongServer():
         time.sleep(1)
 
         initial_pos = players_pos[player_num]
+
         # After connect, send initial position
         conn.send(make_pkt(MsgTypes.POS.value, initial_pos))
 
@@ -80,7 +81,7 @@ class PongServer():
         reply = players_pos[not player_num]
         conn.send(make_pkt(MsgTypes.POS.value, reply))
 
-        # Starts the game
+        # Runs the game
         while True:
             try:
                 data = unmake_pkt(MsgTypes.POS.value, conn.recv(BUFF_SIZE))
@@ -93,7 +94,9 @@ class PongServer():
                 reply = players_pos[not player_num]
                 conn.send(make_pkt(MsgTypes.POS.value, reply))
 
-
+                x_ball, y_ball = ball.get_pos()
+                conn.send(make_pkt(MsgTypes.POS.value, [x_ball, y_ball]))
+                
                 # if player_num == 1:
                 #     reply = players_pos[0]
                 # else:

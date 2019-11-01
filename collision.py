@@ -5,25 +5,27 @@ from config import *
 def interpolate(value, start, end, new_start, new_end):
     return new_start + (new_end - new_start) * ((value - start) / (end - start))
 
-def reset(self):
-    self.x = WINDOW_WIDTH/2
-    self.y = WINDOW_HEIGHT/2
+def reset_ball():
+    x = WINDOW_WIDTH/2
+    y = WINDOW_HEIGHT/2
 
     angle = uniform(-pi/4, pi/4)
 
-    self.xspeed = 5 * cos(angle)
-    self.yspeed = 5 * sin(angle)
+    xspeed = 5 * cos(angle)
+    yspeed = 5 * sin(angle)
 
     if randrange(1) < 0.5:
-        self.xspeed *= -1
+        xspeed *= -1
 
-def check_paddle_left(self, paddle_x, paddle_y):
+    return (x, y, xspeed, yspeed)
+
+def check_paddle_left(self, ball_x, ball_y, paddle_x, paddle_y):
     paddle_height = PADDLE_SIZE[1]
     paddle_width = PADDLE_SIZE[0]
 
-    if (self.y - self.size < paddle_y + paddle_height/2) and (self.y + self.size > paddle_y - paddle_height/2) and self.x - self.size < paddle_x + paddle_width/2:
+    if (ball_y - self.size < paddle_y + paddle_height/2) and (ball_y + self.size > paddle_y - paddle_height/2) and self.x - self.size < paddle_x + paddle_width/2:
         if x > paddle_x:
-            diff = self.y - (paddle_y - paddle_height/2)
+            diff = ball_y - (paddle_y - paddle_height/2)
             rad = radians(45)
             angle = interpolate(diff, 0, paddle_height, -rad, rad)
             self.xspeed = 5 * cos(angle)

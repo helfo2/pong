@@ -50,7 +50,7 @@ class Player():
         
         self.color = WHITE
         self.rect = (self.x, self.y, self.width, self.height)
-        self.vel = 5
+        self.vel = 0.5
 
     def draw(self, window):
         pygame.draw.rect(window, self.color, self.rect)

@@ -1,6 +1,7 @@
 from config import *
 from player import Player
 from network import Client
+from ball import Ball 
 import pygame
 
 FPS = 30
@@ -18,6 +19,10 @@ wait_text_rect.center = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2)
 
 def is_flag_pos(pos):
     return pos[0] == -1 and pos[1] == -1
+
+
+def draw_ball(x, y):
+    pygame.draw.rect(display_surface, WHITE, (x, y, BALL_SIZE, BALL_SIZE))
 
 
 def redraw_window(player1, player2):
@@ -81,6 +86,13 @@ def main():
         current_player.move(dt)
 
         print("player1_pos: ", current_player.get_pos())
+
+        # Draw the net (not working)
+        pygame.draw.line(display_surface, WHITE, [WINDOW_WIDTH/2, 0], [WINDOW_WIDTH/2, WINDOW_HEIGHT], 5)
+
+        x_ball, y_ball = client.recv_pos()
+        
+        draw_ball(x_ball, y_ball)
 
         redraw_window(current_player, opposite_player)
 

@@ -1,14 +1,21 @@
 from config import *
+from math import *
+from random import *
 from log import Log
 import pygame
+import math
+import random
 
 pygame.init()
+
+def interpolate(value, start, end, new_start, new_end):
+    return new_start + (new_end - new_start) * ((value - start) / (end - start))
 
 class Ball():
     def __init__(self):
         self.x = 0
         self.y = 0
-        self.size = BALL_LEN
+        self.size = BALL_SIZE
         self.color = WHITE
         self.rect = (self.x, self.y, self.size, self.size)
 
@@ -29,6 +36,9 @@ class Ball():
     def draw(self, window):
         pygame.draw.rect(window, self.color, self.rect)
 
+    def get_pos(self):
+        return self.x, self.y
+
     def update(self):
         self.x += self.xspeed
         self.y += self.yspeed
@@ -43,7 +53,7 @@ class Ball():
             if x > paddle_x:
                 diff = self.y - (paddle_y - paddle_height/2)
                 rad = radians(45)
-                angle = _map_new_range(diff, 0, paddle_height, -rad, rad)
+                angle = interpolate(diff, 0, paddle_height, -rad, rad)
                 self.xspeed = 5 * cos(angle)
                 self.yspeed = 5 * sin(angle)
 
@@ -57,7 +67,7 @@ class Ball():
         if self.y - self.size < paddle_y + paddle_height/2 and self.y + self.size > paddle_y - paddle_height/2 and (self.x + self.size > paddle_x - paddle_width/2):
             if self.x < paddle_x:
                 diff = self.y - (paddle_y - paddle_height/2)
-                angle = _map_new_range(diff, 0, paddle_height, radians(225), radians(135))
+                angle = interpolate(diff, 0, paddle_height, radians(225), radians(135))
                 self.xspeed = 5 * cos(angle)
                 self.yspeed = 5 * sin(angle)
 
