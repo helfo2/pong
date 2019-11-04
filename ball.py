@@ -48,30 +48,46 @@ class Ball():
     def check_paddle_left(self, paddle_x, paddle_y):
         paddle_height = PADDLE_SIZE[1]
         paddle_width = PADDLE_SIZE[0]
+        
+        if self.x < paddle_x + paddle_width and self.y < paddle_y + paddle_height and self.x + self.size > paddle_x and self.y + self.size > paddle_y:
+            diff = self.y - (paddle_y - paddle_height/2)
+            angle = interpolate(diff, 0, paddle_height, radians(225), radians(135))
+            self.xspeed = 5 * cos(angle)
+            self.yspeed = 5 * sin(angle)
 
-        if (self.y - self.size < paddle_y + paddle_height/2) and (self.y + self.size > paddle_y - paddle_height/2) and self.x - self.size < paddle_x + paddle_width/2:
-            if self.x > paddle_x:
-                diff = self.y - (paddle_y - paddle_height/2)
-                rad = radians(45)
-                angle = interpolate(diff, 0, paddle_height, -rad, rad)
-                self.xspeed = 5 * cos(angle)
-                self.yspeed = 5 * sin(angle)
+            self.x = paddle_x + paddle_width/2 + self.size
+        
+        # if (self.y - self.size < paddle_y + paddle_height/2) and (self.y + self.size > paddle_y - paddle_height/2) and self.x - self.size < paddle_x + paddle_width/2:
+        #     if self.x > paddle_x:
+        #         diff = self.y - (paddle_y - paddle_height/2)
+        #         rad = radians(45)
+        #         angle = interpolate(diff, 0, paddle_height, -rad, rad)
+        #         self.xspeed = 5 * cos(angle)
+        #         self.yspeed = 5 * sin(angle)
 
-                self.x = paddle_x + paddle_width/2 + self.size
+        #         self.x = paddle_x + paddle_width/2 + self.size
 
 
     def check_paddle_right(self, paddle_x, paddle_y):
         paddle_height = PADDLE_SIZE[1]
         paddle_width = PADDLE_SIZE[0]
 
-        if self.y - self.size < paddle_y + paddle_height/2 and self.y + self.size > paddle_y - paddle_height/2 and (self.x + self.size > paddle_x - paddle_width/2):
-            if self.x < paddle_x:
-                diff = self.y - (paddle_y - paddle_height/2)
-                angle = interpolate(diff, 0, paddle_height, radians(225), radians(135))
-                self.xspeed = 5 * cos(angle)
-                self.yspeed = 5 * sin(angle)
+        if self.x < paddle_x + paddle_width and self.y < paddle_y + paddle_height and self.x + self.size > paddle_x and self.y + self.size > paddle_y:
+            diff = self.y - (paddle_y - paddle_height/2)
+            angle = interpolate(diff, 0, paddle_height, radians(225), radians(135))
+            self.xspeed = 5 * cos(angle)
+            self.yspeed = 5 * sin(angle)
 
-                self.x = paddle_x - paddle_width/2 - self.size
+            self.x = paddle_x - paddle_width/2 - self.size
+
+        # if self.y - self.size < paddle_y + paddle_height/2 and self.y + self.size > paddle_y - paddle_height/2 and (self.x + self.size > paddle_x - paddle_width/2):
+        #     if self.x < paddle_x:
+        #         diff = self.y - (paddle_y - paddle_height/2)
+        #         angle = interpolate(diff, 0, paddle_height, radians(225), radians(135))
+        #         self.xspeed = 5 * cos(angle)
+        #         self.yspeed = 5 * sin(angle)
+
+        #         self.x = paddle_x - paddle_width/2 - self.size
 
 
     def edges(self):

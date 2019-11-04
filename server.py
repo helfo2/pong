@@ -102,9 +102,6 @@ class PongServer():
                 reply = players_pos[not player_num]
                 print("Sending: ", reply)
                 conn.send(make_pkt(MsgTypes.POS.value, reply))
-
-                # MANDAR SÓ A POSICAO DA BOLINHA, SEMPRE!!!
-                # DETECTOU COLISAO? A POSICAO MUDA E CABOU
                 
                 # First, deal with collisions
                 ball.edges()
