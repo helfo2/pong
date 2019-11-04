@@ -10,6 +10,8 @@ import sys
 from packet import *
 import time
 from ball import Ball
+import collision
+import pygame 
 
 server_log = Log("server.log")
 
@@ -24,6 +26,7 @@ player2_win = False
 PLAYER_COUNT = 0
 
 ball = Ball()
+clock = pygame.time.Clock()
 
 class PongServer():
     def __init__(self, ip, port):
@@ -59,6 +62,9 @@ class PongServer():
 
 
     def run_client(self, conn, player_num):
+        global ball
+        global clock
+
         print("player #:", player_num)
         print("player (x, y): {}".format(players_pos[player_num]))
         
@@ -84,6 +90,8 @@ class PongServer():
         # Runs the game
         while True:
             try:
+                clock.tick(30)
+
                 data = unmake_pkt(MsgTypes.POS.value, conn.recv(BUFF_SIZE))
 
                 if not data:
@@ -92,18 +100,25 @@ class PongServer():
                     players_pos[player_num] = data
                 
                 reply = players_pos[not player_num]
+                print("Sending: ", reply)
                 conn.send(make_pkt(MsgTypes.POS.value, reply))
 
-                x_ball, y_ball = ball.get_pos()
-                conn.send(make_pkt(MsgTypes.POS.value, [x_ball, y_ball]))
+                # MANDAR SÓ A POSICAO DA BOLINHA, SEMPRE!!!
+                # DETECTOU COLISAO? A POSICAO MUDA E CABOU
                 
-                # if player_num == 1:
-                #     reply = players_pos[0]
-                # else:
-                #     reply = players_pos[1]
+                # First, deal with collisions
+                ball.edges()
+                ball.check_paddle_left(players_pos[0][0], players_pos[0][1])
+                ball.check_paddle_right(players_pos[1][0], players_pos[1][1])
 
-                # print("Received: ", data)
-                print("Sending: ", reply)
+                ball.update()
+
+                ball_pos = ball.get_pos()
+                print("server ball_pos = ", ball_pos)
+                conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
+
+                
+
             except Exception as e:
                 server_log.log(LogLevels.ERROR.value, "Error at run_client(): {}".format(e))
                 sys.exit(1)

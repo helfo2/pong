@@ -5,6 +5,23 @@ from config import *
 def interpolate(value, start, end, new_start, new_end):
     return new_start + (new_end - new_start) * ((value - start) / (end - start))
 
+def edges(x, y):
+    left_score = 0
+    right_score = 0
+
+    if y < 0 or y > WINDOW_HEIGHT:
+        yspeed *= -1
+
+    if x - BALL_SIZE > WINDOW_WIDTH:
+        left_score += 1
+        reset_ball()
+
+    if x + BALL_SIZE < 0:
+        right_score += 1
+        reset_ball()
+
+    return (left_score, right_score)
+
 def reset_ball():
     x = WINDOW_WIDTH/2
     y = WINDOW_HEIGHT/2
@@ -48,19 +65,3 @@ def check_paddle_right(self, paddle_x, paddle_y):
             self.x = paddle_x - paddle_width/2 - self.size
 
 
-def edges(self):
-    left_score = 0
-    right_score = 0
-
-    if self.y < 0 or self.y > WINDOW_HEIGHT:
-        yspeed *= -1
-
-    if self.x - self.size > WINDOW_WIDTH:
-        left_score += 1
-        self.reset()
-
-    if self.x + self.size < 0:
-        right_score += 1
-        self.reset()
-
-    return (left_score, right_score)

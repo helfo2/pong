@@ -20,15 +20,12 @@ wait_text_rect.center = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2)
 def is_flag_pos(pos):
     return pos[0] == -1 and pos[1] == -1
 
-
-def draw_ball(x, y):
-    pygame.draw.rect(display_surface, WHITE, (x, y, BALL_SIZE, BALL_SIZE))
-
-
-def redraw_window(player1, player2):
+def redraw_window(player1, player2, ball_pos):
     display_surface.fill(BLACK)
     player1.draw(display_surface)
     player2.draw(display_surface)
+    # Draws the ball
+    pygame.draw.rect(display_surface, WHITE, (ball_pos[0], ball_pos[1], BALL_SIZE, BALL_SIZE))
 
     pygame.display.update()
 
@@ -88,13 +85,12 @@ def main():
         print("player1_pos: ", current_player.get_pos())
 
         # Draw the net (not working)
-        pygame.draw.line(display_surface, WHITE, [WINDOW_WIDTH/2, 0], [WINDOW_WIDTH/2, WINDOW_HEIGHT], 5)
+        #pygame.draw.line(display_surface, WHITE, [WINDOW_WIDTH/2, 0], [WINDOW_WIDTH/2, WINDOW_HEIGHT], 5)
 
-        x_ball, y_ball = client.recv_pos()
+        ball_pos = client.recv_pos()
+        print("ball_pos = ", ball_pos)
         
-        draw_ball(x_ball, y_ball)
-
-        redraw_window(current_player, opposite_player)
+        redraw_window(current_player, opposite_player, ball_pos)
 
 
 

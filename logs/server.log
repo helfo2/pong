@@ -444,3 +444,293 @@
 2019-11-01 19:10:33 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
 2019-11-01 19:10:34,911 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
 2019-11-01 19:10:34 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:37:46,653 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:37:46 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:37:53,102 INFO     Connection established with ('127.0.0.1', 53107)
+2019-11-04 12:37:53 INFO     Connection established with ('127.0.0.1', 53107)
+2019-11-04 12:38:00,277 INFO     Connection established with ('127.0.0.1', 53125)
+2019-11-04 12:38:00 INFO     Connection established with ('127.0.0.1', 53125)
+2019-11-04 12:38:01,022 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:38:01 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:38:07,596 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 12:38:07 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 12:40:31,052 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:40:31 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:40:34,040 INFO     Connection established with ('127.0.0.1', 53323)
+2019-11-04 12:40:34 INFO     Connection established with ('127.0.0.1', 53323)
+2019-11-04 12:40:48,189 INFO     Connection established with ('127.0.0.1', 53342)
+2019-11-04 12:40:48 INFO     Connection established with ('127.0.0.1', 53342)
+2019-11-04 12:40:49,153 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:40:49 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:40:58,426 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 12:40:58 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 12:43:29,563 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:43:29 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:43:36,813 INFO     Connection established with ('127.0.0.1', 53553)
+2019-11-04 12:43:36 INFO     Connection established with ('127.0.0.1', 53553)
+2019-11-04 12:44:24,677 INFO     Connection established with ('127.0.0.1', 53622)
+2019-11-04 12:44:24 INFO     Connection established with ('127.0.0.1', 53622)
+2019-11-04 12:44:26,827 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:44:26 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:44:27,233 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:44:27 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:44:40,321 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:44:40 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:44:43,117 INFO     Connection established with ('127.0.0.1', 53643)
+2019-11-04 12:44:43 INFO     Connection established with ('127.0.0.1', 53643)
+2019-11-04 12:44:46,536 INFO     Connection established with ('127.0.0.1', 53647)
+2019-11-04 12:44:46 INFO     Connection established with ('127.0.0.1', 53647)
+2019-11-04 12:44:47,086 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:44:47 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:44:49,846 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:44:49 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:47:53,588 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:47:53 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:47:57,681 INFO     Connection established with ('127.0.0.1', 53893)
+2019-11-04 12:47:57 INFO     Connection established with ('127.0.0.1', 53893)
+2019-11-04 12:48:01,534 INFO     Connection established with ('127.0.0.1', 53899)
+2019-11-04 12:48:01 INFO     Connection established with ('127.0.0.1', 53899)
+2019-11-04 12:48:07,506 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:48:07 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:48:16,353 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 12:48:16 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 12:49:21,164 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:49:21 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:49:24,113 INFO     Connection established with ('127.0.0.1', 54007)
+2019-11-04 12:49:24 INFO     Connection established with ('127.0.0.1', 54007)
+2019-11-04 12:49:27,325 INFO     Connection established with ('127.0.0.1', 54013)
+2019-11-04 12:49:27 INFO     Connection established with ('127.0.0.1', 54013)
+2019-11-04 12:49:27,970 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:49:27 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:49:28,654 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:49:28 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:49:42,246 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:49:42 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:49:46,114 INFO     Connection established with ('127.0.0.1', 54037)
+2019-11-04 12:49:46 INFO     Connection established with ('127.0.0.1', 54037)
+2019-11-04 12:49:49,787 INFO     Connection established with ('127.0.0.1', 54042)
+2019-11-04 12:49:49 INFO     Connection established with ('127.0.0.1', 54042)
+2019-11-04 12:50:02,535 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:50:02 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 12:50:02,662 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 12:50:02 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 12:50:14,536 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:50:14 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:50:17,909 INFO     Connection established with ('127.0.0.1', 54080)
+2019-11-04 12:50:17 INFO     Connection established with ('127.0.0.1', 54080)
+2019-11-04 12:50:20,190 INFO     Connection established with ('127.0.0.1', 54083)
+2019-11-04 12:50:20 INFO     Connection established with ('127.0.0.1', 54083)
+2019-11-04 12:50:28,727 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 12:50:28 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 12:50:30,476 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 12:50:30 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 12:51:48,661 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:51:48 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:51:51,763 INFO     Connection established with ('127.0.0.1', 54206)
+2019-11-04 12:51:51 INFO     Connection established with ('127.0.0.1', 54206)
+2019-11-04 12:52:15,037 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:52:15 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:52:24,341 INFO     Connection established with ('127.0.0.1', 54258)
+2019-11-04 12:52:24 INFO     Connection established with ('127.0.0.1', 54258)
+2019-11-04 12:52:59,282 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:52:59 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:53:02,463 INFO     Connection established with ('127.0.0.1', 54313)
+2019-11-04 12:53:02 INFO     Connection established with ('127.0.0.1', 54313)
+2019-11-04 12:53:05,939 INFO     Connection established with ('127.0.0.1', 54320)
+2019-11-04 12:53:05 INFO     Connection established with ('127.0.0.1', 54320)
+2019-11-04 12:53:18,818 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 12:53:18 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 12:53:31,900 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 12:53:31 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 12:56:02,624 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:56:02 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 12:56:06,030 INFO     Connection established with ('127.0.0.1', 54573)
+2019-11-04 12:56:06 INFO     Connection established with ('127.0.0.1', 54573)
+2019-11-04 12:56:10,558 INFO     Connection established with ('127.0.0.1', 54580)
+2019-11-04 12:56:10 INFO     Connection established with ('127.0.0.1', 54580)
+2019-11-04 12:56:22,732 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 12:56:22 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 12:56:22,736 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 12:56:22 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:05:35,289 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:05:35 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:05:41,681 INFO     Connection established with ('127.0.0.1', 55394)
+2019-11-04 13:05:41 INFO     Connection established with ('127.0.0.1', 55394)
+2019-11-04 13:05:47,230 INFO     Connection established with ('127.0.0.1', 55403)
+2019-11-04 13:05:47 INFO     Connection established with ('127.0.0.1', 55403)
+2019-11-04 13:06:04,579 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:06:04 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:06:09,718 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:06:09 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:07:20,440 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:07:20 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:07:23,667 INFO     Connection established with ('127.0.0.1', 55516)
+2019-11-04 13:07:23 INFO     Connection established with ('127.0.0.1', 55516)
+2019-11-04 13:07:27,397 INFO     Connection established with ('127.0.0.1', 55521)
+2019-11-04 13:07:27 INFO     Connection established with ('127.0.0.1', 55521)
+2019-11-04 13:07:43,181 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:07:43 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:07:44,931 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:07:44 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:08:51,790 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:08:51 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:08:55,353 INFO     Connection established with ('127.0.0.1', 55644)
+2019-11-04 13:08:55 INFO     Connection established with ('127.0.0.1', 55644)
+2019-11-04 13:08:59,327 INFO     Connection established with ('127.0.0.1', 55651)
+2019-11-04 13:08:59 INFO     Connection established with ('127.0.0.1', 55651)
+2019-11-04 13:09:01,412 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:09:01 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:09:01,415 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:09:01 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:10:47,870 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:10:47 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:11:02,595 INFO     Connection established with ('127.0.0.1', 55812)
+2019-11-04 13:11:02 INFO     Connection established with ('127.0.0.1', 55812)
+2019-11-04 13:11:05,276 INFO     Connection established with ('127.0.0.1', 55815)
+2019-11-04 13:11:05 INFO     Connection established with ('127.0.0.1', 55815)
+2019-11-04 13:11:20,341 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:11:20 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:11:20,356 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:11:20 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:12:15,997 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:12:15 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:12:19,195 INFO     Connection established with ('127.0.0.1', 55909)
+2019-11-04 13:12:19 INFO     Connection established with ('127.0.0.1', 55909)
+2019-11-04 13:12:22,603 INFO     Connection established with ('127.0.0.1', 55914)
+2019-11-04 13:12:22 INFO     Connection established with ('127.0.0.1', 55914)
+2019-11-04 13:12:28,595 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:12:28 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:12:28,628 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:12:28 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:17:21,884 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:17:21 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:17:31,481 INFO     Connection established with ('127.0.0.1', 56271)
+2019-11-04 13:17:31 INFO     Connection established with ('127.0.0.1', 56271)
+2019-11-04 13:17:52,979 INFO     Connection established with ('127.0.0.1', 56298)
+2019-11-04 13:17:52 INFO     Connection established with ('127.0.0.1', 56298)
+2019-11-04 13:18:00,669 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:18:00 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:18:00,819 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:18:00 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:20:23,843 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:20:23 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:20:27,214 INFO     Connection established with ('127.0.0.1', 56494)
+2019-11-04 13:20:27 INFO     Connection established with ('127.0.0.1', 56494)
+2019-11-04 13:20:33,876 INFO     Connection established with ('127.0.0.1', 56501)
+2019-11-04 13:20:33 INFO     Connection established with ('127.0.0.1', 56501)
+2019-11-04 13:20:38,126 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:20:38 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:20:38,141 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:20:38 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:23:23,619 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:23:23 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:23:35,327 ERROR    Socket error while binding: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-11-04 13:23:35 ERROR    Socket error while binding: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-11-04 13:23:40,818 INFO     Connection established with ('127.0.0.1', 56923)
+2019-11-04 13:23:40 INFO     Connection established with ('127.0.0.1', 56923)
+2019-11-04 13:23:44,571 INFO     Connection established with ('127.0.0.1', 56933)
+2019-11-04 13:23:44 INFO     Connection established with ('127.0.0.1', 56933)
+2019-11-04 13:23:44,880 ERROR    Error at run_client(): 'Ball' object has no attribute 'xpeed'
+2019-11-04 13:23:44 ERROR    Error at run_client(): 'Ball' object has no attribute 'xpeed'
+2019-11-04 13:23:45,579 ERROR    Error at run_client(): 'Ball' object has no attribute 'xpeed'
+2019-11-04 13:23:45 ERROR    Error at run_client(): 'Ball' object has no attribute 'xpeed'
+2019-11-04 13:24:11,315 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:24:11 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:24:16,319 INFO     Connection established with ('127.0.0.1', 57000)
+2019-11-04 13:24:16 INFO     Connection established with ('127.0.0.1', 57000)
+2019-11-04 13:24:30,510 INFO     Connection established with ('127.0.0.1', 57029)
+2019-11-04 13:24:30 INFO     Connection established with ('127.0.0.1', 57029)
+2019-11-04 13:24:30,855 ERROR    Error at run_client(): 'Ball' object has no attribute 'xpeed'
+2019-11-04 13:24:30 ERROR    Error at run_client(): 'Ball' object has no attribute 'xpeed'
+2019-11-04 13:24:31,523 ERROR    Error at run_client(): 'Ball' object has no attribute 'xpeed'
+2019-11-04 13:24:31 ERROR    Error at run_client(): 'Ball' object has no attribute 'xpeed'
+2019-11-04 13:26:52,316 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:26:52 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:27:02,334 INFO     Connection established with ('127.0.0.1', 57284)
+2019-11-04 13:27:02 INFO     Connection established with ('127.0.0.1', 57284)
+2019-11-04 13:27:06,078 INFO     Connection established with ('127.0.0.1', 57290)
+2019-11-04 13:27:06 INFO     Connection established with ('127.0.0.1', 57290)
+2019-11-04 13:27:06,375 ERROR    Error at run_client(): 'Ball' object has no attribute 'xpeed'
+2019-11-04 13:27:06 ERROR    Error at run_client(): 'Ball' object has no attribute 'xpeed'
+2019-11-04 13:27:07,093 ERROR    Error at run_client(): 'Ball' object has no attribute 'xpeed'
+2019-11-04 13:27:07 ERROR    Error at run_client(): 'Ball' object has no attribute 'xpeed'
+2019-11-04 13:27:35,719 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:27:35 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:27:39,265 INFO     Connection established with ('127.0.0.1', 57325)
+2019-11-04 13:27:39 INFO     Connection established with ('127.0.0.1', 57325)
+2019-11-04 13:27:42,817 INFO     Connection established with ('127.0.0.1', 57330)
+2019-11-04 13:27:42 INFO     Connection established with ('127.0.0.1', 57330)
+2019-11-04 13:27:51,197 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:27:51 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:27:51,217 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:27:51 ERROR    Error at run_client(): local variable 'yspeed' referenced before assignment
+2019-11-04 13:33:44,288 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:33:44 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:33:48,580 INFO     Connection established with ('127.0.0.1', 49459)
+2019-11-04 13:33:48 INFO     Connection established with ('127.0.0.1', 49459)
+2019-11-04 13:33:52,998 INFO     Connection established with ('127.0.0.1', 49464)
+2019-11-04 13:33:52 INFO     Connection established with ('127.0.0.1', 49464)
+2019-11-04 13:34:26,006 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 13:34:26 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 13:34:33,828 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:34:33 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:35:20,030 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:35:20 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:35:24,497 INFO     Connection established with ('127.0.0.1', 49547)
+2019-11-04 13:35:24 INFO     Connection established with ('127.0.0.1', 49547)
+2019-11-04 13:35:28,796 INFO     Connection established with ('127.0.0.1', 49552)
+2019-11-04 13:35:28 INFO     Connection established with ('127.0.0.1', 49552)
+2019-11-04 13:35:30,650 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 13:35:30 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 13:35:42,745 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:35:42 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:37:16,919 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:37:16 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:37:20,044 INFO     Connection established with ('127.0.0.1', 49721)
+2019-11-04 13:37:20 INFO     Connection established with ('127.0.0.1', 49721)
+2019-11-04 13:37:23,247 INFO     Connection established with ('127.0.0.1', 49726)
+2019-11-04 13:37:23 INFO     Connection established with ('127.0.0.1', 49726)
+2019-11-04 13:37:23,551 ERROR    Error at run_client(): name 'clock' is not defined
+2019-11-04 13:37:23 ERROR    Error at run_client(): name 'clock' is not defined
+2019-11-04 13:37:24,249 ERROR    Error at run_client(): name 'clock' is not defined
+2019-11-04 13:37:24 ERROR    Error at run_client(): name 'clock' is not defined
+2019-11-04 13:38:33,068 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:38:33 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 13:38:35,652 INFO     Connection established with ('127.0.0.1', 49828)
+2019-11-04 13:38:35 INFO     Connection established with ('127.0.0.1', 49828)
+2019-11-04 13:38:40,798 INFO     Connection established with ('127.0.0.1', 49839)
+2019-11-04 13:38:40 INFO     Connection established with ('127.0.0.1', 49839)
+2019-11-04 13:39:19,179 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 13:39:19 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-04 13:39:25,610 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 13:39:25 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 14:01:23,039 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 14:01:23 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 14:01:27,793 INFO     Connection established with ('127.0.0.1', 51975)
+2019-11-04 14:01:27 INFO     Connection established with ('127.0.0.1', 51975)
+2019-11-04 14:01:30,698 INFO     Connection established with ('127.0.0.1', 51980)
+2019-11-04 14:01:30 INFO     Connection established with ('127.0.0.1', 51980)
+2019-11-04 14:17:18,846 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 14:17:18 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 14:17:26,185 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 14:17:26 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 14:25:17,752 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 14:25:17 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 14:25:21,432 INFO     Connection established with ('127.0.0.1', 54825)
+2019-11-04 14:25:21 INFO     Connection established with ('127.0.0.1', 54825)
+2019-11-04 14:25:26,157 INFO     Connection established with ('127.0.0.1', 54834)
+2019-11-04 14:25:26 INFO     Connection established with ('127.0.0.1', 54834)
+2019-11-04 14:25:30,662 ERROR    Error at run_client(): name 'x' is not defined
+2019-11-04 14:25:30 ERROR    Error at run_client(): name 'x' is not defined
+2019-11-04 14:25:30,673 ERROR    Error at run_client(): name 'x' is not defined
+2019-11-04 14:25:30 ERROR    Error at run_client(): name 'x' is not defined
+2019-11-04 16:30:53,107 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 16:30:53 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-04 16:30:58,039 INFO     Connection established with ('127.0.0.1', 65285)
+2019-11-04 16:30:58 INFO     Connection established with ('127.0.0.1', 65285)
+2019-11-04 16:31:03,823 INFO     Connection established with ('127.0.0.1', 65287)
+2019-11-04 16:31:03 INFO     Connection established with ('127.0.0.1', 65287)
+2019-11-04 16:32:50,161 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 16:32:50 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 16:32:51,885 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-04 16:32:51 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host

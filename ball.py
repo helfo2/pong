@@ -25,7 +25,7 @@ class Ball():
         self.x = WINDOW_WIDTH/2
         self.y = WINDOW_HEIGHT/2
 
-        angle = uniform(-pi/4, pi/4)
+        angle = uniform(pi/4, -pi/4)
 
         self.xspeed = 5 * cos(angle)
         self.yspeed = 5 * sin(angle)
@@ -37,7 +37,7 @@ class Ball():
         pygame.draw.rect(window, self.color, self.rect)
 
     def get_pos(self):
-        return self.x, self.y
+        return [self.x, self.y]
 
     def update(self):
         self.x += self.xspeed
@@ -50,7 +50,7 @@ class Ball():
         paddle_width = PADDLE_SIZE[0]
 
         if (self.y - self.size < paddle_y + paddle_height/2) and (self.y + self.size > paddle_y - paddle_height/2) and self.x - self.size < paddle_x + paddle_width/2:
-            if x > paddle_x:
+            if self.x > paddle_x:
                 diff = self.y - (paddle_y - paddle_height/2)
                 rad = radians(45)
                 angle = interpolate(diff, 0, paddle_height, -rad, rad)
@@ -78,8 +78,8 @@ class Ball():
         left_score = 0
         right_score = 0
 
-        if self.y < 0 or self.y > WINDOW_HEIGHT:
-            yspeed *= -1
+        if self.y < 0 or self.y + self.size > WINDOW_HEIGHT:
+            self.yspeed *= -1
 
         if self.x - self.size > WINDOW_WIDTH:
             left_score += 1

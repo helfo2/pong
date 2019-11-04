@@ -3,7 +3,7 @@ from enum import Enum
 SERVER_IP = "127.0.0.1"
 PORT = 1235
 
-BUFF_SIZE = 2048
+BUFF_SIZE = 12
 
 """ Colors """
 WHITE = (255, 255, 255)
