@@ -114,18 +114,22 @@ class Ball():
         top1 = col.LEFT_PADDLE_TOP
         top2 = col.RIGHT_PADDLE_TOP
 
-        bottom1 = col.LEFT_PADDLE_BOTTOM
-        bottom2 = col.RIGHT_PADDLE_BOTTOM
-
         # check if ball intersects at the top edge
         if col.do_intersect(p1, q1, top1, top2):
             self.yspeed *= -1
             self.y = 0
 
+        p1 = [self.x, self.y + BALL_SIZE]
+        q1 = [nx, ny + BALL_SIZE]
+
+        bottom1 = col.LEFT_PADDLE_BOTTOM
+        bottom2 = col.RIGHT_PADDLE_BOTTOM
+
         # check if ball intersects at the bottom edge
         if col.do_intersect(p1, q1, bottom1, bottom2):
             self.yspeed *= -1
             self.y = WINDOW_HEIGHT-BALL_SIZE
+
 
         if self.x - self.size > WINDOW_WIDTH:
             left_score += 1
