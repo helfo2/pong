@@ -1,7 +1,10 @@
 from config import *
 from player import Player
 from network import Client
+from ball import Ball 
 import pygame
+
+FPS = 30
 
 pygame.init()
 
@@ -17,11 +20,12 @@ wait_text_rect.center = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2)
 def is_flag_pos(pos):
     return pos[0] == -1 and pos[1] == -1
 
-
-def redraw_window(player1, player2):
+def redraw_window(player1, player2, ball_pos):
     display_surface.fill(BLACK)
     player1.draw(display_surface)
     player2.draw(display_surface)
+    # Draws the ball
+    pygame.draw.rect(display_surface, WHITE, (ball_pos[0], ball_pos[1], BALL_SIZE, BALL_SIZE))
 
     pygame.display.update()
 
@@ -39,7 +43,8 @@ def main():
     wait = True
     while(wait):
         opposite_pos = client.recv_pos()
-
+        
+        # if opposite_pos is [-1,-1]
         if not is_flag_pos(opposite_pos):
             print("Wait stopped")
             wait = False 
@@ -64,7 +69,7 @@ def main():
     # Game event
     run = True
     while(run):
-        clock.tick(60)
+        dt = clock.tick(FPS)
 
         opposite_pos = client.send_pos(current_player.get_pos())
         print("player2_pos: ", opposite_pos)
@@ -75,11 +80,17 @@ def main():
                 run = False
                 pygame.quit()
 
-        current_player.move()
+        current_player.move(dt)
 
         print("player1_pos: ", current_player.get_pos())
 
-        redraw_window(current_player, opposite_player)
+        # Draw the net (not working)
+        #pygame.draw.line(display_surface, WHITE, [WINDOW_WIDTH/2, 0], [WINDOW_WIDTH/2, WINDOW_HEIGHT], 5)
+
+        ball_pos = client.recv_pos()
+        print("ball_pos = ", ball_pos)
+        
+        redraw_window(current_player, opposite_player, ball_pos)
 
 
 

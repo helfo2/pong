@@ -1,9 +1,9 @@
 from enum import Enum
 
-LOCALHOST = "127.0.0.1"
-PORT = 1236
+SERVER_IP = "127.0.0.1"
+PORT = 1235
 
-BUFF_SIZE = 2048
+BUFF_SIZE = 12
 
 """ Colors """
 WHITE = (255, 255, 255)
@@ -21,6 +21,9 @@ WINDOW_MARGIN = 20
 PADDLE_SIZE = [15,200]
 PADDLE_SPEED = 8
 
+""" Ball """
+BALL_SIZE = 20
+
 """ Initial locations """
 PLAYER_1_POS = [WINDOW_MARGIN, WINDOW_HEIGHT/2 - 100]
 PLAYER_2_POS = [WINDOW_WIDTH-WINDOW_MARGIN-PADDLE_SIZE[0], WINDOW_HEIGHT/2 - 100]
@@ -29,6 +32,8 @@ FLAG_POS = [-1,-1]
 """ Network """
 class MsgTypes(Enum):
     POS = 1
+    PADDLE_POS = 2
+    WAIT = 3
 
 """ Log """
 class LogLevels(Enum):

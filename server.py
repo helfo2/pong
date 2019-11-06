@@ -7,18 +7,26 @@ import threading
 from config import *
 from log import Log
 import sys
-from player import Player
 from packet import *
 import time
+from ball import Ball
+import collision
+import pygame 
 
 server_log = Log("server.log")
 
 players_pos = [PLAYER_1_POS, PLAYER_2_POS]
 
+player1_score = 0
+player2_score = 0
+
 player1_win = False
 player2_win = False
 
 PLAYER_COUNT = 0
+
+ball = Ball()
+clock = pygame.time.Clock()
 
 class PongServer():
     def __init__(self, ip, port):
@@ -54,10 +62,16 @@ class PongServer():
 
 
     def run_client(self, conn, player_num):
+        global ball
+        global clock
+
         print("player #:", player_num)
         print("player (x, y): {}".format(players_pos[player_num]))
         
+        time.sleep(1)
+
         initial_pos = players_pos[player_num]
+
         # After connect, send initial position
         conn.send(make_pkt(MsgTypes.POS.value, initial_pos))
 
@@ -73,9 +87,11 @@ class PongServer():
         reply = players_pos[not player_num]
         conn.send(make_pkt(MsgTypes.POS.value, reply))
 
-        # Starts the game
+        # Runs the game
         while True:
             try:
+                clock.tick(30)
+
                 data = unmake_pkt(MsgTypes.POS.value, conn.recv(BUFF_SIZE))
 
                 if not data:
@@ -84,23 +100,29 @@ class PongServer():
                     players_pos[player_num] = data
                 
                 reply = players_pos[not player_num]
-                conn.send(make_pkt(MsgTypes.POS.value, reply))
-
-
-                # if player_num == 1:
-                #     reply = players_pos[0]
-                # else:
-                #     reply = players_pos[1]
-
-                # print("Received: ", data)
                 print("Sending: ", reply)
+                conn.send(make_pkt(MsgTypes.POS.value, reply))
+                
+                # First, deal with collisions
+                ball.edges()
+                ball.check_paddle_left(players_pos[0][0], players_pos[0][1])
+                ball.check_paddle_right(players_pos[1][0], players_pos[1][1])
+
+                ball.update()
+
+                ball_pos = ball.get_pos()
+                print("server ball_pos = ", ball_pos)
+                conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
+
+                
+
             except Exception as e:
                 server_log.log(LogLevels.ERROR.value, "Error at run_client(): {}".format(e))
                 sys.exit(1)
             
 
 def main():
-    pongServer = PongServer(LOCALHOST, PORT)
+    pongServer = PongServer(SERVER_IP, PORT)
     pongServer.listen()
     
 
