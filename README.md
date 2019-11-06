@@ -1,4 +1,4 @@
-# pong
+# Distributed Pong
 Implementation of a distributed pong game.
 
 This project was created to challenge ourselves into better understanding networks, latency, collision and game development logic. It uses purely sockets in Python 3.8 along with Pygame 1.9.2 to draw objects on the screen surface.
