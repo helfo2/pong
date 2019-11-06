@@ -90,7 +90,7 @@ class PongServer():
         # Runs the game
         while True:
             try:
-                clock.tick(30)
+                dt = clock.tick(30)
 
                 data = unmake_pkt(MsgTypes.POS.value, conn.recv(BUFF_SIZE))
 
@@ -104,19 +104,29 @@ class PongServer():
                 conn.send(make_pkt(MsgTypes.POS.value, reply))
                 
                 # First, deal with collisions
-                ball.edges()
+                print("wtf")
+                nx, ny = ball.try_update(dt)
+
+                print("nx = ", nx)
+                print("ny = ", ny)
+
+                ball.edges(nx, ny)
                 ball.check_paddle_left(players_pos[0][0], players_pos[0][1])
                 ball.check_paddle_right(players_pos[1][0], players_pos[1][1])
 
-                ball.update()
+                ball.update(dt)
 
                 ball_pos = ball.get_pos()
                 print("server ball_pos = ", ball_pos)
                 conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
 
+            except KeyboardInterrupt as ke:
+                print("Finishing server...")
+                socket.close()
+                sys.exit(0)
                 
-
             except Exception as e:
+                print("Exception occurred at the server. Check logs")
                 server_log.log(LogLevels.ERROR.value, "Error at run_client(): {}".format(e))
                 sys.exit(1)
             
