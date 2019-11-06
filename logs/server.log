@@ -118,3 +118,93 @@
 2019-11-06 10:31:24 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
 2019-11-06 10:31:26,060 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
 2019-11-06 10:31:26 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 13:11:37,620 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 13:11:37 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 13:12:59,349 INFO     Connection established with ('127.0.0.1', 57185)
+2019-11-06 13:12:59 INFO     Connection established with ('127.0.0.1', 57185)
+2019-11-06 13:13:06,471 INFO     Connection established with ('127.0.0.1', 57190)
+2019-11-06 13:13:06 INFO     Connection established with ('127.0.0.1', 57190)
+2019-11-06 13:13:23,366 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 13:13:23 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 13:13:25,864 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 13:13:25 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 13:43:18,908 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 13:43:18 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 13:43:23,169 INFO     Connection established with ('127.0.0.1', 59228)
+2019-11-06 13:43:23 INFO     Connection established with ('127.0.0.1', 59228)
+2019-11-06 13:43:28,341 INFO     Connection established with ('127.0.0.1', 59233)
+2019-11-06 13:43:28 INFO     Connection established with ('127.0.0.1', 59233)
+2019-11-06 13:48:15,433 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 13:48:15 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 13:48:17,616 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 13:48:17 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 15:28:34,893 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 15:28:34 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 15:28:38,295 INFO     Connection established with ('127.0.0.1', 51682)
+2019-11-06 15:28:38 INFO     Connection established with ('127.0.0.1', 51682)
+2019-11-06 15:28:42,809 INFO     Connection established with ('127.0.0.1', 51686)
+2019-11-06 15:28:42 INFO     Connection established with ('127.0.0.1', 51686)
+2019-11-06 15:30:00,148 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 15:30:00 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 15:30:01,018 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 15:30:01 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 15:59:32,219 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 15:59:32 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 15:59:35,956 INFO     Connection established with ('127.0.0.1', 54271)
+2019-11-06 15:59:35 INFO     Connection established with ('127.0.0.1', 54271)
+2019-11-06 15:59:39,829 INFO     Connection established with ('127.0.0.1', 54277)
+2019-11-06 15:59:39 INFO     Connection established with ('127.0.0.1', 54277)
+2019-11-06 16:00:33,677 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:00:33 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:00:35,024 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:00:35 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:02:05,432 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 16:02:05 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 16:02:11,817 INFO     Connection established with ('127.0.0.1', 54482)
+2019-11-06 16:02:11 INFO     Connection established with ('127.0.0.1', 54482)
+2019-11-06 16:02:15,112 INFO     Connection established with ('127.0.0.1', 54489)
+2019-11-06 16:02:15 INFO     Connection established with ('127.0.0.1', 54489)
+2019-11-06 16:02:54,523 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:02:54 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:02:55,794 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:02:55 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:10:20,191 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 16:10:20 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 16:10:40,613 INFO     Connection established with ('127.0.0.1', 55414)
+2019-11-06 16:10:40 INFO     Connection established with ('127.0.0.1', 55414)
+2019-11-06 16:10:50,586 INFO     Connection established with ('127.0.0.1', 55425)
+2019-11-06 16:10:50 INFO     Connection established with ('127.0.0.1', 55425)
+2019-11-06 16:10:58,959 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:10:58 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:11:00,991 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:11:00 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:13:34,474 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 16:13:34 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 16:13:37,837 INFO     Connection established with ('127.0.0.1', 55650)
+2019-11-06 16:13:37 INFO     Connection established with ('127.0.0.1', 55650)
+2019-11-06 16:13:47,599 INFO     Connection established with ('127.0.0.1', 55664)
+2019-11-06 16:13:47 INFO     Connection established with ('127.0.0.1', 55664)
+2019-11-06 16:13:55,669 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:13:55 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:13:57,119 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:13:57 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:16:36,586 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 16:16:36 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 16:16:39,904 INFO     Connection established with ('127.0.0.1', 55858)
+2019-11-06 16:16:39 INFO     Connection established with ('127.0.0.1', 55858)
+2019-11-06 16:16:48,314 INFO     Connection established with ('127.0.0.1', 55861)
+2019-11-06 16:16:48 INFO     Connection established with ('127.0.0.1', 55861)
+2019-11-06 16:16:58,108 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:16:58 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:16:59,755 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:16:59 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:17:32,430 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 16:17:32 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-06 16:17:40,519 INFO     Connection established with ('127.0.0.1', 55908)
+2019-11-06 16:17:40 INFO     Connection established with ('127.0.0.1', 55908)
+2019-11-06 16:17:47,290 INFO     Connection established with ('127.0.0.1', 55912)
+2019-11-06 16:17:47 INFO     Connection established with ('127.0.0.1', 55912)
+2019-11-06 16:18:11,293 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:18:11 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:18:13,077 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-06 16:18:13 ERROR    Error at run_client(): [WinError 10054] An existing connection was forcibly closed by the remote host

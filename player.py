@@ -23,17 +23,17 @@ class Player():
         keys = pygame.key.get_pressed()
 
         if keys[pygame.K_UP]:
-            if (self.y - self.vel * dt > WINDOW_MARGIN):
+            if (self.y - self.vel * dt > 0):
                 self.y -= self.vel * dt
             else:
-                self.y = WINDOW_MARGIN
+                self.y = 0
 
 
         if keys[pygame.K_DOWN]:
-            if (self.y + self.vel * dt + self.height < WINDOW_HEIGHT-WINDOW_MARGIN):
+            if (self.y + self.vel * dt + self.height < WINDOW_HEIGHT):
                 self.y += self.vel * dt
             else:
-                self.y = WINDOW_HEIGHT-WINDOW_MARGIN - self.height
+                self.y = WINDOW_HEIGHT - self.height
 
         self.update_internal()
 

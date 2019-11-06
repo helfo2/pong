@@ -8,6 +8,12 @@ LEFT_PADDLE_BOTTOM = [WINDOW_MARGIN + PADDLE_SIZE[0], WINDOW_HEIGHT]
 RIGHT_PADDLE_TOP = [WINDOW_WIDTH - WINDOW_HEIGHT - PADDLE_SIZE[0], 0]
 RIGHT_PADDLE_BOTTOM = [WINDOW_WIDTH - WINDOW_MARGIN - PADDLE_SIZE[0], WINDOW_HEIGHT]
 
+LEFT_WALL_TOP = [0,0]
+LEFT_WALL_BOTTOM = [0,WINDOW_HEIGHT]
+
+RIGHT_WALL_TOP = [WINDOW_WIDTH,0]
+RIGHT_WALL_BOTTOM = [WINDOW_WIDTH,WINDOW_HEIGHT]
+
 def on_segment(p, q, r):
     """ If point q lies on segment pr """
     return q[0] <= max(p[0], r[0]) and q[0] >= min(p[0], r[0]) and q[1] <= max(p[1], r[1]) and q[1] >= min(p[1], r[1])

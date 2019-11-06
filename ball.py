@@ -130,6 +130,27 @@ class Ball():
             self.yspeed *= -1
             self.y = WINDOW_HEIGHT-BALL_SIZE
 
+        # p1 = [self.x, self.y]
+        # q1 = [nx, ny]
+
+        # left1 = col.LEFT_WALL_TOP
+        # left2 = col.LEFT_WALL_BOTTOM
+
+        # # check if ball goes through left wall
+        # if col.do_intersect(p1, q1, left1, left2):
+        #     left_score += 1
+        #     self.reset()
+
+        # p1 = [self.x + BALL_SIZE, self.y]
+        # q1 = [nx + BALL_SIZE, ny]
+
+        # right1 = col.RIGHT_WALL_TOP
+        # right2 = col.RIGHT_WALL_BOTTOM
+
+        # # check if ball goes through right wall
+        # if col.do_intersect(p1, q1, right1, right2):
+        #     right_score += 1
+        #     self.reset()
 
         if self.x - self.size > WINDOW_WIDTH:
             left_score += 1
