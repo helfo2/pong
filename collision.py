@@ -2,17 +2,53 @@ from math import *
 from random import *
 from config import *
 
-LEFT_PADDLE_TOP = [WINDOW_MARGIN + PADDLE_SIZE[0], 0]
-LEFT_PADDLE_BOTTOM = [WINDOW_MARGIN + PADDLE_SIZE[0], WINDOW_HEIGHT]
+LEFT_WINDOW_TOP = [WINDOW_MARGIN + PADDLE_SIZE[0], 0]
+LEFT_WINDOW_BOTTOM = [WINDOW_MARGIN + PADDLE_SIZE[0], WINDOW_HEIGHT]
 
-RIGHT_PADDLE_TOP = [WINDOW_WIDTH - WINDOW_HEIGHT - PADDLE_SIZE[0], 0]
-RIGHT_PADDLE_BOTTOM = [WINDOW_WIDTH - WINDOW_MARGIN - PADDLE_SIZE[0], WINDOW_HEIGHT]
+RIGHT_WINDOW_TOP = [WINDOW_WIDTH - WINDOW_MARGIN - PADDLE_SIZE[0], 0]
+RIGHT_WINDOW_BOTTOM = [WINDOW_WIDTH - WINDOW_MARGIN - PADDLE_SIZE[0], WINDOW_HEIGHT]
 
-LEFT_WALL_TOP = [0,0]
-LEFT_WALL_BOTTOM = [0,WINDOW_HEIGHT]
+# LEFT_WINDOW_TOP = [0, 0]
+# LEFT_WINDOW_BOTTOM = [0, WINDOW_HEIGHT]
 
-RIGHT_WALL_TOP = [WINDOW_WIDTH,0]
-RIGHT_WALL_BOTTOM = [WINDOW_WIDTH,WINDOW_HEIGHT]
+# RIGHT_WINDOW_TOP = [WINDOW_WIDTH, 0]
+# RIGHT_WINDOW_BOTTOM = [WINDOW_WIDTH, WINDOW_HEIGHT]
+
+# LEFT_WALL_TOP = [0,0]
+# LEFT_WALL_BOTTOM = [0,WINDOW_HEIGHT]
+
+# RIGHT_WALL_TOP = [WINDOW_WIDTH,0]
+# RIGHT_WALL_BOTTOM = [WINDOW_WIDTH,WINDOW_HEIGHT]
+
+
+def get_segment_intersection(p1_x, p1_y, p2_x, p2_y, q1_x, q1_y, q2_x, q2_y):
+    """ Returns point if the lines intersect, otherwise 0. Based on cross product
+
+    t = (q-p) x s / (r x s)
+    u = (q-p) x r / (r x s)
+
+    https://www.youtube.com/watch?v=c065KoXooSw
+    """
+
+    r_x = p2_x - p1_x
+    r_y = p2_y - p1_y
+    
+    s_x = q2_x - q1_x
+    s_y = q2_y - q1_y
+
+    s = (-r_y * (p1_x - q1_x) + r_x * (p1_y - q1_y)) / (-s_x * r_y + r_x * s_y)
+    t = ( s_x * (p1_y - q1_y) - s_y * (p1_x - q1_x)) / (-s_x * r_y + r_x * s_y)
+
+    if (s >= 0 and s <= 1 and t >= 0 and t <= 1):
+        # collision detected
+        i_x = p1_x + (t * r_x)
+        i_y = p1_y + (t * r_y)
+        
+        return [i_x, i_y]
+
+
+    return None # no collision
+
 
 def on_segment(p, q, r):
     """ If point q lies on segment pr """
