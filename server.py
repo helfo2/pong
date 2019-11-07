@@ -93,6 +93,23 @@ class PongServer():
             try:
                 dt = clock.tick(30)
 
+                # First, deal with collisions
+                nx, ny = ball.try_update(dt)
+
+                print("nx = ", nx)
+                print("ny = ", ny)
+
+                ball.edges(nx, ny)
+                
+                ball.check_paddle_left(players_pos[0][0], players_pos[0][1], nx, ny)
+                #ball.check_paddle_right(players_pos[1][0], players_pos[1][1])
+
+                ball.update(dt)
+
+                ball_pos = ball.get_pos()
+                print("server ball_pos = ", ball_pos)
+                conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
+                
                 data = unmake_pkt(MsgTypes.POS.value, conn.recv(BUFF_SIZE))
 
                 if not data:
@@ -104,21 +121,7 @@ class PongServer():
                 print("Sending: ", reply)
                 conn.send(make_pkt(MsgTypes.POS.value, reply))
                 
-                # First, deal with collisions
-                nx, ny = ball.try_update(dt)
-
-                print("nx = ", nx)
-                print("ny = ", ny)
-
-                ball.edges(nx, ny)
-                ball.check_paddle_left(players_pos[0][0], players_pos[0][1], nx, ny)
-                #ball.check_paddle_right(players_pos[1][0], players_pos[1][1])
-
-                ball.update(dt)
-
-                ball_pos = ball.get_pos()
-                print("server ball_pos = ", ball_pos)
-                conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
+                
 
             except socket.error as se:
                 if se.errno == errno.WSAECONNRESET:

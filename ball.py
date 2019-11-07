@@ -38,8 +38,8 @@ class Ball():
         return [self.x, self.y]
 
     def try_update(self, dt):
-        x = self.xspeed * dt
-        y = self.yspeed * dt
+        x = self.x + self.xspeed * dt
+        y = self.y + self.yspeed * dt
 
         return x, y
 
@@ -90,14 +90,17 @@ class Ball():
 
         collision_point = col.get_segment_intersection(self.x, self.y, nx, ny, paddle_x + paddle_width, paddle_y, paddle_x + paddle_width, paddle_y + paddle_height)
         if collision_point is not None:
-            print("collided with left paddle")
-            diff = collision_point[1] - (paddle_y - paddle_height)
-            rad = radians(-45)
-            angle = col.interpolate(diff, 0, paddle_height, -rad, rad)
-            self.xspeed = 0.2 * cos(angle)
-            self.yspeed = 0.2 * sin(angle)
+            # print("collided with left paddle")
+            # diff = collision_point[1] - (paddle_y - paddle_height)
+            # rad = radians(-45)
+            # angle = col.interpolate(diff, 0, paddle_height, -rad, rad)
+            # self.xspeed = 0.2 * cos(angle)
+            # self.yspeed = 0.2 * sin(angle)
 
-            self.x = paddle_x + paddle_width + self.size
+            # self.x = paddle_x + paddle_width + self.size
+
+            self.xspeed *= -1
+            #self.x = paddle_x + paddle_width + 1
 
             return True
 
@@ -143,12 +146,12 @@ class Ball():
         top2 = col.RIGHT_WINDOW_TOP
 
         # check if ball intersects at the top edge
-        #if col.do_intersect(p1, q1, top1, top2):
-        collision_point = col.get_segment_intersection(self.x, self.y, nx, ny, top1[0], top1[1], top2[0], top2[1])
-        if collision_point is not None:
+        if col.do_intersect(p1, q1, top1, top2):
+        #collision_point = col.get_segment_intersection(self.x, self.y, nx, ny, top1[0], top1[1], top2[0], top2[1])
+        #if collision_point is not None:
             print("top edge")
             self.yspeed *= -1
-            self.y = collision_point[1]
+            self.y = 1
 
             return True
 

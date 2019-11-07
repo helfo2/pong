@@ -75,6 +75,9 @@ def main():
     while(run):
         dt = clock.tick(FPS)
 
+        ball_pos = client.recv_pos()
+        print("ball_pos = ", ball_pos)
+        
         opposite_pos = client.send_pos(current_player.get_pos())
         print("player2_pos: ", opposite_pos)
         opposite_player.update(opposite_pos)
@@ -90,8 +93,7 @@ def main():
 
         
 
-        ball_pos = client.recv_pos()
-        print("ball_pos = ", ball_pos)
+        
         
         redraw_window(current_player, opposite_player, ball_pos)
 

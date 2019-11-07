@@ -36,6 +36,9 @@ def get_segment_intersection(p1_x, p1_y, p2_x, p2_y, q1_x, q1_y, q2_x, q2_y):
     s_x = q2_x - q1_x
     s_y = q2_y - q1_y
 
+    if (-s_x * r_y + r_x * s_y) == 0:
+        return None
+        
     s = (-r_y * (p1_x - q1_x) + r_x * (p1_y - q1_y)) / (-s_x * r_y + r_x * s_y)
     t = ( s_x * (p1_y - q1_y) - s_y * (p1_x - q1_x)) / (-s_x * r_y + r_x * s_y)
 

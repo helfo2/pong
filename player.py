@@ -26,14 +26,14 @@ class Player():
             if (self.y - self.vel * dt > 0):
                 self.y -= self.vel * dt
             else:
-                self.y = 0
+                self.y = 1
 
 
         if keys[pygame.K_DOWN]:
             if (self.y + self.vel * dt + self.height < WINDOW_HEIGHT):
                 self.y += self.vel * dt
             else:
-                self.y = WINDOW_HEIGHT - self.height
+                self.y = WINDOW_HEIGHT - self.height - 1
 
         self.update_internal()
 

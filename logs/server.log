@@ -128,3 +128,115 @@
 2019-11-07 18:36:35 WARNING  A player left the game
 2019-11-07 18:36:38,098 WARNING  A player left the game
 2019-11-07 18:36:38 WARNING  A player left the game
+2019-11-07 19:17:41,390 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:17:41 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:19:27,843 INFO     Connection established with ('127.0.0.1', 62628)
+2019-11-07 19:19:27 INFO     Connection established with ('127.0.0.1', 62628)
+2019-11-07 19:19:31,235 INFO     Connection established with ('127.0.0.1', 62632)
+2019-11-07 19:19:31 INFO     Connection established with ('127.0.0.1', 62632)
+2019-11-07 19:19:43,919 WARNING  A player left the game
+2019-11-07 19:19:43 WARNING  A player left the game
+2019-11-07 19:19:49,411 WARNING  A player left the game
+2019-11-07 19:19:49 WARNING  A player left the game
+2019-11-07 19:20:07,468 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:20:07 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:20:13,506 INFO     Connection established with ('127.0.0.1', 62692)
+2019-11-07 19:20:13 INFO     Connection established with ('127.0.0.1', 62692)
+2019-11-07 19:20:24,410 INFO     Connection established with ('127.0.0.1', 62710)
+2019-11-07 19:20:24 INFO     Connection established with ('127.0.0.1', 62710)
+2019-11-07 19:20:31,204 ERROR    Error at run_client(): float division by zero
+2019-11-07 19:20:31 ERROR    Error at run_client(): float division by zero
+2019-11-07 19:20:31,234 ERROR    Error at run_client(): float division by zero
+2019-11-07 19:20:31 ERROR    Error at run_client(): float division by zero
+2019-11-07 19:21:06,769 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:21:06 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:21:10,306 INFO     Connection established with ('127.0.0.1', 62785)
+2019-11-07 19:21:10 INFO     Connection established with ('127.0.0.1', 62785)
+2019-11-07 19:21:16,091 INFO     Connection established with ('127.0.0.1', 62792)
+2019-11-07 19:21:16 INFO     Connection established with ('127.0.0.1', 62792)
+2019-11-07 19:21:19,009 ERROR    Error at run_client(): float division by zero
+2019-11-07 19:21:19 ERROR    Error at run_client(): float division by zero
+2019-11-07 19:21:19,041 ERROR    Error at run_client(): float division by zero
+2019-11-07 19:21:19 ERROR    Error at run_client(): float division by zero
+2019-11-07 19:22:11,813 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:22:11 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:22:16,839 INFO     Connection established with ('127.0.0.1', 62878)
+2019-11-07 19:22:16 INFO     Connection established with ('127.0.0.1', 62878)
+2019-11-07 19:22:24,707 INFO     Connection established with ('127.0.0.1', 62890)
+2019-11-07 19:22:24 INFO     Connection established with ('127.0.0.1', 62890)
+2019-11-07 19:35:59,894 WARNING  A player left the game
+2019-11-07 19:35:59 WARNING  A player left the game
+2019-11-07 19:36:00,682 WARNING  A player left the game
+2019-11-07 19:36:00 WARNING  A player left the game
+2019-11-07 19:36:55,304 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:36:55 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:36:58,095 ERROR    Socket error while binding: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-11-07 19:36:58 ERROR    Socket error while binding: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-11-07 19:37:18,889 INFO     Connection established with ('127.0.0.1', 64081)
+2019-11-07 19:37:18 INFO     Connection established with ('127.0.0.1', 64081)
+2019-11-07 19:37:23,075 INFO     Connection established with ('127.0.0.1', 64083)
+2019-11-07 19:37:23 INFO     Connection established with ('127.0.0.1', 64083)
+2019-11-07 19:38:18,322 WARNING  A player left the game
+2019-11-07 19:38:18 WARNING  A player left the game
+2019-11-07 19:38:20,186 WARNING  A player left the game
+2019-11-07 19:38:20 WARNING  A player left the game
+2019-11-07 19:40:51,601 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:40:51 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:40:56,216 INFO     Connection established with ('127.0.0.1', 64370)
+2019-11-07 19:40:56 INFO     Connection established with ('127.0.0.1', 64370)
+2019-11-07 19:41:00,857 INFO     Connection established with ('127.0.0.1', 64377)
+2019-11-07 19:41:00 INFO     Connection established with ('127.0.0.1', 64377)
+2019-11-07 19:43:21,310 WARNING  A player left the game
+2019-11-07 19:43:21 WARNING  A player left the game
+2019-11-07 19:43:22,526 WARNING  A player left the game
+2019-11-07 19:43:22 WARNING  A player left the game
+2019-11-07 19:43:29,160 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:43:29 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:43:34,141 INFO     Connection established with ('127.0.0.1', 64553)
+2019-11-07 19:43:34 INFO     Connection established with ('127.0.0.1', 64553)
+2019-11-07 19:43:38,133 INFO     Connection established with ('127.0.0.1', 64555)
+2019-11-07 19:43:38 INFO     Connection established with ('127.0.0.1', 64555)
+2019-11-07 19:44:52,507 WARNING  A player left the game
+2019-11-07 19:44:52 WARNING  A player left the game
+2019-11-07 19:44:53,772 WARNING  A player left the game
+2019-11-07 19:44:53 WARNING  A player left the game
+2019-11-07 19:45:00,979 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:45:00 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:45:05,557 INFO     Connection established with ('127.0.0.1', 64673)
+2019-11-07 19:45:05 INFO     Connection established with ('127.0.0.1', 64673)
+2019-11-07 19:45:09,150 INFO     Connection established with ('127.0.0.1', 64678)
+2019-11-07 19:45:09 INFO     Connection established with ('127.0.0.1', 64678)
+2019-11-07 19:48:30,250 WARNING  A player left the game
+2019-11-07 19:48:30 WARNING  A player left the game
+2019-11-07 19:48:31,973 WARNING  A player left the game
+2019-11-07 19:48:31 WARNING  A player left the game
+2019-11-07 19:48:40,765 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:48:40 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:48:44,775 INFO     Connection established with ('127.0.0.1', 64953)
+2019-11-07 19:48:44 INFO     Connection established with ('127.0.0.1', 64953)
+2019-11-07 19:48:49,833 INFO     Connection established with ('127.0.0.1', 64965)
+2019-11-07 19:48:49 INFO     Connection established with ('127.0.0.1', 64965)
+2019-11-07 19:48:51,519 ERROR    Error at run_client(): float division by zero
+2019-11-07 19:48:51 ERROR    Error at run_client(): float division by zero
+2019-11-07 19:48:54,770 WARNING  A player left the game
+2019-11-07 19:48:54 WARNING  A player left the game
+2019-11-07 19:51:02,744 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:51:02 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:51:07,149 INFO     Connection established with ('127.0.0.1', 65142)
+2019-11-07 19:51:07 INFO     Connection established with ('127.0.0.1', 65142)
+2019-11-07 19:51:10,238 INFO     Connection established with ('127.0.0.1', 65147)
+2019-11-07 19:51:10 INFO     Connection established with ('127.0.0.1', 65147)
+2019-11-07 19:51:49,830 WARNING  A player left the game
+2019-11-07 19:51:49 WARNING  A player left the game
+2019-11-07 19:51:51,538 WARNING  A player left the game
+2019-11-07 19:51:51 WARNING  A player left the game
+2019-11-07 19:53:27,744 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:53:27 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-07 19:53:42,975 INFO     Connection established with ('127.0.0.1', 65339)
+2019-11-07 19:53:42 INFO     Connection established with ('127.0.0.1', 65339)
+2019-11-07 19:53:46,739 INFO     Connection established with ('127.0.0.1', 65345)
+2019-11-07 19:53:46 INFO     Connection established with ('127.0.0.1', 65345)
+2019-11-07 19:54:16,359 WARNING  A player left the game
+2019-11-07 19:54:16 WARNING  A player left the game
+2019-11-07 19:54:17,990 WARNING  A player left the game
+2019-11-07 19:54:17 WARNING  A player left the game
