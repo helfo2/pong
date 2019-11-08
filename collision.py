@@ -2,6 +2,8 @@ from math import *
 from random import *
 from config import *
 
+BOUNCE_ANGLE = radians(75)
+
 LEFT_WINDOW_TOP = [WINDOW_MARGIN + PADDLE_SIZE[0], 0]
 LEFT_WINDOW_BOTTOM = [WINDOW_MARGIN + PADDLE_SIZE[0], WINDOW_HEIGHT]
 
@@ -36,11 +38,12 @@ def get_segment_intersection(p1_x, p1_y, p2_x, p2_y, q1_x, q1_y, q2_x, q2_y):
     s_x = q2_x - q1_x
     s_y = q2_y - q1_y
 
-    if (-s_x * r_y + r_x * s_y) == 0:
+    cross_prod = -s_x * r_y + r_x * s_y
+    if cross_prod == 0: # collinear
         return None
-        
-    s = (-r_y * (p1_x - q1_x) + r_x * (p1_y - q1_y)) / (-s_x * r_y + r_x * s_y)
-    t = ( s_x * (p1_y - q1_y) - s_y * (p1_x - q1_x)) / (-s_x * r_y + r_x * s_y)
+
+    s = ( r_x * (p1_y - q1_y) - r_y * (p1_x - q1_x) ) / cross_prod
+    t = ( s_x * (p1_y - q1_y) - s_y * (p1_x - q1_x) ) / cross_prod
 
     if (s >= 0 and s <= 1 and t >= 0 and t <= 1):
         # collision detected

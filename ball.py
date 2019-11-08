@@ -28,7 +28,7 @@ class Ball():
         self.xspeed = 0.2 * cos(angle)
         self.yspeed = 0.2 * sin(angle)
 
-        if randrange(1) < 0.5:
+        if randrange(0, 1) < 0.5:
             self.xspeed *= -1
 
     def draw(self, window):
@@ -52,62 +52,26 @@ class Ball():
     def check_paddle_left(self, paddle_x, paddle_y, nx, ny):
         paddle_height = PADDLE_SIZE[1]
         paddle_width = PADDLE_SIZE[0]
-        
-        # if self.x < paddle_x + paddle_width and self.y < paddle_y + paddle_height and self.x + self.size > paddle_x and self.y + self.size > paddle_y:
-        #     diff = self.y - (paddle_y - paddle_height/2)
-        #     angle = interpolate(diff, 0, paddle_height, radians(225), radians(135))
-        #     self.xspeed = 5 * cos(angle)
-        #     self.yspeed = 5 * sin(angle)
-
-        #     self.x = paddle_x + paddle_width/2 + self.size
-        
-        # if (self.y - self.size < paddle_y + paddle_height/2) and (self.y + self.size > paddle_y - paddle_height/2) and self.x - self.size < paddle_x + paddle_width/2:
-        #     if self.x > paddle_x:
-        #         diff = self.y - (paddle_y - paddle_height/2)
-        #         rad = radians(45)
-        #         angle = interpolate(diff, 0, paddle_height, -rad, rad)
-        #         self.xspeed = 0.2 * cos(angle)
-        #         self.yspeed = 0.2 * sin(angle)
-
-        #         self.x = paddle_x + paddle_width/2 + self.size
-
-        # left_paddle_top = [paddle_x + paddle_width, paddle_y]
-        # left_paddle_bottom = [paddle_x + paddle_width, paddle_y + paddle_height]
-
-        # ball_left_top = [self.x, self.y]
-        # ball_left_bottom = [nx, ny]
-
-        # if col.do_intersect(left_paddle_top, left_paddle_bottom, ball_left_top, ball_left_bottom):
-        #     diff = (self.y - paddle_y) / paddle_height
-        #     rad = radians(70)
-        #     angle = col.interpolate(diff, 0, paddle_height, -rad, rad)
-        #     self.xspeed = 0.2 * cos(angle)
-        #     self.yspeed = 0.2 * sin(angle)
-
-        #     self.x = paddle_x + paddle_width/2 + self.size
-
-        #     return True
 
         collision_point = col.get_segment_intersection(self.x, self.y, nx, ny, paddle_x + paddle_width, paddle_y, paddle_x + paddle_width, paddle_y + paddle_height)
         if collision_point is not None:
-            # print("collided with left paddle")
-            # diff = collision_point[1] - (paddle_y - paddle_height)
-            # rad = radians(-45)
-            # angle = col.interpolate(diff, 0, paddle_height, -rad, rad)
-            # self.xspeed = 0.2 * cos(angle)
-            # self.yspeed = 0.2 * sin(angle)
+            # https://gamedev.stackexchange.com/questions/4253/in-pong-how-do-you-calculate-the-balls-direction-when-it-bounces-off-the-paddl
+            print("collided with left paddle")
 
-            # self.x = paddle_x + paddle_width + self.size
+            # take diff from middle of paddle
+            relative_intersection = (paddle_y + (paddle_height / 2)) - collision_point[1]
+            normalized = relative_intersection / (paddle_height/2)
 
-            self.xspeed *= -1
-            #self.x = paddle_x + paddle_width + 1
+            angle = normalized * col.BOUNCE_ANGLE # multiply by acceleration here
+    
+            self.xspeed = 0.2 * cos(angle)
+            self.yspeed = 0.2 * -sin(angle)
+
+            self.x = paddle_x + paddle_width
 
             return True
 
         return False
-
-
-
 
 
     def check_paddle_right(self, paddle_x, paddle_y):
