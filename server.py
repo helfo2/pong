@@ -102,14 +102,14 @@ class PongServer():
                 ball.edges(nx, ny)
                 
                 ball.check_paddle_left(players_pos[0][0], players_pos[0][1], nx, ny)
-                #ball.check_paddle_right(players_pos[1][0], players_pos[1][1])
+                ball.check_paddle_right(players_pos[1][0], players_pos[1][1], nx, ny)
 
                 ball.update(dt)
 
                 ball_pos = ball.get_pos()
                 print("server ball_pos = ", ball_pos)
                 conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
-                
+
                 data = unmake_pkt(MsgTypes.POS.value, conn.recv(BUFF_SIZE))
 
                 if not data:

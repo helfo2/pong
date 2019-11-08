@@ -62,7 +62,7 @@ class Ball():
             relative_intersection = (paddle_y + (paddle_height / 2)) - collision_point[1]
             normalized = relative_intersection / (paddle_height/2)
 
-            angle = normalized * col.BOUNCE_ANGLE # multiply by acceleration here
+            angle = normalized * col.BOUNCE_ANGLE_1 # multiply by acceleration here
     
             self.xspeed = 0.2 * cos(angle)
             self.yspeed = 0.2 * -sin(angle)
@@ -74,7 +74,7 @@ class Ball():
         return False
 
 
-    def check_paddle_right(self, paddle_x, paddle_y):
+    def check_paddle_right(self, paddle_x, paddle_y, nx, ny):
         paddle_height = PADDLE_SIZE[1]
         paddle_width = PADDLE_SIZE[0]
 
@@ -86,16 +86,34 @@ class Ball():
 
         #     self.x = paddle_x - paddle_width/2 - self.size
 
-        if self.y - self.size < paddle_y + paddle_height/2 and self.y + self.size > paddle_y - paddle_height/2 and (self.x + self.size > paddle_x - paddle_width/2):
-            if self.x < paddle_x:
-                diff = self.y - (paddle_y - paddle_height/2)
-                angle = col.interpolate(diff, 0, paddle_height, radians(225), radians(135))
-                self.xspeed = 0.2 * cos(angle)
-                self.yspeed = 0.2 * sin(angle)
+        # if self.y - self.size < paddle_y + paddle_height/2 and self.y + self.size > paddle_y - paddle_height/2 and (self.x + self.size > paddle_x - paddle_width/2):
+        #     if self.x < paddle_x:
+        #         diff = self.y - (paddle_y - paddle_height/2)
+        #         angle = col.interpolate(diff, 0, paddle_height, radians(225), radians(135))
+        #         self.xspeed = 0.2 * cos(angle)
+        #         self.yspeed = 0.2 * sin(angle)
 
-                self.x = paddle_x - paddle_width/2 - self.size
+        #         self.x = paddle_x - paddle_width/2 - self.size
 
-                return True
+        #         return True
+
+        collision_point = col.get_segment_intersection(self.x + BALL_SIZE, self.y, nx + BALL_SIZE, ny, paddle_x, paddle_y, paddle_x, paddle_y + paddle_height)
+        if collision_point is not None:
+            # https://gamedev.stackexchange.com/questions/4253/in-pong-how-do-you-calculate-the-balls-direction-when-it-bounces-off-the-paddl
+            print("collided with right paddle")
+
+            # take diff from middle of paddle
+            relative_intersection = (paddle_y + (paddle_height / 2)) - collision_point[1]
+            normalized = relative_intersection / (paddle_height/2)
+
+            angle = normalized * col.BOUNCE_ANGLE_1 # multiply by acceleration here
+
+            self.xspeed = 0.2 * -cos(angle)
+            self.yspeed = 0.2 * -sin(angle)
+
+            self.x = paddle_x - BALL_SIZE - paddle_width
+
+            return True
 
         return False
 
@@ -110,12 +128,12 @@ class Ball():
         top2 = col.RIGHT_WINDOW_TOP
 
         # check if ball intersects at the top edge
-        if col.do_intersect(p1, q1, top1, top2):
-        #collision_point = col.get_segment_intersection(self.x, self.y, nx, ny, top1[0], top1[1], top2[0], top2[1])
-        #if collision_point is not None:
+        #if col.do_intersect(p1, q1, top1, top2):
+        collision_point = col.get_segment_intersection(self.x, self.y, nx, ny, top1[0], top1[1], top2[0], top2[1])
+        if collision_point is not None:
             print("top edge")
             self.yspeed *= -1
-            self.y = 1
+            self.y = collision_point[1]+1
 
             return True
 
@@ -126,9 +144,12 @@ class Ball():
         bottom2 = col.RIGHT_WINDOW_BOTTOM
 
         # check if ball intersects at the bottom edge
-        if col.do_intersect(p1, q1, bottom1, bottom2):
+        collision_point = col.get_segment_intersection(self.x, self.y + BALL_SIZE, nx, ny + BALL_SIZE, bottom1[0], bottom1[1], bottom2[0], bottom2[1])
+        if collision_point is not None:
+        #if col.do_intersect(p1, q1, bottom1, bottom2):
+            print("collision with bottom")
             self.yspeed *= -1
-            self.y = WINDOW_HEIGHT-BALL_SIZE
+            self.y = collision_point[1]-BALL_SIZE
 
             return True
 
