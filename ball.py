@@ -62,7 +62,7 @@ class Ball():
             relative_intersection = (paddle_y + (paddle_height / 2)) - collision_point[1]
             normalized = relative_intersection / (paddle_height/2)
 
-            angle = normalized * col.BOUNCE_ANGLE_1 # multiply by acceleration here
+            angle = normalized * col.BOUNCE_ANGLE # multiply by acceleration here
     
             self.xspeed = 0.2 * cos(angle)
             self.yspeed = 0.2 * -sin(angle)
@@ -106,7 +106,7 @@ class Ball():
             relative_intersection = (paddle_y + (paddle_height / 2)) - collision_point[1]
             normalized = relative_intersection / (paddle_height/2)
 
-            angle = normalized * col.BOUNCE_ANGLE_1 # multiply by acceleration here
+            angle = normalized * col.BOUNCE_ANGLE # multiply by acceleration here
 
             self.xspeed = 0.2 * -cos(angle)
             self.yspeed = 0.2 * -sin(angle)

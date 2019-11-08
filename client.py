@@ -44,6 +44,9 @@ def main():
     print(current_player.get_pos())
 
     # Wait event
+    """ TODO
+        try to use select here to no avoid polling over the network
+    """
     wait = True
     while(wait):
         opposite_pos = client.recv_pos()
@@ -77,7 +80,7 @@ def main():
 
         ball_pos = client.recv_pos()
         print("ball_pos = ", ball_pos)
-        
+
         opposite_pos = client.send_pos(current_player.get_pos())
         print("player2_pos: ", opposite_pos)
         opposite_player.update(opposite_pos)
@@ -90,10 +93,6 @@ def main():
         current_player.move(dt)
 
         print("player1_pos: ", current_player.get_pos())
-
-        
-
-        
         
         redraw_window(current_player, opposite_player, ball_pos)
 
