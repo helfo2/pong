@@ -11,4 +11,4 @@ To use it, one should install Python 3.7+ and Pygame 1.9+ on the machine*, then 
 
 Feel free to use the code and enjoy playing!
 
-* Note that MACOSX systems may have an issue with SDL (on top of which pygame is developed). Make sure to use Python 3.7.2 and Pygame 1.9.2, because for newer versions this could make the screen blank - https://github.com/pygame/pygame/issues/555)
+*Note that MACOSX systems may have an issue with SDL (on top of which pygame is developed). Make sure to use Python 3.7.2 and Pygame 1.9.2, because for newer versions this could make the screen blank - https://github.com/pygame/pygame/issues/555)
