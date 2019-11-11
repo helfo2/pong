@@ -21,6 +21,7 @@ class Client():
             client_log.log(LogLevels.INFO.value, "Connected to {}".format(self.serverAddr))
 
             return self.recv_pos()
+
         except socket.error as e:
             client_log.log(LogLevels.ERROR.value, "Could not connect to {}: {}".format(self.serverAddr, e))
             sys.exit(1)
@@ -34,6 +35,7 @@ class Client():
 
             self.client.send(pkt)
             return unmake_pkt(MsgTypes.POS.value, self.client.recv(BUFF_SIZE))
+            
         except socket.error as e:
             client_log.log(LogLevels.ERROR.value, "Error sending {}: {}".format(data, e))
 

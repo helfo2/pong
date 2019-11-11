@@ -12,6 +12,7 @@ import time
 from ball import Ball
 import collision
 import pygame 
+import errno
 
 server_log = Log("server.log")
 
@@ -92,6 +93,23 @@ class PongServer():
             try:
                 dt = clock.tick(30)
 
+                # First, deal with collisions
+                nx, ny = ball.try_update(dt)
+
+                print("nx = ", nx)
+                print("ny = ", ny)
+
+                ball.edges(nx, ny)
+                
+                ball.check_paddle_left(players_pos[0][0], players_pos[0][1], nx, ny)
+                ball.check_paddle_right(players_pos[1][0], players_pos[1][1], nx, ny)
+
+                ball.update(dt)
+
+                ball_pos = ball.get_pos()
+                print("server ball_pos = ", ball_pos)
+                conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
+
                 data = unmake_pkt(MsgTypes.POS.value, conn.recv(BUFF_SIZE))
 
                 if not data:
@@ -103,24 +121,17 @@ class PongServer():
                 print("Sending: ", reply)
                 conn.send(make_pkt(MsgTypes.POS.value, reply))
                 
-                # First, deal with collisions
-                print("wtf")
-                nx, ny = ball.try_update(dt)
+                
 
-                print("nx = ", nx)
-                print("ny = ", ny)
+            except socket.error as se:
+                if se.errno == errno.WSAECONNRESET:
+                    server_log.log(LogLevels.WARNING.value, "A player left the game")
+                    sys.exit(0)
+                else:
+                    server_log.log(LogLevels.ERROR.value, "Socket error: {}".format(se))
+                    sys.exit(1)
 
-                ball.edges(nx, ny)
-                ball.check_paddle_left(players_pos[0][0], players_pos[0][1])
-                ball.check_paddle_right(players_pos[1][0], players_pos[1][1])
-
-                ball.update(dt)
-
-                ball_pos = ball.get_pos()
-                print("server ball_pos = ", ball_pos)
-                conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
-
-            except KeyboardInterrupt as ke:
+            except KeyboardInterrupt:
                 print("Finishing server...")
                 socket.close()
                 sys.exit(0)

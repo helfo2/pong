@@ -11,9 +11,9 @@ pygame.init()
 display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption("Client")
 
-font = pygame.font.Font("freesansbold.ttf", 32) 
+font = pygame.font.Font("arcadeclassic-font/ARCADECLASSIC.TTF", 32) 
   
-wait_text = font.render("Waiting for the other player...", True, WHITE, BLACK)   
+wait_text = font.render("Waiting for the other player...", True, BLACK, WHITE)   
 wait_text_rect = wait_text.get_rect()  
 wait_text_rect.center = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2) 
 
@@ -24,8 +24,12 @@ def redraw_window(player1, player2, ball_pos):
     display_surface.fill(BLACK)
     player1.draw(display_surface)
     player2.draw(display_surface)
-    # Draws the ball
+    
+    # draw the ball
     pygame.draw.rect(display_surface, WHITE, (ball_pos[0], ball_pos[1], BALL_SIZE, BALL_SIZE))
+
+    # draw the net
+    pygame.draw.line(display_surface, WHITE, [WINDOW_WIDTH/2, 0], [WINDOW_WIDTH/2, WINDOW_HEIGHT], 5)
 
     pygame.display.update()
 
@@ -40,6 +44,9 @@ def main():
     print(current_player.get_pos())
 
     # Wait event
+    """ TODO
+        try to use select here to no avoid polling over the network
+    """
     wait = True
     while(wait):
         opposite_pos = client.recv_pos()
@@ -71,6 +78,9 @@ def main():
     while(run):
         dt = clock.tick(FPS)
 
+        ball_pos = client.recv_pos()
+        print("ball_pos = ", ball_pos)
+
         opposite_pos = client.send_pos(current_player.get_pos())
         print("player2_pos: ", opposite_pos)
         opposite_player.update(opposite_pos)
@@ -83,12 +93,6 @@ def main():
         current_player.move(dt)
 
         print("player1_pos: ", current_player.get_pos())
-
-        # Draw the net (not working)
-        #pygame.draw.line(display_surface, WHITE, [WINDOW_WIDTH/2, 0], [WINDOW_WIDTH/2, WINDOW_HEIGHT], 5)
-
-        ball_pos = client.recv_pos()
-        print("ball_pos = ", ball_pos)
         
         redraw_window(current_player, opposite_player, ball_pos)
 

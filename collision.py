@@ -2,11 +2,46 @@ from math import *
 from random import *
 from config import *
 
-LEFT_PADDLE_TOP = [WINDOW_MARGIN + PADDLE_SIZE[0], 0]
-LEFT_PADDLE_BOTTOM = [WINDOW_MARGIN + PADDLE_SIZE[0], WINDOW_HEIGHT]
+BOUNCE_ANGLE = radians(75)
 
-RIGHT_PADDLE_TOP = [WINDOW_WIDTH - WINDOW_HEIGHT - PADDLE_SIZE[0], 0]
-RIGHT_PADDLE_BOTTOM = [WINDOW_WIDTH - WINDOW_MARGIN - PADDLE_SIZE[0], WINDOW_HEIGHT]
+LEFT_WINDOW_TOP = [0, 0]
+LEFT_WINDOW_BOTTOM = [0, WINDOW_HEIGHT]
+
+RIGHT_WINDOW_TOP = [WINDOW_WIDTH, 0]
+RIGHT_WINDOW_BOTTOM = [WINDOW_WIDTH, WINDOW_HEIGHT]
+
+def get_segment_intersection(p1_x, p1_y, p2_x, p2_y, q1_x, q1_y, q2_x, q2_y):
+    """ Returns point if the lines intersect, otherwise 0. Based on cross product
+
+    t = (q-p) x s / (r x s)
+    u = (q-p) x r / (r x s)
+
+    https://www.youtube.com/watch?v=c065KoXooSw
+    """
+
+    r_x = p2_x - p1_x
+    r_y = p2_y - p1_y
+    
+    s_x = q2_x - q1_x
+    s_y = q2_y - q1_y
+
+    cross_prod = -s_x * r_y + r_x * s_y
+    if cross_prod == 0: # collinear
+        return None
+
+    s = ( r_x * (p1_y - q1_y) - r_y * (p1_x - q1_x) ) / cross_prod
+    t = ( s_x * (p1_y - q1_y) - s_y * (p1_x - q1_x) ) / cross_prod
+
+    if (s >= 0 and s <= 1 and t >= 0 and t <= 1):
+        # collision detected
+        i_x = p1_x + (t * r_x)
+        i_y = p1_y + (t * r_y)
+        
+        return [i_x, i_y]
+
+
+    return None # no collision
+
 
 def on_segment(p, q, r):
     """ If point q lies on segment pr """
@@ -67,67 +102,3 @@ def interpolate(value, start, end, new_start, new_end):
 def create_line(point_a, point_b):
     """ encapsulates a segment from point_a.x, point_a.y to point_b.x, point_b.y """
     return [point_a, point_b]
-
-
-def edges(x, y):
-    left_score = 0
-    right_score = 0
-
-    if y < 0 or y > WINDOW_HEIGHT:
-        yspeed *= -1
-
-    if x - BALL_SIZE > WINDOW_WIDTH:
-        left_score += 1
-        reset_ball()
-
-    if x + BALL_SIZE < 0:
-        right_score += 1
-        reset_ball()
-
-    return (left_score, right_score)
-
-
-def reset_ball():
-    x = WINDOW_WIDTH/2
-    y = WINDOW_HEIGHT/2
-
-    angle = uniform(-pi/4, pi/4)
-
-    xspeed = 5 * cos(angle)
-    yspeed = 5 * sin(angle)
-
-    if randrange(1) < 0.5:
-        xspeed *= -1
-
-    return (x, y, xspeed, yspeed)
-
-
-def check_paddle_left(self, ball_x, ball_y, paddle_x, paddle_y):
-    paddle_height = PADDLE_SIZE[1]
-    paddle_width = PADDLE_SIZE[0]
-
-    if (ball_y - self.size < paddle_y + paddle_height/2) and (ball_y + self.size > paddle_y - paddle_height/2) and self.x - self.size < paddle_x + paddle_width/2:
-        if x > paddle_x:
-            diff = ball_y - (paddle_y - paddle_height/2)
-            rad = radians(45)
-            angle = interpolate(diff, 0, paddle_height, -rad, rad)
-            self.xspeed = 5 * cos(angle)
-            self.yspeed = 5 * sin(angle)
-
-            self.x = paddle_x + paddle_width/2 + self.size
-
-
-def check_paddle_right(self, paddle_x, paddle_y):
-    paddle_height = PADDLE_SIZE[1]
-    paddle_width = PADDLE_SIZE[0]
-
-    if self.y - self.size < paddle_y + paddle_height/2 and self.y + self.size > paddle_y - paddle_height/2 and (self.x + self.size > paddle_x - paddle_width/2):
-        if self.x < paddle_x:
-            diff = self.y - (paddle_y - paddle_height/2)
-            angle = interpolate(diff, 0, paddle_height, radians(225), radians(135))
-            self.xspeed = 5 * cos(angle)
-            self.yspeed = 5 * sin(angle)
-
-            self.x = paddle_x - paddle_width/2 - self.size
-
-
