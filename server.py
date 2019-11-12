@@ -12,7 +12,6 @@ import time
 from ball import Ball
 import collision
 import pygame 
-import errno
 
 server_log = Log("server.log")
 
@@ -63,6 +62,8 @@ class PongServer():
 
 
     def run_client(self, conn, player_num):
+        import errno
+
         global ball
         global clock
 
@@ -121,15 +122,9 @@ class PongServer():
                 print("Sending: ", reply)
                 conn.send(make_pkt(MsgTypes.POS.value, reply))
                 
-                
-
             except socket.error as se:
-                if se.errno == errno.WSAECONNRESET:
-                    server_log.log(LogLevels.WARNING.value, "A player left the game")
-                    sys.exit(0)
-                else:
-                    server_log.log(LogLevels.ERROR.value, "Socket error: {}".format(se))
-                    sys.exit(1)
+                server_log.log(LogLevels.ERROR.value, "Socket error: {}".format(se))
+                sys.exit(1)
 
             except KeyboardInterrupt:
                 print("Finishing server...")

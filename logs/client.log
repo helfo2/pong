@@ -1,0 +1,50 @@
+2019-11-08 20:51:06,592 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-08 20:51:06 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-08 20:51:11,965 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-08 20:51:11 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-08 23:22:36,065 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-08 23:22:36 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-08 23:22:46,287 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-08 23:22:46 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-08 23:34:05,993 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-08 23:34:05 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-08 23:34:11,258 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-08 23:34:11 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-08 23:34:15 INFO     Game finished
+2019-11-08 23:34:27 INFO     Game finished
+2019-11-09 12:28:35,688 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-09 12:28:35 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-09 12:28:46,225 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-09 12:28:46 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-09 12:29:25 INFO     Game finished
+2019-11-09 12:29:26 INFO     Game finished
+2019-11-09 13:28:46,532 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-09 13:28:46 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-09 13:29:02 INFO     Game finished while WAITING
+2019-11-09 13:29:29,516 ERROR    Could not connect to ('127.0.0.1', 1235): [Errno 61] Connection refused
+2019-11-09 13:29:29 ERROR    Could not connect to ('127.0.0.1', 1235): [Errno 61] Connection refused
+2019-11-09 13:29:38,891 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-09 13:29:38 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-09 13:30:06,605 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-09 13:30:06 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-10 11:21:24,671 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-10 11:21:24 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-10 11:21:40,724 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-10 11:21:40 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-10 11:21:51 INFO     Game finished
+2019-11-10 11:21:53 INFO     Game finished
+2019-11-10 11:28:14,787 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-10 11:28:14 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-10 11:28:22 INFO     Game finished while WAITING
+2019-11-10 11:37:11,352 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-10 11:37:11 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-10 11:37:19,163 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-10 11:37:19 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-10 11:37:39 INFO     Game finished
+2019-11-10 11:37:40 INFO     Game finished
+2019-11-12 09:41:48,997 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-12 09:41:48 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-12 09:41:58,320 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-12 09:41:58 INFO     Connected to ('127.0.0.1', 1235)
+2019-11-12 09:42:15 INFO     Game finished
+2019-11-12 09:42:17 INFO     Game finished

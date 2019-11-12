@@ -6,6 +6,7 @@ import pygame
 import math
 import random
 import collision as col
+from datetime import datetime
 
 pygame.init()
 
@@ -28,6 +29,7 @@ class Ball():
         self.xspeed = 0.2 * cos(angle)
         self.yspeed = 0.2 * sin(angle)
 
+        random.seed(datetime.now())
         if randrange(0, 1) < 0.5:
             self.xspeed *= -1
 

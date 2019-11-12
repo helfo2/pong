@@ -1,3 +1,7 @@
+""" Use python 3.7.2 64 bit on Mac OSX + pygame 1.9.2 
+    SDL issue: https://bugzilla.libsdl.org/show_bug.cgi?id=4272
+"""
+
 from enum import Enum
 
 SERVER_IP = "127.0.0.1"
