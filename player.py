@@ -5,7 +5,7 @@ import logging
 
 pygame.init()
 
-class Player():
+class Paddle():
     def __init__(self, position):
         self.x = position[0]
         self.y = position[1]

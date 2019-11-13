@@ -1,0 +1,96 @@
+2019-11-08 20:50:58,404 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-08 20:50:58 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-08 20:51:06,592 INFO     Connection established with ('127.0.0.1', 53530)
+2019-11-08 20:51:06 INFO     Connection established with ('127.0.0.1', 53530)
+2019-11-08 20:51:11,965 INFO     Connection established with ('127.0.0.1', 53531)
+2019-11-08 20:51:11 INFO     Connection established with ('127.0.0.1', 53531)
+2019-11-08 23:21:13,711 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-08 23:21:13 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-08 23:21:47,600 WARNING  Interrupted form keyboard
+2019-11-08 23:21:47 WARNING  Interrupted form keyboard
+2019-11-08 23:22:04,226 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-08 23:22:04 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-08 23:22:36,065 INFO     Connection established with ('127.0.0.1', 53732)
+2019-11-08 23:22:36 INFO     Connection established with ('127.0.0.1', 53732)
+2019-11-08 23:22:46,287 INFO     Connection established with ('127.0.0.1', 53734)
+2019-11-08 23:22:46 INFO     Connection established with ('127.0.0.1', 53734)
+2019-11-08 23:26:37,109 WARNING  Interrupted form keyboard
+2019-11-08 23:26:37 WARNING  Interrupted form keyboard
+2019-11-08 23:34:02,061 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-08 23:34:02 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-08 23:34:05,993 INFO     Connection established with ('127.0.0.1', 53914)
+2019-11-08 23:34:05 INFO     Connection established with ('127.0.0.1', 53914)
+2019-11-08 23:34:11,258 INFO     Connection established with ('127.0.0.1', 53916)
+2019-11-08 23:34:11 INFO     Connection established with ('127.0.0.1', 53916)
+2019-11-08 23:34:33,943 WARNING  Interrupted form keyboard
+2019-11-08 23:34:33 WARNING  Interrupted form keyboard
+2019-11-09 12:28:32,937 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-09 12:28:32 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-09 12:28:35,688 INFO     Connection established with ('127.0.0.1', 55347)
+2019-11-09 12:28:35 INFO     Connection established with ('127.0.0.1', 55347)
+2019-11-09 12:28:46,225 INFO     Connection established with ('127.0.0.1', 55348)
+2019-11-09 12:28:46 INFO     Connection established with ('127.0.0.1', 55348)
+2019-11-09 12:29:25,287 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-09 12:29:25 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-09 12:29:26,227 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-09 12:29:26 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-09 13:28:03,766 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-09 13:28:03 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-09 13:28:08,939 WARNING  Interrupted form keyboard
+2019-11-09 13:28:08 WARNING  Interrupted form keyboard
+2019-11-09 13:28:14,254 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-09 13:28:14 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-09 13:28:46,532 INFO     Connection established with ('127.0.0.1', 55985)
+2019-11-09 13:28:46 INFO     Connection established with ('127.0.0.1', 55985)
+2019-11-09 13:29:05,888 WARNING  Interrupted form keyboard
+2019-11-09 13:29:05 WARNING  Interrupted form keyboard
+2019-11-09 13:29:35,052 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-09 13:29:35 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-09 13:29:38,891 INFO     Connection established with ('127.0.0.1', 55992)
+2019-11-09 13:29:38 INFO     Connection established with ('127.0.0.1', 55992)
+2019-11-09 13:30:06,605 INFO     Connection established with ('127.0.0.1', 55993)
+2019-11-09 13:30:06 INFO     Connection established with ('127.0.0.1', 55993)
+2019-11-09 13:31:30,195 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-09 13:31:30 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-09 13:31:31,084 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-09 13:31:31 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-09 13:31:32,765 WARNING  Interrupted form keyboard
+2019-11-09 13:31:32 WARNING  Interrupted form keyboard
+2019-11-10 11:20:46,652 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-10 11:20:46 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-10 11:21:24,671 INFO     Connection established with ('127.0.0.1', 49756)
+2019-11-10 11:21:24 INFO     Connection established with ('127.0.0.1', 49756)
+2019-11-10 11:21:40,724 INFO     Connection established with ('127.0.0.1', 49757)
+2019-11-10 11:21:40 INFO     Connection established with ('127.0.0.1', 49757)
+2019-11-10 11:21:51,787 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-10 11:21:51 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-10 11:21:53,136 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-10 11:21:53 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-10 11:21:57,127 WARNING  Interrupted form keyboard
+2019-11-10 11:21:57 WARNING  Interrupted form keyboard
+2019-11-10 11:28:12,025 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-10 11:28:12 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-10 11:28:14,787 INFO     Connection established with ('127.0.0.1', 49816)
+2019-11-10 11:28:14 INFO     Connection established with ('127.0.0.1', 49816)
+2019-11-10 11:37:04,398 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-10 11:37:04 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-10 11:37:11,352 INFO     Connection established with ('127.0.0.1', 49878)
+2019-11-10 11:37:11 INFO     Connection established with ('127.0.0.1', 49878)
+2019-11-10 11:37:19,163 INFO     Connection established with ('127.0.0.1', 49880)
+2019-11-10 11:37:19 INFO     Connection established with ('127.0.0.1', 49880)
+2019-11-10 11:37:39,046 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-10 11:37:39 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-10 11:37:40,242 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-10 11:37:40 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-12 09:41:43,812 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-12 09:41:43 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-12 09:41:48,997 INFO     Connection established with ('127.0.0.1', 50203)
+2019-11-12 09:41:48 INFO     Connection established with ('127.0.0.1', 50203)
+2019-11-12 09:41:58,320 INFO     Connection established with ('127.0.0.1', 50204)
+2019-11-12 09:41:58 INFO     Connection established with ('127.0.0.1', 50204)
+2019-11-12 09:42:15,987 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-12 09:42:15 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-12 09:42:17,085 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-12 09:42:17 ERROR    Socket error: [Errno 54] Connection reset by peer
+2019-11-12 09:42:20,602 WARNING  Interrupted form keyboard
+2019-11-12 09:42:20 WARNING  Interrupted form keyboard

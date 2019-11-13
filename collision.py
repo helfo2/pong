@@ -99,6 +99,6 @@ def interpolate(value, start, end, new_start, new_end):
     return new_start + (new_end - new_start) * ((value - start) / (end - start))
 
 
-def create_line(point_a, point_b):
+def create_segment(point_a, point_b):
     """ encapsulates a segment from point_a.x, point_a.y to point_b.x, point_b.y """
     return [point_a, point_b]
