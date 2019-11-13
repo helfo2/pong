@@ -94,3 +94,43 @@
 2019-11-12 09:42:17 ERROR    Socket error: [Errno 54] Connection reset by peer
 2019-11-12 09:42:20,602 WARNING  Interrupted form keyboard
 2019-11-12 09:42:20 WARNING  Interrupted form keyboard
+2019-11-13 15:10:44,294 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-13 15:10:44 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-13 15:12:58,133 INFO     Connection established with ('127.0.0.1', 54319)
+2019-11-13 15:12:58 INFO     Connection established with ('127.0.0.1', 54319)
+2019-11-13 15:13:34,275 INFO     Connection established with ('127.0.0.1', 54372)
+2019-11-13 15:13:34 INFO     Connection established with ('127.0.0.1', 54372)
+2019-11-13 15:13:34,925 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-13 15:13:34 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-13 15:13:36,159 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-13 15:13:36 ERROR    Error at run_client(): unpack requires a buffer of 12 bytes
+2019-11-13 15:49:59,120 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-13 15:49:59 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-13 15:50:03,605 INFO     Connection established with ('127.0.0.1', 57859)
+2019-11-13 15:50:03 INFO     Connection established with ('127.0.0.1', 57859)
+2019-11-13 15:50:07,039 INFO     Connection established with ('127.0.0.1', 57864)
+2019-11-13 15:50:07 INFO     Connection established with ('127.0.0.1', 57864)
+2019-11-13 15:50:32,905 ERROR    Socket error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-13 15:50:32 ERROR    Socket error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-13 15:50:34,703 ERROR    Socket error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-13 15:50:34 ERROR    Socket error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-13 15:53:45,678 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-13 15:53:45 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-13 15:53:49,418 INFO     Connection established with ('127.0.0.1', 58220)
+2019-11-13 15:53:49 INFO     Connection established with ('127.0.0.1', 58220)
+2019-11-13 15:53:52,832 INFO     Connection established with ('127.0.0.1', 58224)
+2019-11-13 15:53:52 INFO     Connection established with ('127.0.0.1', 58224)
+2019-11-13 15:55:05,430 ERROR    Socket error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-13 15:55:05 ERROR    Socket error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-13 15:55:06,295 ERROR    Socket error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-13 15:55:06 ERROR    Socket error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-13 15:55:28,851 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-13 15:55:28 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-13 15:55:31,553 INFO     Connection established with ('127.0.0.1', 58338)
+2019-11-13 15:55:31 INFO     Connection established with ('127.0.0.1', 58338)
+2019-11-13 15:55:37,338 INFO     Connection established with ('127.0.0.1', 58350)
+2019-11-13 15:55:37 INFO     Connection established with ('127.0.0.1', 58350)
+2019-11-13 15:56:43,172 ERROR    Socket error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-13 15:56:43 ERROR    Socket error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-13 15:56:44,707 ERROR    Socket error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-13 15:56:44 ERROR    Socket error: [WinError 10054] An existing connection was forcibly closed by the remote host

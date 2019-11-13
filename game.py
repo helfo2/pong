@@ -23,7 +23,7 @@ wait_text_rect.center = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2)
 def is_flag_pos(pos):
     return pos[0] == -1 and pos[1] == -1
 
-def redraw_window(player1, player2, ball_pos):
+def redraw_window(player1, player2, ball_pos, score):
     display_surface.fill(BLACK)
     player1.draw(display_surface)
     player2.draw(display_surface)
@@ -33,6 +33,17 @@ def redraw_window(player1, player2, ball_pos):
 
     # draw the net
     pygame.draw.line(display_surface, WHITE, [WINDOW_WIDTH/2, 0], [WINDOW_WIDTH/2, WINDOW_HEIGHT], 5)
+
+    left_score_text = font.render(str(score[0]), True, WHITE, BLACK)   
+    left_score_text_rect = left_score_text.get_rect()  
+    left_score_text_rect.center = (WINDOW_WIDTH // 4, WINDOW_HEIGHT // 4) 
+
+    right_score_text = font.render(str(score[1]), True, WHITE, BLACK)
+    right_score_text_rect = right_score_text.get_rect()  
+    right_score_text_rect.center = (0.75 * WINDOW_WIDTH, WINDOW_HEIGHT // 4) 
+
+    display_surface.blit(left_score_text, left_score_text_rect)
+    display_surface.blit(right_score_text, right_score_text_rect)
 
     pygame.display.update()
 
@@ -57,7 +68,7 @@ def main():
         # if opposite_pos is [-1,-1]
         if not is_flag_pos(opposite_pos):
             print("Wait stopped")
-            wait = False 
+            wait = False
             break
 
         display_surface.fill(WHITE) 
@@ -85,6 +96,8 @@ def main():
         ball_pos = client.recv_pos()
         print("ball_pos = ", ball_pos)
 
+        score = client.recv_score()
+
         opposite_pos = client.send_pos(current_player.get_pos())
         print("player2_pos: ", opposite_pos)
         opposite_player.update(opposite_pos)
@@ -100,7 +113,7 @@ def main():
 
         print("player1_pos: ", current_player.get_pos())
         
-        redraw_window(current_player, opposite_player, ball_pos)
+        redraw_window(current_player, opposite_player, ball_pos, score)
 
 
 

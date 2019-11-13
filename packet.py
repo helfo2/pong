@@ -10,6 +10,9 @@ def make_pkt(msg_type, data):
     elif msg_type == MsgTypes.WAIT.value:
         return pack("HH", msg_type, 0x0)
 
+    elif msg_type == MsgTypes.SCORE.value:
+        return pack("HII", msg_type, data[0], data[1])
+
     else:
         logging.warning("make_pkt: Dont know the type of message")
 
@@ -23,6 +26,11 @@ def unmake_pkt(msg_type,  data):
         
     elif msg_type == MsgTypes.WAIT.value:
         flag = unpack("HH", msg_type, 0x0)
+
+    elif msg_type == MsgTypes.SCORE.value:
+        msg = unpack("HII", data)
+
+        return [msg[1], msg[2]] # left score and right score
 
     else:
         logging.warning("unmake_pkt: Dont know the type of message")

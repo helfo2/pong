@@ -28,6 +28,8 @@ PLAYER_COUNT = 0
 ball = Ball()
 clock = pygame.time.Clock()
 
+SCORE = [0, 0]
+
 class PongServer():
     def __init__(self, ip, port):
         self.ip = ip
@@ -59,6 +61,12 @@ class PongServer():
                 
         except KeyboardInterrupt:
             server_log.log(LogLevels.WARNING.value, "Interrupted form keyboard")
+
+    def update_score(self, score):
+        global SCORE
+
+        SCORE[0] += score[0]
+        SCORE[1] += score[1]
 
 
     def run_client(self, conn, player_num):
@@ -100,8 +108,10 @@ class PongServer():
                 print("nx = ", nx)
                 print("ny = ", ny)
 
-                ball.edges(nx, ny)
+                score = ball.edges(nx, ny)
                 
+                self.update_score(score)
+
                 ball.check_paddle_left(players_pos[0][0], players_pos[0][1], nx, ny)
                 ball.check_paddle_right(players_pos[1][0], players_pos[1][1], nx, ny)
 
@@ -110,6 +120,8 @@ class PongServer():
                 ball_pos = ball.get_pos()
                 print("server ball_pos = ", ball_pos)
                 conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
+
+                conn.send(make_pkt(MsgTypes.SCORE.value, SCORE))
 
                 data = unmake_pkt(MsgTypes.POS.value, conn.recv(BUFF_SIZE))
 

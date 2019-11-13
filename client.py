@@ -29,6 +29,9 @@ class Client():
     def recv_pos(self):
         return unmake_pkt(MsgTypes.POS.value, self.client.recv(BUFF_SIZE))
 
+    def recv_score(self):
+        return unmake_pkt(MsgTypes.SCORE.value, self.client.recv(BUFF_SIZE))
+
     def send_pos(self, data):
         try:
             pkt = make_pkt(MsgTypes.POS.value, data)
