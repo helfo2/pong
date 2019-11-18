@@ -105,6 +105,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+                client.close()
                 pygame.quit()
                 game_log.log(LogLevels.INFO.value, "Game finished")
                 exit(0)

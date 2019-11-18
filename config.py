@@ -39,6 +39,7 @@ class MsgTypes(Enum):
     PADDLE_POS = 2
     WAIT = 3
     SCORE = 4
+    START = 5
 
 """ Log """
 class LogLevels(Enum):

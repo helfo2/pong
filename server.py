@@ -135,17 +135,22 @@ class PongServer():
                 conn.send(make_pkt(MsgTypes.POS.value, reply))
                 
             except socket.error as se:
-                server_log.log(LogLevels.ERROR.value, "Socket error: {}".format(se))
+                if se.errno == errno.WSAECONNRESET:
+                    server_log.log(LogLevels.WARNING.value, "Client disconnected: {}".format(se))
+                else:
+                    server_log.log(LogLevels.ERROR.value, "Socket error: {}".format(se))
+                self.server.close()
                 sys.exit(1)
 
             except KeyboardInterrupt:
                 print("Finishing server...")
-                socket.close()
+                self.server.close()
                 sys.exit(0)
                 
             except Exception as e:
                 print("Exception occurred at the server. Check logs")
                 server_log.log(LogLevels.ERROR.value, "Error at run_client(): {}".format(e))
+                self.server.close()
                 sys.exit(1)
             
 

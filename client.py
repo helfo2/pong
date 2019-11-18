@@ -44,3 +44,6 @@ class Client():
 
     def get_player_initial_pos(self):
         return self.player_initial_pos
+
+    def close(self):
+        self.client.close()
