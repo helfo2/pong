@@ -8,3 +8,193 @@
 2019-11-18 12:09:16 WARNING  Client disconnected: [WinError 10054] An existing connection was forcibly closed by the remote host
 2019-11-18 12:09:34,550 WARNING  Client disconnected: [WinError 10054] An existing connection was forcibly closed by the remote host
 2019-11-18 12:09:34 WARNING  Client disconnected: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:12:48,576 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:12:48 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:12:58,202 INFO     Connection established with ('127.0.0.1', 54740)
+2019-11-18 12:12:58 INFO     Connection established with ('127.0.0.1', 54740)
+2019-11-18 12:13:18,558 INFO     Connection established with ('127.0.0.1', 54753)
+2019-11-18 12:13:18 INFO     Connection established with ('127.0.0.1', 54753)
+2019-11-18 12:13:37,755 ERROR    Socket error: [WinError 10053] An established connection was aborted by the software in your host machine
+2019-11-18 12:13:37 ERROR    Socket error: [WinError 10053] An established connection was aborted by the software in your host machine
+2019-11-18 12:13:39,429 ERROR    Socket error: [WinError 10053] An established connection was aborted by the software in your host machine
+2019-11-18 12:13:39 ERROR    Socket error: [WinError 10053] An established connection was aborted by the software in your host machine
+2019-11-18 12:20:47,875 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:20:47 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:20:51,046 INFO     Connection established with ('127.0.0.1', 55330)
+2019-11-18 12:20:51 INFO     Connection established with ('127.0.0.1', 55330)
+2019-11-18 12:20:55,182 INFO     Connection established with ('127.0.0.1', 55338)
+2019-11-18 12:20:55 INFO     Connection established with ('127.0.0.1', 55338)
+2019-11-18 12:20:59,388 WARNING  Client disconnected: <socket.socket fd=1484, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 55338)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:20:59 WARNING  Client disconnected: <socket.socket fd=1484, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 55338)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:21:00,869 WARNING  Client disconnected: <socket.socket fd=1508, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 55330)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:21:00 WARNING  Client disconnected: <socket.socket fd=1508, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 55330)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:22:46,142 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:22:46 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:22:49,046 INFO     Connection established with ('127.0.0.1', 55560)
+2019-11-18 12:22:49 INFO     Connection established with ('127.0.0.1', 55560)
+2019-11-18 12:22:52,200 INFO     Connection established with ('127.0.0.1', 55563)
+2019-11-18 12:22:52 INFO     Connection established with ('127.0.0.1', 55563)
+2019-11-18 12:23:06,508 WARNING  Client disconnected: <socket.socket fd=1392, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 55563)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:23:06 WARNING  Client disconnected: <socket.socket fd=1392, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 55563)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:23:08,516 ERROR    Socket error: [WinError 10053] An established connection was aborted by the software in your host machine
+2019-11-18 12:23:08 ERROR    Socket error: [WinError 10053] An established connection was aborted by the software in your host machine
+2019-11-18 12:25:26,435 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:25:26 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:25:28,601 INFO     Connection established with ('127.0.0.1', 55809)
+2019-11-18 12:25:28 INFO     Connection established with ('127.0.0.1', 55809)
+2019-11-18 12:25:32,018 INFO     Connection established with ('127.0.0.1', 55815)
+2019-11-18 12:25:32 INFO     Connection established with ('127.0.0.1', 55815)
+2019-11-18 12:25:35,884 WARNING  Client disconnected: <socket.socket fd=1500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 55815)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:25:35 WARNING  Client disconnected: <socket.socket fd=1500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 55815)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:25:37,765 WARNING  Client disconnected: <socket.socket fd=1520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 55809)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:25:37 WARNING  Client disconnected: <socket.socket fd=1520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 55809)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:27:01,487 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:27:01 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:27:05,108 INFO     Connection established with ('127.0.0.1', 55987)
+2019-11-18 12:27:05 INFO     Connection established with ('127.0.0.1', 55987)
+2019-11-18 12:27:11,380 INFO     Connection established with ('127.0.0.1', 56009)
+2019-11-18 12:27:11 INFO     Connection established with ('127.0.0.1', 56009)
+2019-11-18 12:27:41,788 WARNING  Client disconnected: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 56009)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:27:41 WARNING  Client disconnected: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 56009)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:27:42,828 WARNING  Client disconnected: <socket.socket fd=1540, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 55987)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:27:42 WARNING  Client disconnected: <socket.socket fd=1540, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 55987)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:28:54,518 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:28:54 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:28:57,915 INFO     Connection established with ('127.0.0.1', 56247)
+2019-11-18 12:28:57 INFO     Connection established with ('127.0.0.1', 56247)
+2019-11-18 12:29:01,838 INFO     Connection established with ('127.0.0.1', 56251)
+2019-11-18 12:29:01 INFO     Connection established with ('127.0.0.1', 56251)
+2019-11-18 12:29:33,204 WARNING  Client disconnected: <socket.socket fd=1536, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 56247)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:29:33 WARNING  Client disconnected: <socket.socket fd=1536, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 56247)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:29:37,124 WARNING  Client disconnected: <socket.socket fd=1540, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 56251)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:29:37 WARNING  Client disconnected: <socket.socket fd=1540, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 56251)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:40:31,506 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:40:31 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:40:34,475 INFO     Connection established with ('127.0.0.1', 57688)
+2019-11-18 12:40:34 INFO     Connection established with ('127.0.0.1', 57688)
+2019-11-18 12:40:37,744 INFO     Connection established with ('127.0.0.1', 57692)
+2019-11-18 12:40:37 INFO     Connection established with ('127.0.0.1', 57692)
+2019-11-18 12:41:05,044 WARNING  Client disconnected: <socket.socket fd=1412, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57688)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:41:05 WARNING  Client disconnected: <socket.socket fd=1412, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57688)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:41:07,698 WARNING  Client disconnected: <socket.socket fd=1588, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57692)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:41:07 WARNING  Client disconnected: <socket.socket fd=1588, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57692)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:42:38,600 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:42:38 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:42:42,820 INFO     Connection established with ('127.0.0.1', 57886)
+2019-11-18 12:42:42 INFO     Connection established with ('127.0.0.1', 57886)
+2019-11-18 12:42:46,985 INFO     Connection established with ('127.0.0.1', 57893)
+2019-11-18 12:42:46 INFO     Connection established with ('127.0.0.1', 57893)
+2019-11-18 12:43:15,067 WARNING  Client disconnected: <socket.socket fd=1516, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57893)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:43:15 WARNING  Client disconnected: <socket.socket fd=1516, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57893)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:43:16,555 WARNING  Client disconnected: <socket.socket fd=1584, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57886)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:43:16 WARNING  Client disconnected: <socket.socket fd=1584, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57886)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:56:03,462 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:56:03 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:56:06,968 INFO     Connection established with ('127.0.0.1', 59128)
+2019-11-18 12:56:06 INFO     Connection established with ('127.0.0.1', 59128)
+2019-11-18 12:56:10,308 INFO     Connection established with ('127.0.0.1', 59133)
+2019-11-18 12:56:10 INFO     Connection established with ('127.0.0.1', 59133)
+2019-11-18 12:56:25,737 WARNING  Client disconnected: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 59133)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:56:25 WARNING  Client disconnected: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 59133)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:56:28,938 WARNING  Client disconnected: <socket.socket fd=1516, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 59128)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:56:28 WARNING  Client disconnected: <socket.socket fd=1516, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 59128)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:56:57,507 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:56:57 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:57:00,088 INFO     Connection established with ('127.0.0.1', 59183)
+2019-11-18 12:57:00 INFO     Connection established with ('127.0.0.1', 59183)
+2019-11-18 12:57:03,608 INFO     Connection established with ('127.0.0.1', 59190)
+2019-11-18 12:57:03 INFO     Connection established with ('127.0.0.1', 59190)
+2019-11-18 12:57:06,274 WARNING  Client disconnected: <socket.socket fd=1544, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 59190)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:57:06 WARNING  Client disconnected: <socket.socket fd=1544, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 59190)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:57:07,138 WARNING  Client disconnected: <socket.socket fd=1508, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 59183)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:57:07 WARNING  Client disconnected: <socket.socket fd=1508, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 59183)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:58:46,102 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:58:46 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 12:58:49,126 INFO     Connection established with ('127.0.0.1', 59546)
+2019-11-18 12:58:49 INFO     Connection established with ('127.0.0.1', 59546)
+2019-11-18 12:58:53,046 INFO     Connection established with ('127.0.0.1', 59556)
+2019-11-18 12:58:53 INFO     Connection established with ('127.0.0.1', 59556)
+2019-11-18 12:59:10,113 WARNING  Client disconnected: <socket.socket fd=1524, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 59556)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:59:10 WARNING  Client disconnected: <socket.socket fd=1524, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 59556)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 12:59:12,505 ERROR    Socket error: [WinError 10053] An established connection was aborted by the software in your host machine
+2019-11-18 12:59:12 ERROR    Socket error: [WinError 10053] An established connection was aborted by the software in your host machine
+2019-11-18 13:35:25,411 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 13:35:25 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 13:35:28,968 INFO     Connection established with ('127.0.0.1', 63727)
+2019-11-18 13:35:28 INFO     Connection established with ('127.0.0.1', 63727)
+2019-11-18 13:35:33,152 INFO     Connection established with ('127.0.0.1', 63733)
+2019-11-18 13:35:33 INFO     Connection established with ('127.0.0.1', 63733)
+2019-11-18 13:35:52,655 WARNING  Client disconnected: <socket.socket fd=1520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 63733)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:35:52 WARNING  Client disconnected: <socket.socket fd=1520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 63733)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:35:54,087 WARNING  Client disconnected: <socket.socket fd=1544, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 63727)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:35:54 WARNING  Client disconnected: <socket.socket fd=1544, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 63727)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:37:50,896 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 13:37:50 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 13:37:53,516 INFO     Connection established with ('127.0.0.1', 63957)
+2019-11-18 13:37:53 INFO     Connection established with ('127.0.0.1', 63957)
+2019-11-18 13:37:57,678 INFO     Connection established with ('127.0.0.1', 63964)
+2019-11-18 13:37:57 INFO     Connection established with ('127.0.0.1', 63964)
+2019-11-18 13:40:50,055 WARNING  Client disconnected: <socket.socket fd=1564, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 63957)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:40:50 WARNING  Client disconnected: <socket.socket fd=1564, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 63957)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:40:52,438 WARNING  Client disconnected: <socket.socket fd=1508, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 63964)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:40:52 WARNING  Client disconnected: <socket.socket fd=1508, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 63964)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:49:06,317 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 13:49:06 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 13:49:12,281 INFO     Connection established with ('127.0.0.1', 65166)
+2019-11-18 13:49:12 INFO     Connection established with ('127.0.0.1', 65166)
+2019-11-18 13:49:17,187 INFO     Connection established with ('127.0.0.1', 65173)
+2019-11-18 13:49:17 INFO     Connection established with ('127.0.0.1', 65173)
+2019-11-18 13:49:55,926 WARNING  Client disconnected: <socket.socket fd=1572, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 65173)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:49:55 WARNING  Client disconnected: <socket.socket fd=1572, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 65173)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:49:58,646 ERROR    Socket error: [WinError 10053] An established connection was aborted by the software in your host machine
+2019-11-18 13:49:58 ERROR    Socket error: [WinError 10053] An established connection was aborted by the software in your host machine
+2019-11-18 13:54:08,209 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 13:54:08 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 13:54:12,074 INFO     Connection established with ('127.0.0.1', 49254)
+2019-11-18 13:54:12 INFO     Connection established with ('127.0.0.1', 49254)
+2019-11-18 13:54:16,394 INFO     Connection established with ('127.0.0.1', 49271)
+2019-11-18 13:54:16 INFO     Connection established with ('127.0.0.1', 49271)
+2019-11-18 13:54:49,381 WARNING  Client disconnected: <socket.socket fd=1544, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 49271)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:54:49 WARNING  Client disconnected: <socket.socket fd=1544, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 49271)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:54:50,646 WARNING  Client disconnected: <socket.socket fd=1496, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 49254)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 13:54:50 WARNING  Client disconnected: <socket.socket fd=1496, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 49254)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 14:10:32,362 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 14:10:32 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 14:10:34,455 INFO     Connection established with ('127.0.0.1', 56582)
+2019-11-18 14:10:34 INFO     Connection established with ('127.0.0.1', 56582)
+2019-11-18 14:10:40,090 INFO     Connection established with ('127.0.0.1', 56589)
+2019-11-18 14:10:40 INFO     Connection established with ('127.0.0.1', 56589)
+2019-11-18 14:13:42,459 WARNING  Client disconnected: <socket.socket fd=1404, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 56589)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 14:13:42 WARNING  Client disconnected: <socket.socket fd=1404, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 56589)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 14:13:43,763 WARNING  Client disconnected: <socket.socket fd=1572, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 56582)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 14:13:43 WARNING  Client disconnected: <socket.socket fd=1572, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 56582)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 14:16:25,836 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 14:16:25 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 14:16:29,427 INFO     Connection established with ('127.0.0.1', 57068)
+2019-11-18 14:16:29 INFO     Connection established with ('127.0.0.1', 57068)
+2019-11-18 14:16:32,748 INFO     Connection established with ('127.0.0.1', 57072)
+2019-11-18 14:16:32 INFO     Connection established with ('127.0.0.1', 57072)
+2019-11-18 14:16:32,985 ERROR    Error at run_client(): 'NoneType' object is not subscriptable
+2019-11-18 14:16:32 ERROR    Error at run_client(): 'NoneType' object is not subscriptable
+2019-11-18 14:16:33,775 ERROR    Error at run_client(): 'NoneType' object is not subscriptable
+2019-11-18 14:16:33 ERROR    Error at run_client(): 'NoneType' object is not subscriptable
+2019-11-18 14:16:51,605 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 14:16:51 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 14:16:54,419 INFO     Connection established with ('127.0.0.1', 57102)
+2019-11-18 14:16:54 INFO     Connection established with ('127.0.0.1', 57102)
+2019-11-18 14:16:57,694 INFO     Connection established with ('127.0.0.1', 57107)
+2019-11-18 14:16:57 INFO     Connection established with ('127.0.0.1', 57107)
+2019-11-18 14:17:40,867 WARNING  Client disconnected: <socket.socket fd=1516, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57107)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 14:17:40 WARNING  Client disconnected: <socket.socket fd=1516, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57107)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 14:17:42,019 WARNING  Client disconnected: <socket.socket fd=1544, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57102)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 14:17:42 WARNING  Client disconnected: <socket.socket fd=1544, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57102)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 14:18:28,632 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 14:18:28 INFO     Initialized PONG server at 127.0.0.1:1235
+2019-11-18 14:18:31,746 INFO     Connection established with ('127.0.0.1', 57247)
+2019-11-18 14:18:31 INFO     Connection established with ('127.0.0.1', 57247)
+2019-11-18 14:18:35,898 INFO     Connection established with ('127.0.0.1', 57256)
+2019-11-18 14:18:35 INFO     Connection established with ('127.0.0.1', 57256)
+2019-11-18 14:19:11,851 WARNING  Client disconnected: <socket.socket fd=1496, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57256)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 14:19:11 WARNING  Client disconnected: <socket.socket fd=1496, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57256)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 14:19:13,779 WARNING  Client disconnected: <socket.socket fd=1556, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57247)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-18 14:19:13 WARNING  Client disconnected: <socket.socket fd=1556, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1235), raddr=('127.0.0.1', 57247)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host

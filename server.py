@@ -74,6 +74,7 @@ class PongServer():
 
         global ball
         global clock
+        global SCORE
 
         print("player #:", player_num)
         print("player (x, y): {}".format(players_pos[player_num]))
@@ -108,10 +109,6 @@ class PongServer():
                 print("nx = ", nx)
                 print("ny = ", ny)
 
-                score = ball.edges(nx, ny)
-                
-                self.update_score(score)
-
                 ball.check_paddle_left(players_pos[0][0], players_pos[0][1], nx, ny)
                 ball.check_paddle_right(players_pos[1][0], players_pos[1][1], nx, ny)
 
@@ -121,12 +118,16 @@ class PongServer():
                 print("server ball_pos = ", ball_pos)
                 conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
 
+                score = ball.edges(nx, ny)
+                
+                self.update_score(score)
+
                 conn.send(make_pkt(MsgTypes.SCORE.value, SCORE))
 
                 data = unmake_pkt(MsgTypes.POS.value, conn.recv(BUFF_SIZE))
 
                 if not data:
-                    server_log.log(LogLevels.WARNING.value, "Client {} disconnected".format(conn))
+                    server_log.log(LogLevels.WARNING.value, "Client {} disconnected with no data".format(conn))
                 else:
                     players_pos[player_num] = data
                 
@@ -136,14 +137,14 @@ class PongServer():
                 
             except socket.error as se:
                 if se.errno == errno.WSAECONNRESET:
-                    server_log.log(LogLevels.WARNING.value, "Client disconnected: {}".format(se))
+                    server_log.log(LogLevels.WARNING.value, "Client disconnected: {} | Exception: {}".format(conn, se))
                 else:
                     server_log.log(LogLevels.ERROR.value, "Socket error: {}".format(se))
                 self.server.close()
                 sys.exit(1)
 
             except KeyboardInterrupt:
-                print("Finishing server...")
+                print("Finishing server from Keyboard...")
                 self.server.close()
                 sys.exit(0)
                 

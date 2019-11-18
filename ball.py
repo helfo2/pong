@@ -10,6 +10,8 @@ from datetime import datetime
 
 pygame.init()
 
+random.seed(datetime.now())
+
 class Ball():
     def __init__(self):
         self.x = 0
@@ -29,7 +31,6 @@ class Ball():
         self.xspeed = 0.2 * cos(angle)
         self.yspeed = 0.2 * sin(angle)
 
-        random.seed(datetime.now())
         if randrange(0, 1) < 0.5:
             self.xspeed *= -1
 
@@ -107,6 +108,9 @@ class Ball():
         top1 = col.LEFT_WINDOW_TOP
         top2 = col.RIGHT_WINDOW_TOP
 
+        bottom1 = col.LEFT_WINDOW_BOTTOM
+        bottom2 = col.RIGHT_WINDOW_BOTTOM
+
         # check if ball intersects at the top edge
         collision_point = col.get_segment_intersection(self.x, self.y, nx, ny, top1[0], top1[1], top2[0], top2[1])
         if collision_point is not None:
@@ -115,52 +119,43 @@ class Ball():
             self.y = collision_point[1]+1
 
             return [0, 0]
-
-        p1 = [self.x, self.y + BALL_SIZE]
-        q1 = [nx, ny + BALL_SIZE]
-
-        bottom1 = col.LEFT_WINDOW_BOTTOM
-        bottom2 = col.RIGHT_WINDOW_BOTTOM
-
-        # check if ball intersects at the bottom edge
-        collision_point = col.get_segment_intersection(self.x, self.y + BALL_SIZE, nx, ny + BALL_SIZE, bottom1[0], bottom1[1], bottom2[0], bottom2[1])
-        if collision_point is not None:
-            print("collision with bottom")
+        elif ny <= 0:
+            print("top edge")
             self.yspeed *= -1
-            self.y = collision_point[1]-BALL_SIZE
+            self.y = 1
 
             return [0, 0]
 
-        # p1 = [self.x, self.y]
-        # q1 = [nx, ny]
+        # check if ball intersects at the bottom edge
+        collision_point = col.get_segment_intersection(self.x, self.y, nx, ny + BALL_SIZE, bottom1[0], bottom1[1], bottom2[0], bottom2[1])
+        if collision_point is not None:
+            print("collision with bottom")
+            self.yspeed *= -1
+            self.y = collision_point[1]-BALL_SIZE-1
 
-        # left1 = col.LEFT_WALL_TOP
-        # left2 = col.LEFT_WALL_BOTTOM
+            return [0, 0]
+        elif ny >= WINDOW_HEIGHT:
+            self.yspeed *= -1
+            self.y = WINDOW_HEIGHT-BALL_SIZE-1
 
-        # # check if ball goes through left wall
-        # if col.do_intersect(p1, q1, left1, left2):
-        #     left_score += 1
-        #     self.reset()
+            return [0, 0]
 
-        # p1 = [self.x + BALL_SIZE, self.y]
-        # q1 = [nx + BALL_SIZE, ny]
-
-        # right1 = col.RIGHT_WALL_TOP
-        # right2 = col.RIGHT_WALL_BOTTOM
-
-        # # check if ball goes through right wall
-        # if col.do_intersect(p1, q1, right1, right2):
-        #     right_score += 1
-        #     self.reset()
-
-        if self.x - self.size > WINDOW_WIDTH:
+        
+        # check if ball intersects at the right edge
+        #collision_point = col.get_segment_intersection(self.x + BALL_SIZE, self.y, nx + BALL_SIZE, ny, top2[0], top2[1], bottom2[0], bottom2[1])
+        #if collision_point is not None:
+        if nx + BALL_SIZE >= WINDOW_WIDTH-WINDOW_MARGIN:
             # left player scored
+            print("OOOOOOOOOOO")
             left_score += 1
             self.reset()
 
             return [1, 0]
 
-        if self.x + self.size < 0:
+        # check if ball intersects at the left edge
+        #collision_point = col.get_segment_intersection(self.x, self.y, nx, ny, top1[0], top1[1], bottom1[0], bottom1[1])
+        #if collision_point is not None:
+        if nx <= WINDOW_MARGIN:
             # right player scored
             right_score += 1
             self.reset()

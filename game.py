@@ -16,7 +16,7 @@ pygame.display.set_caption("Client")
 
 font = pygame.font.Font("arcadeclassic-font/ARCADECLASSIC.TTF", 32) 
   
-wait_text = font.render("Waiting for the other player...", True, BLACK, WHITE)   
+wait_text = font.render("waiting", True, BLACK, WHITE)
 wait_text_rect = wait_text.get_rect()  
 wait_text_rect.center = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2) 
 
