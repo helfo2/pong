@@ -1,136 +1,41 @@
-2019-11-18 12:02:55,510 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:02:55 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:03:01,694 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:03:01 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:03:07 INFO     Game finished
-2019-11-18 12:03:09 INFO     Game finished
-2019-11-18 12:06:39,920 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:06:39 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:06:43,834 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:06:43 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:06:48 INFO     Game finished
-2019-11-18 12:06:50 INFO     Game finished
-2019-11-18 12:07:36,483 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:07:36 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:07:40,103 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:07:40 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:07:45 INFO     Game finished
-2019-11-18 12:07:46 INFO     Game finished
-2019-11-18 12:09:08,643 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:09:08 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:09:13,119 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:09:13 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:09:16 INFO     Game finished
-2019-11-18 12:09:34 INFO     Game finished
-2019-11-18 12:12:58,202 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:12:58 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:13:18,558 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:13:18 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:13:37 INFO     Game finished
-2019-11-18 12:13:39 INFO     Game finished
-2019-11-18 12:20:51,046 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:20:51 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:20:55,182 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:20:55 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:20:59 INFO     Game finished
-2019-11-18 12:21:01 INFO     Game finished
-2019-11-18 12:22:49,046 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:22:49 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:22:52,200 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:22:52 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:23:06 INFO     Game finished
-2019-11-18 12:23:08 INFO     Game finished
-2019-11-18 12:25:28,601 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:25:28 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:25:32,018 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:25:32 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:25:36 INFO     Game finished
-2019-11-18 12:25:38 INFO     Game finished
-2019-11-18 12:27:05,108 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:27:05 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:27:11,380 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:27:11 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:27:42 INFO     Game finished
-2019-11-18 12:27:43 INFO     Game finished
-2019-11-18 12:28:57,915 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:28:57 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:29:01,838 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:29:01 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:29:33 INFO     Game finished
-2019-11-18 12:29:37 INFO     Game finished
-2019-11-18 12:40:34,475 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:40:34 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:40:37,744 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:40:37 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:41:05 INFO     Game finished
-2019-11-18 12:41:07 INFO     Game finished
-2019-11-18 12:42:42,820 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:42:42 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:42:46,985 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:42:46 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:43:15 INFO     Game finished
-2019-11-18 12:43:16 INFO     Game finished
-2019-11-18 12:56:06,969 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:56:06 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:56:10,308 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:56:10 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:56:26 INFO     Game finished
-2019-11-18 12:56:29 INFO     Game finished
-2019-11-18 12:57:00,089 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:57:00 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:57:03,608 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:57:03 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:57:06 INFO     Game finished
-2019-11-18 12:57:07 INFO     Game finished
-2019-11-18 12:58:49,126 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:58:49 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:58:53,046 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:58:53 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 12:59:10 INFO     Game finished
-2019-11-18 12:59:12 INFO     Game finished
-2019-11-18 13:35:28,968 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:35:28 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:35:33,152 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:35:33 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:35:53 INFO     Game finished
-2019-11-18 13:35:54 INFO     Game finished
-2019-11-18 13:37:53,517 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:37:53 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:37:57,678 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:37:57 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:40:50 INFO     Game finished
-2019-11-18 13:40:52 INFO     Game finished
-2019-11-18 13:49:12,281 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:49:12 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:49:17,187 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:49:17 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:49:56 INFO     Game finished
-2019-11-18 13:49:58 INFO     Game finished
-2019-11-18 13:54:12,074 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:54:12 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:54:16,394 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:54:16 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 13:54:49 INFO     Game finished
-2019-11-18 13:54:50 INFO     Game finished
-2019-11-18 14:10:34,455 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:10:34 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:10:40,090 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:10:40 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:13:42 INFO     Game finished
-2019-11-18 14:13:44 INFO     Game finished
-2019-11-18 14:16:29,426 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:16:29 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:16:32,747 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:16:32 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:16:54,420 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:16:54 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:16:57,694 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:16:57 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:17:41 INFO     Game finished
-2019-11-18 14:17:42 INFO     Game finished
-2019-11-18 14:18:31,746 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:18:31 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:18:35,898 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:18:35 INFO     Connected to ('127.0.0.1', 1235)
-2019-11-18 14:19:12 INFO     Game finished
-2019-11-18 14:19:14 INFO     Game finished
+2019-11-22 18:20:31,253 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 18:20:31 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 18:20:32 WARNING  unmake_pkt: Don't know the type of message
+2019-11-22 18:22:52,999 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 18:22:52 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 18:22:54 WARNING  unmake_pkt: Don't know the type of message
+2019-11-22 18:31:44,005 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 18:31:44 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 18:32:11,766 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 18:32:11 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 18:32:12 WARNING  unmake_pkt: Don't know the type of message
+2019-11-22 19:04:51,224 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 19:04:51 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 19:04:52 ERROR    unmake_pkt: Don't know the type of message
+2019-11-22 19:35:09,635 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 19:35:09 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 19:35:10 ERROR    unmake_pkt: Don't know the type of message
+2019-11-22 19:37:13,334 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 19:37:13 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 19:37:14 ERROR    unmake_pkt: Don't know the type of message
+2019-11-22 19:48:40,230 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 19:48:40 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 19:48:41 ERROR    unmake_pkt: Don't know the type of message
+2019-11-22 19:54:29,931 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 19:54:29 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 19:54:30 ERROR    unmake_pkt: Don't know the type of message
+2019-11-22 19:55:48,063 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 19:55:48 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 19:55:49 ERROR    unmake_pkt: Don't know the type of message
+2019-11-22 20:05:54,964 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 20:05:54 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 20:06:52,098 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 20:06:52 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 20:06:53 ERROR    unmake_pkt: Don't know the type of message
+2019-11-22 20:08:31,012 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 20:08:31 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 20:08:32 ERROR    unmake_pkt: Don't know the type of message
+2019-11-22 20:09:21,961 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 20:09:21 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 20:09:34,644 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-22 20:09:34 INFO     Connected to ('127.0.0.1', 60000)

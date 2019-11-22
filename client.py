@@ -1,46 +1,67 @@
 import socket
 from log import Log
-from config import *
+import config
 import struct
 import sys
-from packet import *
+import packet
 
 client_log = Log("client.log")
 
 class Client():
     def __init__(self):
+        self.serverAddr = (config.SERVER_IP, config.PORT)
         self.client = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
-        self.serverAddr = (SERVER_IP, PORT)
-
+        
         self.player_initial_pos = self.connect()
 
     def connect(self):
         try:
             self.client.connect(self.serverAddr)
 
-            client_log.log(LogLevels.INFO.value, "Connected to {}".format(self.serverAddr))
+            client_log.log(config.LogLevels.INFO.value, "Connected to {}".format(self.serverAddr))
 
-            return self.recv_pos()
+            return self.recv_msg()
 
         except socket.error as e:
-            client_log.log(LogLevels.ERROR.value, "Could not connect to {}: {}".format(self.serverAddr, e))
+            client_log.log(config.LogLevels.ERROR.value, "Could not connect to {}: {}".format(self.serverAddr, e))
             sys.exit(1)
 
-    def recv_pos(self):
-        return unmake_pkt(MsgTypes.POS.value, self.client.recv(BUFF_SIZE))
+    def recv_msg(self):
+        # raw_msg = self.recv_all(2)
+        # if not raw_msg:
+        #     return None
 
-    def recv_score(self):
-        return unmake_pkt(MsgTypes.SCORE.value, self.client.recv(BUFF_SIZE))
+        # msg_type = struct.unpack("H", raw_msg)[0]
+
+        # msg_sz = packet.msg_size_from_type(msg_type)
+
+        # msg = self.recv_all(msg_sz)
+
+        return packet.unmake_pkt(self.client.recv(config.BUFF_SIZE))
+
+    def recv_all(self, n):
+        data = bytearray()
+
+        while len(data) < n:
+            packet = self.client.recv(n-len(data))
+            print("packet ", packet)
+            if not packet:
+                return None
+
+            data.extend(packet)
+
+        return data
+
 
     def send_pos(self, data):
         try:
-            pkt = make_pkt(MsgTypes.POS.value, data)
+            pkt = packet.make_pkt(config.MsgTypes.POS.value, data)
 
             self.client.send(pkt)
-            return unmake_pkt(MsgTypes.POS.value, self.client.recv(BUFF_SIZE))
+            return self.recv_msg()
             
         except socket.error as e:
-            client_log.log(LogLevels.ERROR.value, "Error sending {}: {}".format(data, e))
+            client_log.log(config.LogLevels.ERROR.value, "Error sending {}: {}".format(data, e))
 
     def get_player_initial_pos(self):
         return self.player_initial_pos

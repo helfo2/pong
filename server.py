@@ -15,6 +15,11 @@ import pygame
 
 server_log = Log("server.log")
 
+""" Initial locations """
+PLAYER_1_POS = [float(WINDOW_MARGIN), float(WINDOW_HEIGHT/2 - 100)]
+PLAYER_2_POS = [float(WINDOW_WIDTH-WINDOW_MARGIN-PADDLE_SIZE[0]), float(WINDOW_HEIGHT/2 - 100)]
+FLAG_POS = [-1.0,-1.0]
+
 players_pos = [PLAYER_1_POS, PLAYER_2_POS]
 
 player1_score = 0
@@ -48,10 +53,13 @@ class PongServer():
     def listen(self):
         global PLAYER_COUNT
 
+        server_log.log(LogLevels.INFO.value, "Listening...")
+
         try:
             run = True
             while run:
                 conn, addr = self.server.accept()
+                server_log.log(LogLevels.INFO.value, "Accepted connection")
                 PLAYER_COUNT += 1
                 
                 server_log.log(LogLevels.INFO.value, "Connection established with {}".format(addr))
@@ -67,6 +75,13 @@ class PongServer():
 
         SCORE[0] += score[0]
         SCORE[1] += score[1]
+
+    def game_end(self):
+        return SCORE[0] == 15 or SCORE[1] == 15
+
+    def send(self):
+        pass
+
 
 
     def run_client(self, conn, player_num):
@@ -84,6 +99,7 @@ class PongServer():
         initial_pos = players_pos[player_num]
 
         # After connect, send initial position
+        print("sending initial position of ", initial_pos)
         conn.send(make_pkt(MsgTypes.POS.value, initial_pos))
 
         # # Send a flag packet for synchronization
@@ -102,6 +118,9 @@ class PongServer():
         while True:
             try:
                 dt = clock.tick(30)
+
+                # if self.game_end():
+                #     conn.send()
 
                 # First, deal with collisions
                 nx, ny = ball.try_update(dt)
@@ -124,7 +143,7 @@ class PongServer():
 
                 conn.send(make_pkt(MsgTypes.SCORE.value, SCORE))
 
-                data = unmake_pkt(MsgTypes.POS.value, conn.recv(BUFF_SIZE))
+                data = unmake_pkt(conn.recv(BUFF_SIZE))
 
                 if not data:
                     server_log.log(LogLevels.WARNING.value, "Client {} disconnected with no data".format(conn))
@@ -140,6 +159,7 @@ class PongServer():
                     server_log.log(LogLevels.WARNING.value, "Client disconnected: {} | Exception: {}".format(conn, se))
                 else:
                     server_log.log(LogLevels.ERROR.value, "Socket error: {}".format(se))
+                conn.close()
                 self.server.close()
                 sys.exit(1)
 
@@ -153,7 +173,7 @@ class PongServer():
                 server_log.log(LogLevels.ERROR.value, "Error at run_client(): {}".format(e))
                 self.server.close()
                 sys.exit(1)
-            
+
 
 def main():
     pongServer = PongServer(SERVER_IP, PORT)

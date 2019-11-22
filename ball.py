@@ -1,12 +1,13 @@
-from config import *
-from math import *
-from random import *
+import config
+import math
+import random
 from log import Log
 import pygame
 import math
 import random
 import collision as col
 from datetime import datetime
+import sys
 
 pygame.init()
 
@@ -16,26 +17,26 @@ class Ball():
     def __init__(self):
         self.x = 0
         self.y = 0
-        self.size = BALL_SIZE
-        self.color = WHITE
+        self.size = 10
+        self.speed = 0.2
         self.rect = (self.x, self.y, self.size, self.size)
 
         self.reset()
         
     def reset(self):
-        self.x = WINDOW_WIDTH/2
-        self.y = WINDOW_HEIGHT/2
+        self.x = config.WINDOW_WIDTH/2
+        self.y = config.WINDOW_HEIGHT/2
 
-        angle = uniform(pi/4, -pi/4)
+        angle = random.uniform(math.pi/4, -math.pi/4)
 
-        self.xspeed = 0.2 * cos(angle)
-        self.yspeed = 0.2 * sin(angle)
+        self.xspeed = self.speed * math.cos(angle)
+        self.yspeed = self.speed * math.sin(angle)
 
-        if randrange(0, 1) < 0.5:
+        if random.randrange(0, 1) < 0.5:
             self.xspeed *= -1
 
     def draw(self, window):
-        pygame.draw.rect(window, self.color, self.rect)
+        pygame.draw.rect(window, (255,255,255), self.rect)
 
     def get_pos(self):
         return [self.x, self.y]
@@ -53,8 +54,8 @@ class Ball():
         self.rect = (self.x, self.y, self.size, self.size)
 
     def check_paddle_left(self, paddle_x, paddle_y, nx, ny):
-        paddle_height = PADDLE_SIZE[1]
-        paddle_width = PADDLE_SIZE[0]
+        paddle_height = config.PADDLE_SIZE[1]
+        paddle_width = config.PADDLE_SIZE[0]
 
         collision_point = col.get_segment_intersection(self.x, self.y, nx, ny, paddle_x + paddle_width, paddle_y, paddle_x + paddle_width, paddle_y + paddle_height)
         if collision_point is not None:
@@ -67,8 +68,8 @@ class Ball():
 
             angle = normalized * col.BOUNCE_ANGLE # multiply by acceleration here
     
-            self.xspeed = 0.2 * cos(angle)
-            self.yspeed = 0.2 * -sin(angle)
+            self.xspeed = self.speed * math.cos(angle)
+            self.yspeed = self.speed * -math.sin(angle)
 
             self.x = paddle_x + paddle_width
 
@@ -78,10 +79,10 @@ class Ball():
 
 
     def check_paddle_right(self, paddle_x, paddle_y, nx, ny):
-        paddle_height = PADDLE_SIZE[1]
-        paddle_width = PADDLE_SIZE[0]
+        paddle_height = config.PADDLE_SIZE[1]
+        paddle_width = config.PADDLE_SIZE[0]
 
-        collision_point = col.get_segment_intersection(self.x + BALL_SIZE, self.y, nx + BALL_SIZE, ny, paddle_x, paddle_y, paddle_x, paddle_y + paddle_height)
+        collision_point = col.get_segment_intersection(self.x + self.size, self.y, nx + self.size, ny, paddle_x, paddle_y, paddle_x, paddle_y + paddle_height)
         if collision_point is not None:
             # https://gamedev.stackexchange.com/questions/4253/in-pong-how-do-you-calculate-the-balls-direction-when-it-bounces-off-the-paddl
             print("collided with right paddle")
@@ -92,10 +93,10 @@ class Ball():
 
             angle = normalized * col.BOUNCE_ANGLE # multiply by acceleration here
 
-            self.xspeed = 0.2 * -cos(angle)
-            self.yspeed = 0.2 * -sin(angle)
+            self.xspeed = self.speed * -math.cos(angle)
+            self.yspeed = self.speed * -math.sin(angle)
 
-            self.x = paddle_x - BALL_SIZE - paddle_width
+            self.x = paddle_x - self.size - paddle_width
 
             return True
 
@@ -127,38 +128,36 @@ class Ball():
             return [0, 0]
 
         # check if ball intersects at the bottom edge
-        collision_point = col.get_segment_intersection(self.x, self.y, nx, ny + BALL_SIZE, bottom1[0], bottom1[1], bottom2[0], bottom2[1])
+        collision_point = col.get_segment_intersection(self.x, self.y, nx, ny + self.size, bottom1[0], bottom1[1], bottom2[0], bottom2[1])
         if collision_point is not None:
             print("collision with bottom")
             self.yspeed *= -1
-            self.y = collision_point[1]-BALL_SIZE-1
+            self.y = collision_point[1]-self.size-1
 
             return [0, 0]
-        elif ny >= WINDOW_HEIGHT:
+        elif ny >= config.WINDOW_HEIGHT:
             self.yspeed *= -1
-            self.y = WINDOW_HEIGHT-BALL_SIZE-1
+            self.y = config.WINDOW_HEIGHT-self.size-1
 
             return [0, 0]
 
         
         # check if ball intersects at the right edge
-        #collision_point = col.get_segment_intersection(self.x + BALL_SIZE, self.y, nx + BALL_SIZE, ny, top2[0], top2[1], bottom2[0], bottom2[1])
-        #if collision_point is not None:
-        if nx + BALL_SIZE >= WINDOW_WIDTH-WINDOW_MARGIN:
+        if nx + self.size >= config.WINDOW_WIDTH-config.WINDOW_MARGIN:
             # left player scored
-            print("OOOOOOOOOOO")
             left_score += 1
             self.reset()
-
+            print("left player scored")
+            sys.exit(1)
             return [1, 0]
-
+        
         # check if ball intersects at the left edge
-        #collision_point = col.get_segment_intersection(self.x, self.y, nx, ny, top1[0], top1[1], bottom1[0], bottom1[1])
-        #if collision_point is not None:
-        if nx <= WINDOW_MARGIN:
+        if nx <= config.WINDOW_MARGIN:
             # right player scored
             right_score += 1
             self.reset()
+            print("roght player scored")
+            sys.exit(1)
 
             return [0, 1]
 

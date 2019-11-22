@@ -5,16 +5,12 @@
 from enum import Enum
 
 SERVER_IP = "127.0.0.1"
-PORT = 1235
+PORT = 60000
 
-BUFF_SIZE = 12
-
-""" Colors """
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
+# 2 bytes message type +
+# 4 bytes float / int +
+# 4 bytes float / int
+BUFF_SIZE = 10
 
 """ Window """
 WINDOW_WIDTH = 1024
@@ -25,13 +21,10 @@ WINDOW_MARGIN = 20
 PADDLE_SIZE = [10,140]
 PADDLE_SPEED = 8
 
-""" Ball """
+""" Ball DO NEED THAT """
 BALL_SIZE = 10
 
-""" Initial locations """
-PLAYER_1_POS = [WINDOW_MARGIN, WINDOW_HEIGHT/2 - 100]
-PLAYER_2_POS = [WINDOW_WIDTH-WINDOW_MARGIN-PADDLE_SIZE[0], WINDOW_HEIGHT/2 - 100]
-FLAG_POS = [-1,-1]
+
 
 """ Network """
 class MsgTypes(Enum):
@@ -40,6 +33,7 @@ class MsgTypes(Enum):
     WAIT = 3
     SCORE = 4
     START = 5
+    STATE = 6
 
 """ Log """
 class LogLevels(Enum):

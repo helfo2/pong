@@ -7,6 +7,10 @@ from log import Log
 
 game_log = Log("game.log")
 
+""" Colors """
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+
 FPS = 30
 
 pygame.init()
@@ -63,7 +67,7 @@ def main():
     """
     wait = True
     while(wait):
-        opposite_pos = client.recv_pos()
+        opposite_pos = client.recv_msg()
         
         # if opposite_pos is [-1,-1]
         if not is_flag_pos(opposite_pos):
@@ -93,10 +97,10 @@ def main():
     while(run):
         dt = clock.tick(FPS)
 
-        ball_pos = client.recv_pos()
+        ball_pos = client.recv_msg()
         print("ball_pos = ", ball_pos)
 
-        score = client.recv_score()
+        score = client.recv_msg()
 
         opposite_pos = client.send_pos(current_player.get_pos())
         print("player2_pos: ", opposite_pos)
