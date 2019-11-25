@@ -28,8 +28,8 @@ BALL_SIZE = 10
 
 """ Network """
 class MsgTypes(Enum):
-    POS = 1
-    PADDLE_POS = 2
+    PADDLE_POS = 1
+    BALL_POS = 2
     WAIT = 3
     SCORE = 4
     START = 5

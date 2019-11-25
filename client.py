@@ -12,7 +12,7 @@ class Client():
         self.serverAddr = (config.SERVER_IP, config.PORT)
         self.client = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
         
-        self.player_initial_pos = self.connect()
+        self.state = self.connect()
 
     def connect(self):
         try:
@@ -37,7 +37,9 @@ class Client():
 
         # msg = self.recv_all(msg_sz)
 
-        return packet.unmake_pkt(self.client.recv(config.BUFF_SIZE))
+        data = packet.unmake_pkt(self.client.recv(config.BUFF_SIZE))
+
+        return data
 
     def recv_all(self, n):
         data = bytearray()
@@ -63,8 +65,8 @@ class Client():
         except socket.error as e:
             client_log.log(config.LogLevels.ERROR.value, "Error sending {}: {}".format(data, e))
 
-    def get_player_initial_pos(self):
-        return self.player_initial_pos
+    def get_state(self):
+        return self.state
 
     def close(self):
         self.client.close()

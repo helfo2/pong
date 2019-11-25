@@ -141,3 +141,17 @@
 2019-11-22 20:09:34 INFO     Accepted connection
 2019-11-22 20:09:34,645 INFO     Connection established with ('127.0.0.1', 57425)
 2019-11-22 20:09:34 INFO     Connection established with ('127.0.0.1', 57425)
+2019-11-23 17:43:55,748 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-23 17:43:55 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-23 17:43:55,748 INFO     Listening...
+2019-11-23 17:43:55 INFO     Listening...
+2019-11-23 17:44:04,022 INFO     Accepted connection
+2019-11-23 17:44:04 INFO     Accepted connection
+2019-11-23 17:44:04,022 INFO     Connection established with ('127.0.0.1', 59816)
+2019-11-23 17:44:04 INFO     Connection established with ('127.0.0.1', 59816)
+2019-11-23 17:44:19,120 INFO     Accepted connection
+2019-11-23 17:44:19 INFO     Accepted connection
+2019-11-23 17:44:19,121 INFO     Connection established with ('127.0.0.1', 59838)
+2019-11-23 17:44:19 INFO     Connection established with ('127.0.0.1', 59838)
+2019-11-23 17:44:28,415 WARNING  Interrupted form keyboard
+2019-11-23 17:44:28 WARNING  Interrupted form keyboard
