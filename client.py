@@ -4,6 +4,7 @@ import config
 import struct
 import sys
 import packet
+import select
 
 client_log = Log("client.log")
 
@@ -41,6 +42,18 @@ class Client():
 
         return data
 
+    def recv_msg_timeout(self, timeout):
+        """ Deals with the start of the game """
+        ready = select.select([self.client], [], [], timeout)
+
+        if ready[0]:
+            data = packet.unmake_pkt(self.client.recv(config.BUFF_SIZE))
+
+            if data == 0:
+                return True
+            else: # error, only accepted payload for START is zero
+                return False
+    
     def recv_all(self, n):
         data = bytearray()
 

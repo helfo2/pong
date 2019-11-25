@@ -155,3 +155,146 @@
 2019-11-23 17:44:19 INFO     Connection established with ('127.0.0.1', 59838)
 2019-11-23 17:44:28,415 WARNING  Interrupted form keyboard
 2019-11-23 17:44:28 WARNING  Interrupted form keyboard
+2019-11-25 13:58:34,931 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 13:58:34 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 13:58:34,932 INFO     Listening...
+2019-11-25 13:58:34 INFO     Listening...
+2019-11-25 13:58:42,989 INFO     Connection established with ('127.0.0.1', 52397)
+2019-11-25 13:58:42 INFO     Connection established with ('127.0.0.1', 52397)
+2019-11-25 14:00:17,973 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 14:00:17 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 14:00:17,973 INFO     Listening...
+2019-11-25 14:00:17 INFO     Listening...
+2019-11-25 14:00:21,584 INFO     Connection established with ('127.0.0.1', 52523)
+2019-11-25 14:00:21 INFO     Connection established with ('127.0.0.1', 52523)
+2019-11-25 14:04:35,070 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 14:04:35 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 14:04:35,071 INFO     Listening...
+2019-11-25 14:04:35 INFO     Listening...
+2019-11-25 14:04:39,665 INFO     Connection established with ('127.0.0.1', 52818)
+2019-11-25 14:04:39 INFO     Connection established with ('127.0.0.1', 52818)
+2019-11-25 14:04:49,910 INFO     Connection established with ('127.0.0.1', 52829)
+2019-11-25 14:04:49 INFO     Connection established with ('127.0.0.1', 52829)
+2019-11-25 14:06:04,264 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 14:06:04 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 14:06:04,265 INFO     Listening...
+2019-11-25 14:06:04 INFO     Listening...
+2019-11-25 14:06:08,364 INFO     Connection established with ('127.0.0.1', 52918)
+2019-11-25 14:06:08 INFO     Connection established with ('127.0.0.1', 52918)
+2019-11-25 14:06:18,590 INFO     Connection established with ('127.0.0.1', 52929)
+2019-11-25 14:06:18 INFO     Connection established with ('127.0.0.1', 52929)
+2019-11-25 14:07:22,035 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 14:07:22 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 14:07:22,036 INFO     Listening...
+2019-11-25 14:07:22 INFO     Listening...
+2019-11-25 14:07:26,467 INFO     Connection established with ('127.0.0.1', 53001)
+2019-11-25 14:07:26 INFO     Connection established with ('127.0.0.1', 53001)
+2019-11-25 14:07:31,297 INFO     Connection established with ('127.0.0.1', 53007)
+2019-11-25 14:07:31 INFO     Connection established with ('127.0.0.1', 53007)
+2019-11-25 14:07:31 ERROR    make_pkt: Don't know the type of message
+2019-11-25 14:07:31,311 ERROR    Error at run_client(): a bytes-like object is required, not 'NoneType'
+2019-11-25 14:07:31 ERROR    Error at run_client(): a bytes-like object is required, not 'NoneType'
+2019-11-25 14:07:31 ERROR    make_pkt: Don't know the type of message
+2019-11-25 14:07:31,338 ERROR    Error at run_client(): a bytes-like object is required, not 'NoneType'
+2019-11-25 14:07:31 ERROR    Error at run_client(): a bytes-like object is required, not 'NoneType'
+2019-11-25 14:56:40,770 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 14:56:40 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 14:56:40,770 INFO     Listening...
+2019-11-25 14:56:40 INFO     Listening...
+2019-11-25 14:56:45,726 INFO     Connection established with ('127.0.0.1', 56505)
+2019-11-25 14:56:45 INFO     Connection established with ('127.0.0.1', 56505)
+2019-11-25 14:57:16,423 INFO     Connection established with ('127.0.0.1', 56549)
+2019-11-25 14:57:16 INFO     Connection established with ('127.0.0.1', 56549)
+2019-11-25 14:57:16 ERROR    make_pkt: Don't know the type of message
+2019-11-25 14:57:16,425 ERROR    Error at run_client(): a bytes-like object is required, not 'NoneType'
+2019-11-25 14:57:16 ERROR    Error at run_client(): a bytes-like object is required, not 'NoneType'
+2019-11-25 15:20:56,723 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:20:56 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:20:56,723 INFO     Listening...
+2019-11-25 15:20:56 INFO     Listening...
+2019-11-25 15:21:11,850 INFO     Connection established with ('127.0.0.1', 58613)
+2019-11-25 15:21:11 INFO     Connection established with ('127.0.0.1', 58613)
+2019-11-25 15:22:36,423 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:22:36 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:22:36,424 INFO     Listening...
+2019-11-25 15:22:36 INFO     Listening...
+2019-11-25 15:22:40,082 INFO     Connection established with ('127.0.0.1', 58732)
+2019-11-25 15:22:40 INFO     Connection established with ('127.0.0.1', 58732)
+2019-11-25 15:23:39,426 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:23:39 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:23:39,427 INFO     Listening...
+2019-11-25 15:23:39 INFO     Listening...
+2019-11-25 15:23:42,685 INFO     Connection established with ('127.0.0.1', 58802)
+2019-11-25 15:23:42 INFO     Connection established with ('127.0.0.1', 58802)
+2019-11-25 15:24:41,935 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:24:41 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:24:41,936 INFO     Listening...
+2019-11-25 15:24:41 INFO     Listening...
+2019-11-25 15:24:47,062 INFO     Connection established with ('127.0.0.1', 58886)
+2019-11-25 15:24:47 INFO     Connection established with ('127.0.0.1', 58886)
+2019-11-25 15:43:41,329 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:43:41 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:43:41,329 INFO     Listening...
+2019-11-25 15:43:41 INFO     Listening...
+2019-11-25 15:43:45,069 INFO     Connection established with ('127.0.0.1', 60422)
+2019-11-25 15:43:45 INFO     Connection established with ('127.0.0.1', 60422)
+2019-11-25 15:44:00 ERROR    make _pkt: No data
+2019-11-25 15:44:00 ERROR    make _pkt: No data
+2019-11-25 15:44:00,506 INFO     Connection established with ('127.0.0.1', 60442)
+2019-11-25 15:44:00 INFO     Connection established with ('127.0.0.1', 60442)
+2019-11-25 15:52:13,691 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:52:13 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:52:13,692 INFO     Listening...
+2019-11-25 15:52:13 INFO     Listening...
+2019-11-25 15:52:17,034 INFO     Connection established with ('127.0.0.1', 61147)
+2019-11-25 15:52:17 INFO     Connection established with ('127.0.0.1', 61147)
+2019-11-25 15:53:11,757 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:53:11 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:53:11,758 INFO     Listening...
+2019-11-25 15:53:11 INFO     Listening...
+2019-11-25 15:53:35,380 INFO     Connection established with ('127.0.0.1', 61246)
+2019-11-25 15:53:35 INFO     Connection established with ('127.0.0.1', 61246)
+2019-11-25 15:54:16,525 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:54:16 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:54:16,525 INFO     Listening...
+2019-11-25 15:54:16 INFO     Listening...
+2019-11-25 15:54:21,063 INFO     Connection established with ('127.0.0.1', 61292)
+2019-11-25 15:54:21 INFO     Connection established with ('127.0.0.1', 61292)
+2019-11-25 15:55:31,617 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:55:31 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:55:31,618 INFO     Listening...
+2019-11-25 15:55:31 INFO     Listening...
+2019-11-25 15:55:35,707 INFO     Connection established with ('127.0.0.1', 61402)
+2019-11-25 15:55:35 INFO     Connection established with ('127.0.0.1', 61402)
+2019-11-25 15:56:04,732 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:56:04 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:56:04,733 INFO     Listening...
+2019-11-25 15:56:04 INFO     Listening...
+2019-11-25 15:56:08,365 INFO     Connection established with ('127.0.0.1', 61441)
+2019-11-25 15:56:08 INFO     Connection established with ('127.0.0.1', 61441)
+2019-11-25 15:57:06 ERROR    make _pkt: No data
+2019-11-25 15:57:06 ERROR    make _pkt: No data
+2019-11-25 15:57:06,073 INFO     Connection established with ('127.0.0.1', 61520)
+2019-11-25 15:57:06 INFO     Connection established with ('127.0.0.1', 61520)
+2019-11-25 15:59:25,784 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:59:25 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 15:59:25,785 INFO     Listening...
+2019-11-25 15:59:25 INFO     Listening...
+2019-11-25 15:59:30,565 INFO     Connection established with ('127.0.0.1', 61721)
+2019-11-25 15:59:30 INFO     Connection established with ('127.0.0.1', 61721)
+2019-11-25 16:03:49,512 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 16:03:49 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 16:03:49,512 INFO     Listening...
+2019-11-25 16:03:49 INFO     Listening...
+2019-11-25 16:03:53,839 INFO     Connection established with ('127.0.0.1', 62261)
+2019-11-25 16:03:53 INFO     Connection established with ('127.0.0.1', 62261)
+2019-11-25 16:04:35 ERROR    make _pkt: No data
+2019-11-25 16:04:35 ERROR    make _pkt: No data
+2019-11-25 16:04:35,049 INFO     Connection established with ('127.0.0.1', 62339)
+2019-11-25 16:04:35 INFO     Connection established with ('127.0.0.1', 62339)
+2019-11-25 16:04:55,313 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 16:04:55 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-25 16:04:55,313 INFO     Listening...
+2019-11-25 16:04:55 INFO     Listening...
+2019-11-25 16:04:59,773 INFO     Connection established with ('127.0.0.1', 62357)
+2019-11-25 16:04:59 INFO     Connection established with ('127.0.0.1', 62357)

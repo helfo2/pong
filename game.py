@@ -5,6 +5,7 @@ from ball import Ball
 import pygame
 from log import Log
 import time
+import threading
 
 """ Game states """
 class MsgTypes(Enum):
@@ -13,6 +14,7 @@ class MsgTypes(Enum):
     FINISH = 3
 
 WINDOW_CENTER = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2)
+BELLOW_WINDOW_CENTER = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2 + 40)
 LEFT_SCORE_POSITION = (WINDOW_WIDTH // 4, WINDOW_HEIGHT // 4)
 RIGHT_SCORE_POSITION = (0.75 * WINDOW_WIDTH, WINDOW_HEIGHT // 4) 
 
@@ -31,27 +33,24 @@ pygame.display.set_caption("Client")
 
 font = pygame.font.Font("arcadeclassic-font/ARCADECLASSIC.TTF", 32) 
 
+START = False
+
 def create_text(text, position):
+    """ Creates text and text rect objets to write on game window """
     text = font.render(str(text), True, WHITE, BLACK)
-    text_rect = wait_text.get_rect()  
+    text_rect = text.get_rect()  
     text_rect.center = (position) 
 
     return text, text_rect
     
 
-wait_text = font.render("waiting", True, WHITE, BLACK)
-wait_text_rect = wait_text.get_rect()  
-wait_text_rect.center = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2) 
-
-
-def is_flag_pos(pos):
-    return pos[0] == -1 and pos[1] == -1
-
-
 def redraw_window(player1, player2, ball_pos, score):
-    global WINDOW_CENTER, SCORE1_POSITION, SCORE2_POSITION
+    global WINDOW_CENTER, LEFT_SCORE_POSITION, RIGHT_SCORE_POSITION
 
+    # draw background
     display_surface.fill(BLACK)
+
+    # draw players
     player1.draw(display_surface)
     player2.draw(display_surface)
     
@@ -61,52 +60,74 @@ def redraw_window(player1, player2, ball_pos, score):
     # draw the net
     pygame.draw.line(display_surface, WHITE, [WINDOW_WIDTH/2, 0], [WINDOW_WIDTH/2, WINDOW_HEIGHT], 5)
 
+    # draw score texts
     left_score_text, left_score_text_rect  = create_text(score[0], LEFT_SCORE_POSITION)
-    
-
-    # left_score_text = font.render(str(score[0]), True, WHITE, BLACK)   
-    # left_score_text_rect = left_score_text.get_rect()  
-    # left_score_text_rect.center = (WINDOW_WIDTH // 4, WINDOW_HEIGHT // 4) 
+    display_surface.blit(left_score_text, left_score_text_rect)
 
     right_score_text, right_score_text_rect  = create_text(score[1], RIGHT_SCORE_POSITION)
-
-    # right_score_text = font.render(str(score[1]), True, WHITE, BLACK)
-    # right_score_text_rect = right_score_text.get_rect()  
-    # right_score_text_rect.center = (0.75 * WINDOW_WIDTH, WINDOW_HEIGHT // 4) 
-
-    display_surface.blit(left_score_text, left_score_text_rect)
     display_surface.blit(right_score_text, right_score_text_rect)
 
     pygame.display.update()
 
 
 def is_wait_state(time_wait):
-    return time_wait is 0
+    return time_wait is not 0
 
-def wait(seconds):
-    count_seconds = 0
-    while count_seconds < seconds:
-        display_surface.fill(WHITE) 
-    
-        wait_text, wait_text_rect = create_text("waiting", WINDOW_CENTER)
 
-        display_surface.blit(wait_text, wait_text_rect)
+def wait_display(seconds):
+    global START
 
+    clock = pygame.time.Clock()
+
+    counter = seconds
+    dt = 0
+    while START is False and counter > 0:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 
-                game_log.log(LogLevels.INFO.value, "Game finished while WAITING")
+                game_log.log(LogLevels.INFO.value, "Game finished while WAITING by user")
                 exit(0)
+        else:
+            counter -= dt
 
-            pygame.display.update()
+            display_surface.fill(BLACK) 
 
-        time.sleep(1)
-        count_seconds += 1        
+            wait_text, wait_text_rect = create_text("waiting", WINDOW_CENTER)
+            seconds_text, seconds_text_rect = create_text(str(counter), BELLOW_WINDOW_CENTER)
+
+            display_surface.blit(wait_text, wait_text_rect)
+            display_surface.blit(seconds_text, seconds_text_rect)
+
+            print("{} seconds left".format(counter))
+
+            pygame.display.flip()
+            dt = clock.tick(FPS) / 1000
+            
+            continue
+
+        break
+
+
+def wait_server(client, timeout):
+    global START
+
+    if client.recv_msg_timeout(timeout) is not True:
+        game_log.log(LogLevels.ERROR.value, "Game finished while WAITING by network error")
+        client.close()
+        exit(1)
+    else:
+        START = True
         
 
-        
+def init_paddles(client):
+    current_player = Paddle(client.recv_msg())
+    print("current pos: ", current_player.get_pos())
 
+    opposite_player = Paddle(client.recv_msg())
+    print("opposite_pos: ", opposite_player.get_pos())
+
+    return current_player, opposite_player
 
 
 def main():
@@ -118,49 +139,16 @@ def main():
     initial_state = client.get_state()
 
     if is_wait_state(initial_state):
-        
-        
-        time.sleep(initial_state)
+        wait_display_thread = threading.Thread(target=wait_display, args=(initial_state, ))
+        wait_server_thread = threading.Thread(target=wait_server, args=(client, initial_state, ))
+
+        wait_display_thread.start()
+        wait_server_thread.start()
+
     else:
         start_pong(client)
     
-
-
-
-
-    current_player = Paddle(client.get_player_initial_pos())
-    print(current_player.get_pos())
-
-    # Wait event
-    """ TODO
-        try to use select here to no avoid polling over the network
-    """
-    wait = True
-    while(wait):
-        opposite_pos = client.recv_msg()
-        
-        # if opposite_pos is [-1,-1]
-        if not is_flag_pos(opposite_pos):
-            print("Wait stopped")
-            wait = False
-            break
-
-        display_surface.fill(WHITE) 
-  
-        display_surface.blit(wait_text, wait_text_rect)
-
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                game_log.log(LogLevels.INFO.value, "Game finished while WAITING")
-                exit(0)
-
-            pygame.display.update()
-
-    print("opposite_pos: ", opposite_pos)
-
-    # opposite_pos = client.recv_pos()
-    opposite_player = Paddle(opposite_pos)
+    current_player, opposite_player = init_paddles(client)
 
     # Game event
     run = True

@@ -38,6 +38,7 @@ clock = pygame.time.Clock()
 SCORE = [0, 0]
 
 class PongServer():
+
     def __init__(self, ip, port):
         self.ip = ip
         self.port = port
@@ -53,6 +54,7 @@ class PongServer():
             server_log.log(LogLevels.ERROR.value, "Socket error while binding: {}".format(e))
             self.server.close()
             sys.exit(1)
+
 
     def listen(self):
         server_log.log(LogLevels.INFO.value, "Listening...")
@@ -71,11 +73,13 @@ class PongServer():
         except KeyboardInterrupt:
             server_log.log(LogLevels.WARNING.value, "Interrupted form keyboard")
 
+
     def add_client(self, client):
         global PLAYER_COUNT
         
         self.connected_clients.append(client)
         PLAYER_COUNT += 1
+
 
     def try_run_game(self):
         global PLAYER_COUNT
@@ -84,19 +88,23 @@ class PongServer():
             self.run_game()
         
         elif PLAYER_COUNT < 2: # only one player, tells it to wait
-            self.send_wait_msg(player[0])
+            self.send_wait_msg(self.connected_clients[0])
 
         else:
             server_log.log(LogLevels.ERROR.value, "Can't handle more than two connections")
 
+
     def run_game(self):
-        for player in self.players:
-            client_thread = threading.Thread(target=self.run_client, args=(conn, PLAYER_COUNT-1,))
+        print("running game")
+        
+        for conn_id, conn in enumerate(self.connected_clients):
+            client_thread = threading.Thread(target=self.run_client, args=(conn, conn_id,))
             client_thread.start()
+
 
     def send_wait_msg(self, conn):
         conn.send(make_pkt(MsgTypes.WAIT.value, WAIT_SECOND_PLAYER_TIME))
-        time.sleep(WAIT_SECOND_PLAYER_TIME)
+
 
     def update_score(self, score):
         global SCORE
@@ -104,48 +112,28 @@ class PongServer():
         SCORE[0] += score[0]
         SCORE[1] += score[1]
 
+
     def game_end(self):
         return SCORE[0] == 15 or SCORE[1] == 15
-
-    
 
 
     def run_client(self, conn, player_num):
         import errno
+        global ball, clock, players_pos, SCORE
 
-        global ball
-        global clock
-        global SCORE
+        conn.send(make_pkt(MsgTypes.START.value))
 
         print("player #:", player_num)
         print("player (x, y): {}".format(players_pos[player_num]))
         
-        # time.sleep(1)
-
-        if PLAYER_COUNT < 2:
-            self.send_wait_msg()
-            time.sleep(30)
-
-
-
-
         initial_pos = players_pos[player_num]
 
-        # After connect, send initial position
+        # After connect, send initial position of both players
         print("sending initial position of ", initial_pos)
         conn.send(make_pkt(MsgTypes.PADDLE_POS.value, initial_pos))
 
-        # # Send a flag packet for synchronization
-        # conn.send(make_pkt(MsgTypes.POS.value, FLAG_POS))
-
-        # Tells player to wait for the other player
-        while PLAYER_COUNT < 2:
-            conn.send(make_pkt(MsgTypes.PADDLE_POS.value, FLAG_POS))
-
-            time.sleep(0.5)
-
-        reply = players_pos[not player_num]
-        conn.send(make_pkt(MsgTypes.PADDLE_POS.value, reply))
+        opposite_pos = players_pos[not player_num]
+        conn.send(make_pkt(MsgTypes.PADDLE_POS.value, opposite_pos))
 
         # Runs the game
         while True:
@@ -183,9 +171,9 @@ class PongServer():
                 else:
                     players_pos[player_num] = data
                 
-                reply = players_pos[not player_num]
-                print("Sending: ", reply)
-                conn.send(make_pkt(MsgTypes.PADDLE_POS.value, reply))
+                opposite_pos = players_pos[not player_num]
+                print("Sending: ", opposite_pos)
+                conn.send(make_pkt(MsgTypes.PADDLE_POS.value, opposite_pos))
                 
             except socket.error as se:
                 if se.errno == errno.WSAECONNRESET:

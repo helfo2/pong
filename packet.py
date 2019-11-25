@@ -15,7 +15,7 @@ def make_pkt(msg_type, data=None):
     elif msg_type is config.MsgTypes.START.value:
         return struct.pack("!H", msg_type)
 
-    elif msg_type is config.MsgTypes.POS.value:
+    elif msg_type is config.MsgTypes.PADDLE_POS.value:
         """ data is location type [x,y] """
 
         print("packet made: ", msg_type, data[0], data[1])
@@ -36,14 +36,14 @@ def unmake_pkt(data):
 
     if msg_type is config.MsgTypes.WAIT.value:
         """ payload is the sleep time in seconds to wait for second player """
-        wait_timeout = struct.unpack("!I", payload)
+        wait_timeout = struct.unpack("!I", payload)[0]
         return wait_timeout
 
     elif msg_type is config.MsgTypes.START.value:
         """ no payload. 0 wait time to the actual start of the game """
         return 0
 
-    elif msg_type is config.MsgTypes.POS.value:
+    elif msg_type is config.MsgTypes.PADDLE_POS.value:
         """ payload is location type [x,y] """
         msg = struct.unpack("!ff", payload)
 

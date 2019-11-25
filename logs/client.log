@@ -43,3 +43,76 @@
 2019-11-23 17:44:04 INFO     Connected to ('127.0.0.1', 60000)
 2019-11-23 17:44:19,120 INFO     Connected to ('127.0.0.1', 60000)
 2019-11-23 17:44:19 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 13:58:42,989 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 13:58:42 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:00:21,584 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:00:21 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:04:39,665 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:04:39 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:04:49,909 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:04:49 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:05:09 ERROR    Game finished while WAITING by network error
+2019-11-25 14:05:57,082 ERROR    Could not connect to ('127.0.0.1', 60000): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-25 14:05:57 ERROR    Could not connect to ('127.0.0.1', 60000): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-25 14:06:08,364 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:06:08 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:06:18,588 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:06:18 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:06:38 ERROR    Game finished while WAITING by network error
+2019-11-25 14:07:16,569 ERROR    Could not connect to ('127.0.0.1', 60000): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-25 14:07:16 ERROR    Could not connect to ('127.0.0.1', 60000): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-25 14:07:26,466 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:07:26 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:07:31,294 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:07:31 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:07:31 ERROR    Game finished while WAITING by network error
+2019-11-25 14:07:37 INFO     Game finished while WAITING by user
+2019-11-25 14:56:45,726 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:56:45 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:57:15 ERROR    Game finished while WAITING by network error
+2019-11-25 14:57:16,422 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 14:57:16 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:21:11,850 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:21:11 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:21:33 INFO     Game finished while WAITING by user
+2019-11-25 15:21:41 ERROR    Game finished while WAITING by network error
+2019-11-25 15:22:40,082 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:22:40 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:23:04 INFO     Game finished while WAITING by user
+2019-11-25 15:23:42,685 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:23:42 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:24:47,062 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:24:47 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:43:45,069 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:43:45 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:44:00,504 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:44:00 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:44:15 ERROR    Game finished while WAITING by network error
+2019-11-25 15:52:17,034 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:52:17 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:52:47 ERROR    Game finished while WAITING by network error
+2019-11-25 15:53:35,380 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:53:35 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:54:05 ERROR    Game finished while WAITING by network error
+2019-11-25 15:54:21,063 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:54:21 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:55:35,707 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:55:35 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:56:08,365 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:56:08 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:56:38 ERROR    Game finished while WAITING by network error
+2019-11-25 15:57:06,071 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:57:06 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:57:19,274 ERROR    Could not connect to ('127.0.0.1', 60000): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-25 15:57:19 ERROR    Could not connect to ('127.0.0.1', 60000): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-25 15:59:30,564 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 15:59:30 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 16:00:00 ERROR    Game finished while WAITING by network error
+2019-11-25 16:03:53,839 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 16:03:53 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 16:04:35,047 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 16:04:35 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 16:04:47,347 ERROR    Could not connect to ('127.0.0.1', 60000): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-25 16:04:47 ERROR    Could not connect to ('127.0.0.1', 60000): [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-25 16:04:59,773 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-25 16:04:59 INFO     Connected to ('127.0.0.1', 60000)
