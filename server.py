@@ -15,7 +15,7 @@ import pygame
 
 server_log = Log("server.log")
 
-WAIT_SECOND_PLAYER_TIME = 30
+WAIT_SECOND_PLAYER_TIME = 10
 
 """ Initial locations """
 PLAYER_1_POS = [float(WINDOW_MARGIN), float(WINDOW_HEIGHT/2 - 100)]

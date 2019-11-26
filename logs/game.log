@@ -59,3 +59,18 @@
 2019-11-25 15:54:05,385 ERROR    Game finished while WAITING by network error
 2019-11-25 15:56:38,369 ERROR    Game finished while WAITING by network error
 2019-11-25 16:00:00,569 ERROR    Game finished while WAITING by network error
+2019-11-25 21:55:31,512 ERROR    Game finished while WAITING by network error
+2019-11-25 21:58:39,494 ERROR    Game finished while WAITING: no connection from other player
+2019-11-25 22:01:56,999 ERROR    Game finished while WAITING: no connection from other player
+2019-11-25 22:02:22,933 ERROR    Game finished while WAITING: no connection from other player
+2019-11-25 22:04:25,038 ERROR    Game finished while WAITING: no connection from other player
+2019-11-25 22:07:33,781 ERROR    Game finished while WAITING: no connection from other player
+2019-11-25 22:11:26,698 ERROR    Game finished while WAITING: no connection from other player
+2019-11-25 23:01:55,704 ERROR    Game finished while WAITING: no connection from other player
+2019-11-25 23:02:45,977 ERROR    Game finished while WAITING: no connection from other player
+2019-11-25 23:02:59,475 INFO     Game finished: no game
+2019-11-25 23:06:17,428 ERROR    Game finished while WAITING: no connection from other player
+2019-11-25 23:06:25,118 INFO     Game finished: no game
+2019-11-25 23:06:49,675 ERROR    Game finished while WAITING: no connection from other player
+2019-11-25 23:07:26,917 ERROR    Game finished while WAITING: no connection from other player
+2019-11-25 23:07:30,525 INFO     Game finished: no game
