@@ -15,6 +15,8 @@ import pygame
 
 server_log = Log("server.log")
 
+FPS = 30
+
 WAIT_SECOND_PLAYER_TIME = 10
 
 """ Initial locations """
@@ -32,7 +34,6 @@ player2_win = False
 
 PLAYER_COUNT = 0
 
-ball = Ball()
 clock = pygame.time.Clock()
 
 SCORE = [0, 0]
@@ -47,9 +48,10 @@ class PongServer():
         try:
             self.server = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
             self.server.bind((self.ip, self.port))
-            self.server.listen(2)
+            self.server.listen(3)
 
             server_log.log(LogLevels.INFO.value, "Initialized PONG server at {}:{}".format(ip, str(port)))
+
         except socket.error as e:
             server_log.log(LogLevels.ERROR.value, "Socket error while binding: {}".format(e))
             self.server.close()
@@ -95,14 +97,19 @@ class PongServer():
 
 
     def run_game(self):
-        print("running game")
-        
+        ball = Ball()
+
+        threads = []
         for conn_id, conn in enumerate(self.connected_clients):
-            client_thread = threading.Thread(target=self.run_client, args=(conn, conn_id,))
-            client_thread.start()
+            threads.append( threading.Thread(target=self.run_client, args=(conn, conn_id, ball, )) )
+            
+        for t in threads:    
+            t.start()
 
 
     def send_wait_msg(self, conn):
+        global WAIT_SECOND_PLAYER_TIME
+
         conn.send(make_pkt(MsgTypes.WAIT.value, WAIT_SECOND_PLAYER_TIME))
 
 
@@ -117,28 +124,42 @@ class PongServer():
         return SCORE[0] == 15 or SCORE[1] == 15
 
 
-    def run_client(self, conn, player_num):
-        import errno
-        global ball, clock, players_pos, SCORE
+    def send_start(self, conn):
+        """ Tells game that it can start since there are two players """
 
-        conn.send(make_pkt(MsgTypes.START.value))
+        print("start sent ")
+
+        conn.send(make_pkt(config.MsgTypes.START.value))
+
+
+    def send_initial_positions(self, conn, player_num):
+        """ After starting the game, send initial position of both players """
+
+        initial_pos = players_pos[player_num]
+
+        print("sending initial position of ", initial_pos)
+        conn.send(make_pkt(MsgTypes.POS.value, initial_pos))
+
+        opposite_pos = players_pos[not player_num]
+        conn.send(make_pkt(MsgTypes.POS.value, opposite_pos))
+
+
+    def run_client(self, conn, player_num, ball):
+        import errno
+        global clock, players_pos, SCORE
+
+        self.send_start(conn)        
 
         print("player #:", player_num)
         print("player (x, y): {}".format(players_pos[player_num]))
         
-        initial_pos = players_pos[player_num]
-
-        # After connect, send initial position of both players
-        print("sending initial position of ", initial_pos)
-        conn.send(make_pkt(MsgTypes.PADDLE_POS.value, initial_pos))
-
-        opposite_pos = players_pos[not player_num]
-        conn.send(make_pkt(MsgTypes.PADDLE_POS.value, opposite_pos))
+        self.send_initial_positions(conn, player_num)
 
         # Runs the game
-        while True:
+        run = True
+        while run:
             try:
-                dt = clock.tick(30)
+                dt = clock.tick(FPS)
 
                 # if self.game_end():
                 #     conn.send()
@@ -151,14 +172,13 @@ class PongServer():
 
                 ball.check_paddle_left(players_pos[0][0], players_pos[0][1], nx, ny)
                 ball.check_paddle_right(players_pos[1][0], players_pos[1][1], nx, ny)
+                score = ball.edges(nx, ny)
 
                 ball.update(dt)
 
                 ball_pos = ball.get_pos()
                 print("server ball_pos = ", ball_pos)
-                conn.send(make_pkt(MsgTypes.BALL_POS.value, ball_pos))
-
-                score = ball.edges(nx, ny)
+                conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
                 
                 self.update_score(score)
 
@@ -173,7 +193,7 @@ class PongServer():
                 
                 opposite_pos = players_pos[not player_num]
                 print("Sending: ", opposite_pos)
-                conn.send(make_pkt(MsgTypes.PADDLE_POS.value, opposite_pos))
+                conn.send(make_pkt(MsgTypes.POS.value, opposite_pos))
                 
             except socket.error as se:
                 if se.errno == errno.WSAECONNRESET:

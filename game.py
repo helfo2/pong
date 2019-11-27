@@ -7,12 +7,6 @@ from log import Log
 import time
 import threading
 
-""" Game states """
-class MsgTypes(Enum):
-    WAIT = 1
-    START = 2
-    FINISH = 3
-
 WINDOW_CENTER = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2)
 BELLOW_WINDOW_CENTER = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2 + 40)
 LEFT_SCORE_POSITION = (WINDOW_WIDTH // 4, WINDOW_HEIGHT // 4)
@@ -34,6 +28,7 @@ pygame.display.set_caption("Client")
 font = pygame.font.Font("arcadeclassic-font/ARCADECLASSIC.TTF", 32) 
 
 START = False
+WAIT = False
 
 def create_text(text, position):
     """ Creates text and text rect objets to write on game window """
@@ -75,7 +70,7 @@ def is_wait_state(time_wait):
 
 
 def wait_display(seconds):
-    global START, INTERRUPT
+    global START
 
     counter = seconds
     while START is False and counter > 0:
@@ -101,8 +96,15 @@ def wait_display(seconds):
     if counter == 0: # no other player joined the match
         no_game_display()
 
+        return False
+    
+    else:
+        return True
+
+
 
 def no_game_display():
+    """ creates a reset screen """
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -118,9 +120,9 @@ def no_game_display():
         display_surface.blit(text, text_rect)
 
         pygame.display.flip()
+    
 
-
-def wait_server(client, timeout):
+def wait_start(client, timeout):
     global START
 
     if client.recv_msg_timeout(timeout) is not True:
@@ -129,6 +131,8 @@ def wait_server(client, timeout):
         
     else:
         START = True
+
+        print("received START from server")
         
 
 def init_paddles(client):
@@ -142,24 +146,47 @@ def init_paddles(client):
 
 
 def main():
-    clock = pygame.time.Clock()
+    global WAIT, START
 
     # gets the initial state
     client = Client()
 
     initial_state = client.get_state()
-    
+    print("initial state = ", initial_state)
+
     if is_wait_state(initial_state):
-        wait_server_thread = threading.Thread(target=wait_server, args=(client, initial_state, ))
-        wait_server_thread.start()
+        WAIT = True
 
-        wait_display(initial_state)
+        wait_start_thread = threading.Thread(target=wait_start, args=(client, initial_state, ))
+        wait_start_thread.start()
 
+        wait_display(initial_state) # timer
     else:
-        start_pong(client)
+        START = True
+
+    start_pong(client)
     
 
 def start_pong(client):
+    global WAIT, START
+
+    clock = pygame.time.Clock()
+
+    print("is wait state: ", WAIT)
+    print("can start: ", START)
+
+    # if WAIT is False:
+    #     start = client.recv_msg() # receive the start message in case it was not waiting
+
+    #     print("start = ", start)
+
+    #     if start is not 0:
+    #         game_log.log(LogLevels.ERROR.value, "START malformed")
+    #         client.close()
+    #         pygame.quit()
+    #         exit(1)
+
+    
     if START:
         current_player, opposite_player = init_paddles(client)
 
@@ -168,6 +195,7 @@ def start_pong(client):
         while(run):
             dt = clock.tick(FPS)
 
+            print("rady to recv ball_pos")
             ball_pos = client.recv_msg()
             print("ball_pos = ", ball_pos)
 

@@ -24,16 +24,14 @@ PADDLE_SPEED = 8
 """ Ball DO NEED THAT """
 BALL_SIZE = 10
 
-
-
 """ Network """
 class MsgTypes(Enum):
-    PADDLE_POS = 1
-    BALL_POS = 2
-    WAIT = 3
-    SCORE = 4
-    START = 5
-    STATE = 6
+    POS = 1
+    WAIT = 2
+    SCORE = 3
+    START = 4
+    STATE = 5
+    START_ACK = 6
 
 """ Log """
 class LogLevels(Enum):

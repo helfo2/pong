@@ -6,7 +6,7 @@ MSG_TYPE_SIZE = 2
 # BUFF_SIZE = 10
 
 def make_pkt(msg_type, data=None):
-    if data is None:
+    if msg_type is not config.MsgTypes.START.value and data is None:
         logging.error("make _pkt: No data")
 
     elif msg_type is config.MsgTypes.WAIT.value:
@@ -15,14 +15,17 @@ def make_pkt(msg_type, data=None):
     elif msg_type is config.MsgTypes.START.value:
         return struct.pack("!H", msg_type)
 
-    elif msg_type is config.MsgTypes.PADDLE_POS.value:
+    elif msg_type is config.MsgTypes.POS.value:
         """ data is location type [x,y] """
 
-        print("packet made: ", msg_type, data[0], data[1])
+        # print("packet made: ", msg_type, data[0], data[1])
         return struct.pack("!Hff", msg_type, data[0], data[1])
 
     elif msg_type is config.MsgTypes.SCORE.value:
         return struct.pack("!HII", msg_type, data[0], data[1])
+
+    elif msg_type is config.MsgTypes.START_ACK.value:
+        return struct.pack("!H", msg_type)
 
     else:
         logging.error("make_pkt: Don't know the type of message")
@@ -43,7 +46,11 @@ def unmake_pkt(data):
         """ no payload. 0 wait time to the actual start of the game """
         return 0
 
-    elif msg_type is config.MsgTypes.PADDLE_POS.value:
+    elif msg_type is config.MsgTypes.START_ACK.value:
+        """ no payload. client confirmation """
+        return 0
+
+    elif msg_type is config.MsgTypes.POS.value:
         """ payload is location type [x,y] """
         msg = struct.unpack("!ff", payload)
 

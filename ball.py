@@ -15,10 +15,13 @@ random.seed(datetime.now())
 
 class Ball():
     def __init__(self):
-        self.x = 0
-        self.y = 0
+        self.x = config.WINDOW_WIDTH/2
+        self.y = config.WINDOW_HEIGHT/2
         self.size = 10
         self.speed = 0.2
+        self.xspeed = self.speed
+        self.yspeed = self.speed
+
         self.rect = (self.x, self.y, self.size, self.size)
 
         self.reset()
@@ -156,7 +159,7 @@ class Ball():
             # right player scored
             right_score += 1
             self.reset()
-            print("roght player scored")
+            print("right player scored")
             sys.exit(1)
 
             return [0, 1]

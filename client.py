@@ -49,14 +49,16 @@ class Client():
 
             if ready[0]:
                 data = packet.unmake_pkt(self.client.recv(config.BUFF_SIZE))
+                
+                # self.client.send(packet.make_pkt(config.MsgTypes.START_ACK.value))
 
-                if data == 0:
-                    return True
-                else: # error, only accepted payload for START is zero
-                    return False
+                print("received correct START")
+                # only accepted payload for START is zero
+                return data == 0
         except:
-            client_log.log(LogLevels.ERROR.value, "Timed out")
+            client_log.log(config.LogLevels.ERROR.value, "Timed out")
     
+
     def recv_all(self, n):
         data = bytearray()
 
