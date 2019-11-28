@@ -204,3 +204,433 @@
 2019-11-27 11:54:56 INFO     Connection established with ('127.0.0.1', 57780)
 2019-11-27 11:55:00,270 INFO     Connection established with ('127.0.0.1', 57784)
 2019-11-27 11:55:00 INFO     Connection established with ('127.0.0.1', 57784)
+2019-11-28 13:29:11,863 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:29:11 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:29:11,864 INFO     Listening...
+2019-11-28 13:29:11 INFO     Listening...
+2019-11-28 13:30:23,642 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:30:23 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:30:23,642 INFO     Listening...
+2019-11-28 13:30:23 INFO     Listening...
+2019-11-28 13:30:57,701 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:30:57 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:30:57,701 INFO     Listening...
+2019-11-28 13:30:57 INFO     Listening...
+2019-11-28 13:30:59,738 INFO     Connection established with ('127.0.0.1', 62905)
+2019-11-28 13:30:59 INFO     Connection established with ('127.0.0.1', 62905)
+2019-11-28 13:34:49,811 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:34:49 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:34:49,812 INFO     Listening...
+2019-11-28 13:34:49 INFO     Listening...
+2019-11-28 13:35:01,010 INFO     Connection established with ('127.0.0.1', 63282)
+2019-11-28 13:35:01 INFO     Connection established with ('127.0.0.1', 63282)
+2019-11-28 13:54:53,447 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:54:53 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:54:53,447 INFO     Listening...
+2019-11-28 13:54:53 INFO     Listening...
+2019-11-28 13:55:06,622 INFO     Connection established with ('127.0.0.1', 64818)
+2019-11-28 13:55:06 INFO     Connection established with ('127.0.0.1', 64818)
+2019-11-28 13:55:50,748 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:55:50 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:55:50,749 INFO     Listening...
+2019-11-28 13:55:50 INFO     Listening...
+2019-11-28 13:55:58,114 INFO     Connection established with ('127.0.0.1', 64882)
+2019-11-28 13:55:58 INFO     Connection established with ('127.0.0.1', 64882)
+2019-11-28 13:56:21,085 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:56:21 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 13:56:21,085 INFO     Listening...
+2019-11-28 13:56:21 INFO     Listening...
+2019-11-28 13:56:26,100 INFO     Connection established with ('127.0.0.1', 64915)
+2019-11-28 13:56:26 INFO     Connection established with ('127.0.0.1', 64915)
+2019-11-28 13:56:32,126 INFO     Connection established with ('127.0.0.1', 64925)
+2019-11-28 13:56:32 INFO     Connection established with ('127.0.0.1', 64925)
+2019-11-28 14:53:50,393 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 14:53:50 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 14:53:50,393 INFO     Listening...
+2019-11-28 14:53:50 INFO     Listening...
+2019-11-28 14:53:59,821 INFO     Connection established with ('127.0.0.1', 53016)
+2019-11-28 14:53:59 INFO     Connection established with ('127.0.0.1', 53016)
+2019-11-28 14:54:08,478 INFO     Connection established with ('127.0.0.1', 53031)
+2019-11-28 14:54:08 INFO     Connection established with ('127.0.0.1', 53031)
+2019-11-28 15:17:49,038 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:17:49 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:17:49,038 INFO     Listening...
+2019-11-28 15:17:49 INFO     Listening...
+2019-11-28 15:17:55,939 INFO     Connection established with ('127.0.0.1', 54867)
+2019-11-28 15:17:55 INFO     Connection established with ('127.0.0.1', 54867)
+2019-11-28 15:18:00,737 INFO     Connection established with ('127.0.0.1', 54874)
+2019-11-28 15:18:00 INFO     Connection established with ('127.0.0.1', 54874)
+2019-11-28 15:20:26,534 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:20:26 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:20:26,535 INFO     Listening...
+2019-11-28 15:20:26 INFO     Listening...
+2019-11-28 15:20:34,278 INFO     Connection established with ('127.0.0.1', 55065)
+2019-11-28 15:20:34 INFO     Connection established with ('127.0.0.1', 55065)
+2019-11-28 15:20:42,255 INFO     Connection established with ('127.0.0.1', 55078)
+2019-11-28 15:20:42 INFO     Connection established with ('127.0.0.1', 55078)
+2019-11-28 15:23:06,804 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:23:06 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:23:06,804 INFO     Listening...
+2019-11-28 15:23:06 INFO     Listening...
+2019-11-28 15:23:12,637 INFO     Connection established with ('127.0.0.1', 55259)
+2019-11-28 15:23:12 INFO     Connection established with ('127.0.0.1', 55259)
+2019-11-28 15:23:21,348 INFO     Connection established with ('127.0.0.1', 55272)
+2019-11-28 15:23:21 INFO     Connection established with ('127.0.0.1', 55272)
+2019-11-28 15:23:21,563 WARNING  Client disconnected: <socket.socket fd=1436, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 55259)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:23:21 WARNING  Client disconnected: <socket.socket fd=1436, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 55259)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:24:13,036 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:24:13 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:24:13,037 INFO     Listening...
+2019-11-28 15:24:13 INFO     Listening...
+2019-11-28 15:24:16,893 INFO     Connection established with ('127.0.0.1', 55342)
+2019-11-28 15:24:16 INFO     Connection established with ('127.0.0.1', 55342)
+2019-11-28 15:24:20,563 INFO     Connection established with ('127.0.0.1', 55353)
+2019-11-28 15:24:20 INFO     Connection established with ('127.0.0.1', 55353)
+2019-11-28 15:33:32,072 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:33:32 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:33:32,072 INFO     Listening...
+2019-11-28 15:33:32 INFO     Listening...
+2019-11-28 15:33:37,259 INFO     Connection established with ('127.0.0.1', 56091)
+2019-11-28 15:33:37 INFO     Connection established with ('127.0.0.1', 56091)
+2019-11-28 15:33:43,909 INFO     Connection established with ('127.0.0.1', 56100)
+2019-11-28 15:33:43 INFO     Connection established with ('127.0.0.1', 56100)
+2019-11-28 15:33:43,946 ERROR    Error at run_client(): name 'BUFF_SIZE' is not defined
+2019-11-28 15:33:43 ERROR    Error at run_client(): name 'BUFF_SIZE' is not defined
+2019-11-28 15:34:23,320 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:34:23 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:34:23,320 INFO     Listening...
+2019-11-28 15:34:23 INFO     Listening...
+2019-11-28 15:34:25,833 INFO     Connection established with ('127.0.0.1', 56149)
+2019-11-28 15:34:25 INFO     Connection established with ('127.0.0.1', 56149)
+2019-11-28 15:34:29,126 INFO     Connection established with ('127.0.0.1', 56154)
+2019-11-28 15:34:29 INFO     Connection established with ('127.0.0.1', 56154)
+2019-11-28 15:34:29,163 ERROR    Error at run_client(): name 'BUFF_SIZE' is not defined
+2019-11-28 15:34:29 ERROR    Error at run_client(): name 'BUFF_SIZE' is not defined
+2019-11-28 15:34:48,209 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:34:48 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:34:48,210 INFO     Listening...
+2019-11-28 15:34:48 INFO     Listening...
+2019-11-28 15:34:50,431 INFO     Connection established with ('127.0.0.1', 56180)
+2019-11-28 15:34:50 INFO     Connection established with ('127.0.0.1', 56180)
+2019-11-28 15:34:53,598 INFO     Connection established with ('127.0.0.1', 56185)
+2019-11-28 15:34:53 INFO     Connection established with ('127.0.0.1', 56185)
+2019-11-28 15:34:53,602 ERROR    Error at run_client(): name 'BUFF_SIZE' is not defined
+2019-11-28 15:34:53 ERROR    Error at run_client(): name 'BUFF_SIZE' is not defined
+2019-11-28 15:34:53,636 ERROR    Error at run_client(): name 'BUFF_SIZE' is not defined
+2019-11-28 15:34:53 ERROR    Error at run_client(): name 'BUFF_SIZE' is not defined
+2019-11-28 15:45:41,542 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:45:41 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:45:41,542 INFO     Listening...
+2019-11-28 15:45:41 INFO     Listening...
+2019-11-28 15:45:49,923 INFO     Connection established with ('127.0.0.1', 57026)
+2019-11-28 15:45:49 INFO     Connection established with ('127.0.0.1', 57026)
+2019-11-28 15:45:58,079 INFO     Connection established with ('127.0.0.1', 57037)
+2019-11-28 15:45:58 INFO     Connection established with ('127.0.0.1', 57037)
+2019-11-28 15:45:58,382 WARNING  Client disconnected: <socket.socket fd=1508, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 57037)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:45:58 WARNING  Client disconnected: <socket.socket fd=1508, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 57037)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:45:59,302 WARNING  Client disconnected: <socket.socket fd=1448, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 57026)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:45:59 WARNING  Client disconnected: <socket.socket fd=1448, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 57026)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:46:36,016 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:46:36 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:46:36,016 INFO     Listening...
+2019-11-28 15:46:36 INFO     Listening...
+2019-11-28 15:46:38,691 INFO     Connection established with ('127.0.0.1', 57092)
+2019-11-28 15:46:38 INFO     Connection established with ('127.0.0.1', 57092)
+2019-11-28 15:46:44,959 INFO     Connection established with ('127.0.0.1', 57101)
+2019-11-28 15:46:44 INFO     Connection established with ('127.0.0.1', 57101)
+2019-11-28 15:46:45,266 WARNING  Client disconnected: <socket.socket fd=1476, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 57101)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:46:45 WARNING  Client disconnected: <socket.socket fd=1476, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 57101)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:46:46,044 WARNING  Client disconnected: <socket.socket fd=1468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 57092)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:46:46 WARNING  Client disconnected: <socket.socket fd=1468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 57092)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:52:29,481 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:52:29 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:52:29,482 INFO     Listening...
+2019-11-28 15:52:29 INFO     Listening...
+2019-11-28 15:52:32,131 INFO     Connection established with ('127.0.0.1', 57535)
+2019-11-28 15:52:32 INFO     Connection established with ('127.0.0.1', 57535)
+2019-11-28 15:52:37,195 INFO     Connection established with ('127.0.0.1', 57542)
+2019-11-28 15:52:37 INFO     Connection established with ('127.0.0.1', 57542)
+2019-11-28 15:53:15,239 WARNING  Client disconnected: <socket.socket fd=1464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 57535)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:53:15 WARNING  Client disconnected: <socket.socket fd=1464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 57535)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:57:27,269 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:57:27 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 15:57:27,269 INFO     Listening...
+2019-11-28 15:57:27 INFO     Listening...
+2019-11-28 15:57:34,019 INFO     Connection established with ('127.0.0.1', 58095)
+2019-11-28 15:57:34 INFO     Connection established with ('127.0.0.1', 58095)
+2019-11-28 15:57:42,939 INFO     Connection established with ('127.0.0.1', 58106)
+2019-11-28 15:57:42 INFO     Connection established with ('127.0.0.1', 58106)
+2019-11-28 15:57:42,975 WARNING  Client disconnected: <socket.socket fd=1472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 58106)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:57:42 WARNING  Client disconnected: <socket.socket fd=1472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 58106)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:57:43,072 WARNING  Client disconnected: <socket.socket fd=1452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 58095)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:57:43 WARNING  Client disconnected: <socket.socket fd=1452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 58095)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:10:11,005 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:10:11 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:10:11,005 INFO     Listening...
+2019-11-28 16:10:11 INFO     Listening...
+2019-11-28 16:10:13,602 INFO     Connection established with ('127.0.0.1', 59243)
+2019-11-28 16:10:13 INFO     Connection established with ('127.0.0.1', 59243)
+2019-11-28 16:10:16,135 INFO     Connection established with ('127.0.0.1', 59247)
+2019-11-28 16:10:16 INFO     Connection established with ('127.0.0.1', 59247)
+2019-11-28 16:10:16,193 WARNING  Client disconnected: <socket.socket fd=1456, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59247)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:10:16 WARNING  Client disconnected: <socket.socket fd=1456, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59247)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:10:16,661 WARNING  Client disconnected: <socket.socket fd=1416, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59243)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:10:16 WARNING  Client disconnected: <socket.socket fd=1416, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59243)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:12:38,906 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:12:38 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:12:38,907 INFO     Listening...
+2019-11-28 16:12:38 INFO     Listening...
+2019-11-28 16:12:41,756 INFO     Connection established with ('127.0.0.1', 59463)
+2019-11-28 16:12:41 INFO     Connection established with ('127.0.0.1', 59463)
+2019-11-28 16:12:47,917 INFO     Connection established with ('127.0.0.1', 59473)
+2019-11-28 16:12:47 INFO     Connection established with ('127.0.0.1', 59473)
+2019-11-28 16:12:48,880 WARNING  Client disconnected: <socket.socket fd=1416, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59463)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:12:48 WARNING  Client disconnected: <socket.socket fd=1416, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59463)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:14:06,297 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:14:06 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:14:06,297 INFO     Listening...
+2019-11-28 16:14:06 INFO     Listening...
+2019-11-28 16:14:09,109 INFO     Connection established with ('127.0.0.1', 59578)
+2019-11-28 16:14:09 INFO     Connection established with ('127.0.0.1', 59578)
+2019-11-28 16:14:12,242 INFO     Connection established with ('127.0.0.1', 59584)
+2019-11-28 16:14:12 INFO     Connection established with ('127.0.0.1', 59584)
+2019-11-28 16:14:12,280 WARNING  Client disconnected: <socket.socket fd=1472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59584)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:14:12 WARNING  Client disconnected: <socket.socket fd=1472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59584)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:14:13,159 WARNING  Client disconnected: <socket.socket fd=1452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59578)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:14:13 WARNING  Client disconnected: <socket.socket fd=1452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59578)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:15:45,288 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:15:45 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:15:45,288 INFO     Listening...
+2019-11-28 16:15:45 INFO     Listening...
+2019-11-28 16:15:47,910 INFO     Connection established with ('127.0.0.1', 59756)
+2019-11-28 16:15:47 INFO     Connection established with ('127.0.0.1', 59756)
+2019-11-28 16:15:51,678 INFO     Connection established with ('127.0.0.1', 59761)
+2019-11-28 16:15:51 INFO     Connection established with ('127.0.0.1', 59761)
+2019-11-28 16:15:51,715 WARNING  Client disconnected: <socket.socket fd=1420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59761)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:15:51 WARNING  Client disconnected: <socket.socket fd=1420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59761)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:15:51,957 WARNING  Client disconnected: <socket.socket fd=1460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59756)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:15:51 WARNING  Client disconnected: <socket.socket fd=1460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 59756)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 16:16:14,591 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:16:14 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:16:14,591 INFO     Listening...
+2019-11-28 16:16:14 INFO     Listening...
+2019-11-28 16:16:16,514 INFO     Connection established with ('127.0.0.1', 59809)
+2019-11-28 16:16:16 INFO     Connection established with ('127.0.0.1', 59809)
+2019-11-28 16:16:19,678 INFO     Connection established with ('127.0.0.1', 59813)
+2019-11-28 16:16:19 INFO     Connection established with ('127.0.0.1', 59813)
+2019-11-28 16:28:24,049 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:28:24 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:28:24,049 INFO     Listening...
+2019-11-28 16:28:24 INFO     Listening...
+2019-11-28 16:28:33,950 INFO     Connection established with ('127.0.0.1', 60916)
+2019-11-28 16:28:33 INFO     Connection established with ('127.0.0.1', 60916)
+2019-11-28 16:28:41,912 INFO     Connection established with ('127.0.0.1', 60926)
+2019-11-28 16:28:41 INFO     Connection established with ('127.0.0.1', 60926)
+2019-11-28 16:29:15,749 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:29:15 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:29:15,749 INFO     Listening...
+2019-11-28 16:29:15 INFO     Listening...
+2019-11-28 16:29:24,276 INFO     Connection established with ('127.0.0.1', 60975)
+2019-11-28 16:29:24 INFO     Connection established with ('127.0.0.1', 60975)
+2019-11-28 16:29:29,522 INFO     Connection established with ('127.0.0.1', 60979)
+2019-11-28 16:29:29 INFO     Connection established with ('127.0.0.1', 60979)
+2019-11-28 16:38:19,593 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:38:19 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:38:19,594 INFO     Listening...
+2019-11-28 16:38:19 INFO     Listening...
+2019-11-28 16:38:30,883 INFO     Connection established with ('127.0.0.1', 61764)
+2019-11-28 16:38:30 INFO     Connection established with ('127.0.0.1', 61764)
+2019-11-28 16:38:38,719 INFO     Connection established with ('127.0.0.1', 61782)
+2019-11-28 16:38:38 INFO     Connection established with ('127.0.0.1', 61782)
+2019-11-28 16:39:28,538 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:39:28 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 16:39:28,538 INFO     Listening...
+2019-11-28 16:39:28 INFO     Listening...
+2019-11-28 16:39:46,708 INFO     Connection established with ('127.0.0.1', 61928)
+2019-11-28 16:39:46 INFO     Connection established with ('127.0.0.1', 61928)
+2019-11-28 16:39:51,217 INFO     Connection established with ('127.0.0.1', 61935)
+2019-11-28 16:39:51 INFO     Connection established with ('127.0.0.1', 61935)
+2019-11-28 17:22:32,776 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 17:22:32 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 17:22:32,777 INFO     Listening...
+2019-11-28 17:22:32 INFO     Listening...
+2019-11-28 17:22:42,554 INFO     Connection established with ('127.0.0.1', 50517)
+2019-11-28 17:22:42 INFO     Connection established with ('127.0.0.1', 50517)
+2019-11-28 17:22:46,841 INFO     Connection established with ('127.0.0.1', 50523)
+2019-11-28 17:22:46 INFO     Connection established with ('127.0.0.1', 50523)
+2019-11-28 18:24:59,370 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 18:24:59 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 18:24:59,370 INFO     Listening...
+2019-11-28 18:24:59 INFO     Listening...
+2019-11-28 18:25:06,025 INFO     Connection established with ('127.0.0.1', 55284)
+2019-11-28 18:25:06 INFO     Connection established with ('127.0.0.1', 55284)
+2019-11-28 18:25:11,004 INFO     Connection established with ('127.0.0.1', 55291)
+2019-11-28 18:25:11 INFO     Connection established with ('127.0.0.1', 55291)
+2019-11-28 18:25:11,026 ERROR    Error at run_client(): name 'ball' is not defined
+2019-11-28 18:25:11 ERROR    Error at run_client(): name 'ball' is not defined
+2019-11-28 18:26:15,213 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 18:26:15 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 18:26:15,213 INFO     Listening...
+2019-11-28 18:26:15 INFO     Listening...
+2019-11-28 18:26:21,292 INFO     Connection established with ('127.0.0.1', 55386)
+2019-11-28 18:26:21 INFO     Connection established with ('127.0.0.1', 55386)
+2019-11-28 18:26:27,916 INFO     Connection established with ('127.0.0.1', 55394)
+2019-11-28 18:26:27 INFO     Connection established with ('127.0.0.1', 55394)
+2019-11-28 18:45:18,685 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 18:45:18 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 18:45:18,685 INFO     Listening...
+2019-11-28 18:45:18 INFO     Listening...
+2019-11-28 18:45:25,999 INFO     Connection established with ('127.0.0.1', 56999)
+2019-11-28 18:45:25 INFO     Connection established with ('127.0.0.1', 56999)
+2019-11-28 18:45:32,163 INFO     Connection established with ('127.0.0.1', 57007)
+2019-11-28 18:45:32 INFO     Connection established with ('127.0.0.1', 57007)
+2019-11-28 19:19:15,181 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:19:15 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:19:15,182 INFO     Listening...
+2019-11-28 19:19:15 INFO     Listening...
+2019-11-28 19:19:24,835 INFO     Connection established with ('127.0.0.1', 59518)
+2019-11-28 19:19:24 INFO     Connection established with ('127.0.0.1', 59518)
+2019-11-28 19:19:33,334 INFO     Connection established with ('127.0.0.1', 59528)
+2019-11-28 19:19:33 INFO     Connection established with ('127.0.0.1', 59528)
+2019-11-28 19:28:57,010 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:28:57 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:28:57,010 INFO     Listening...
+2019-11-28 19:28:57 INFO     Listening...
+2019-11-28 19:29:01,865 INFO     Connection established with ('127.0.0.1', 60246)
+2019-11-28 19:29:01 INFO     Connection established with ('127.0.0.1', 60246)
+2019-11-28 19:29:06,716 INFO     Connection established with ('127.0.0.1', 60252)
+2019-11-28 19:29:06 INFO     Connection established with ('127.0.0.1', 60252)
+2019-11-28 19:34:58,295 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:34:58 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:34:58,296 INFO     Listening...
+2019-11-28 19:34:58 INFO     Listening...
+2019-11-28 19:35:02,998 INFO     Connection established with ('127.0.0.1', 60714)
+2019-11-28 19:35:02 INFO     Connection established with ('127.0.0.1', 60714)
+2019-11-28 19:35:07,113 INFO     Connection established with ('127.0.0.1', 60724)
+2019-11-28 19:35:07 INFO     Connection established with ('127.0.0.1', 60724)
+2019-11-28 19:37:46,236 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:37:46 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:37:46,236 INFO     Listening...
+2019-11-28 19:37:46 INFO     Listening...
+2019-11-28 19:37:52,094 INFO     Connection established with ('127.0.0.1', 60940)
+2019-11-28 19:37:52 INFO     Connection established with ('127.0.0.1', 60940)
+2019-11-28 19:37:57,709 INFO     Connection established with ('127.0.0.1', 60949)
+2019-11-28 19:37:57 INFO     Connection established with ('127.0.0.1', 60949)
+2019-11-28 19:40:36,038 WARNING  Client disconnected: <socket.socket fd=1456, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 60940)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 19:40:36 WARNING  Client disconnected: <socket.socket fd=1456, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 60940)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 19:40:41,145 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:40:41 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:40:41,145 INFO     Listening...
+2019-11-28 19:40:41 INFO     Listening...
+2019-11-28 19:40:44,961 INFO     Connection established with ('127.0.0.1', 61275)
+2019-11-28 19:40:44 INFO     Connection established with ('127.0.0.1', 61275)
+2019-11-28 19:40:50,137 INFO     Connection established with ('127.0.0.1', 61286)
+2019-11-28 19:40:50 INFO     Connection established with ('127.0.0.1', 61286)
+2019-11-28 19:42:10,680 WARNING  Client disconnected: <socket.socket fd=1452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 61275)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 19:42:10 WARNING  Client disconnected: <socket.socket fd=1452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 61275)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 19:42:14,685 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:42:14 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:42:14,685 INFO     Listening...
+2019-11-28 19:42:14 INFO     Listening...
+2019-11-28 19:42:17,226 INFO     Connection established with ('127.0.0.1', 61411)
+2019-11-28 19:42:17 INFO     Connection established with ('127.0.0.1', 61411)
+2019-11-28 19:42:20,337 INFO     Connection established with ('127.0.0.1', 61415)
+2019-11-28 19:42:20 INFO     Connection established with ('127.0.0.1', 61415)
+2019-11-28 19:44:46,528 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:44:46 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:44:46,529 INFO     Listening...
+2019-11-28 19:44:46 INFO     Listening...
+2019-11-28 19:44:53,065 INFO     Connection established with ('127.0.0.1', 61609)
+2019-11-28 19:44:53 INFO     Connection established with ('127.0.0.1', 61609)
+2019-11-28 19:44:58,255 INFO     Connection established with ('127.0.0.1', 61617)
+2019-11-28 19:44:58 INFO     Connection established with ('127.0.0.1', 61617)
+2019-11-28 19:46:41,860 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:46:41 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 19:46:41,860 INFO     Listening...
+2019-11-28 19:46:41 INFO     Listening...
+2019-11-28 19:46:45,903 ERROR    Socket error while binding: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-11-28 19:46:45 ERROR    Socket error while binding: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-11-28 19:46:56,023 INFO     Connection established with ('127.0.0.1', 61818)
+2019-11-28 19:46:56 INFO     Connection established with ('127.0.0.1', 61818)
+2019-11-28 19:46:57,472 INFO     Connection established with ('127.0.0.1', 61821)
+2019-11-28 19:46:57 INFO     Connection established with ('127.0.0.1', 61821)
+2019-11-28 20:02:23,873 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:02:23 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:02:23,874 INFO     Listening...
+2019-11-28 20:02:23 INFO     Listening...
+2019-11-28 20:02:34,284 INFO     Connection established with ('127.0.0.1', 62971)
+2019-11-28 20:02:34 INFO     Connection established with ('127.0.0.1', 62971)
+2019-11-28 20:02:41,823 INFO     Connection established with ('127.0.0.1', 62983)
+2019-11-28 20:02:41 INFO     Connection established with ('127.0.0.1', 62983)
+2019-11-28 20:10:26,320 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:10:26 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:10:26,320 INFO     Listening...
+2019-11-28 20:10:26 INFO     Listening...
+2019-11-28 20:19:09,488 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:19:09 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:19:09,488 INFO     Listening...
+2019-11-28 20:19:09 INFO     Listening...
+2019-11-28 20:19:16,500 INFO     Connection established with ('127.0.0.1', 64342)
+2019-11-28 20:19:16 INFO     Connection established with ('127.0.0.1', 64342)
+2019-11-28 20:19:19,768 INFO     Connection established with ('127.0.0.1', 64347)
+2019-11-28 20:19:19 INFO     Connection established with ('127.0.0.1', 64347)
+2019-11-28 20:31:33,910 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:31:33 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:31:33,910 INFO     Listening...
+2019-11-28 20:31:33 INFO     Listening...
+2019-11-28 20:31:50,979 INFO     Connection established with ('127.0.0.1', 65297)
+2019-11-28 20:31:50 INFO     Connection established with ('127.0.0.1', 65297)
+2019-11-28 20:31:56,267 INFO     Connection established with ('127.0.0.1', 65303)
+2019-11-28 20:31:56 INFO     Connection established with ('127.0.0.1', 65303)
+2019-11-28 20:34:56,885 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:34:56 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:34:56,885 INFO     Listening...
+2019-11-28 20:34:56 INFO     Listening...
+2019-11-28 20:35:03,445 INFO     Connection established with ('127.0.0.1', 65525)
+2019-11-28 20:35:03 INFO     Connection established with ('127.0.0.1', 65525)
+2019-11-28 20:35:11,177 INFO     Connection established with ('127.0.0.1', 49153)
+2019-11-28 20:35:11 INFO     Connection established with ('127.0.0.1', 49153)
+2019-11-28 20:38:15,371 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:38:15 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:38:15,371 INFO     Listening...
+2019-11-28 20:38:15 INFO     Listening...
+2019-11-28 20:38:23,904 INFO     Connection established with ('127.0.0.1', 49399)
+2019-11-28 20:38:23 INFO     Connection established with ('127.0.0.1', 49399)
+2019-11-28 20:38:31,418 INFO     Connection established with ('127.0.0.1', 49416)
+2019-11-28 20:38:31 INFO     Connection established with ('127.0.0.1', 49416)
+2019-11-28 20:42:43,827 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:42:43 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:42:43,827 INFO     Listening...
+2019-11-28 20:42:43 INFO     Listening...
+2019-11-28 20:42:55,587 INFO     Connection established with ('127.0.0.1', 49872)
+2019-11-28 20:42:55 INFO     Connection established with ('127.0.0.1', 49872)
+2019-11-28 20:43:06,764 INFO     Connection established with ('127.0.0.1', 49887)
+2019-11-28 20:43:06 INFO     Connection established with ('127.0.0.1', 49887)
+2019-11-28 20:43:16,270 WARNING  Client disconnected: <socket.socket fd=1496, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 49872)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 20:43:16 WARNING  Client disconnected: <socket.socket fd=1496, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 49872)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 20:44:51,723 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:44:51 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:44:51,724 INFO     Listening...
+2019-11-28 20:44:51 INFO     Listening...
+2019-11-28 20:44:56,561 INFO     Connection established with ('127.0.0.1', 50015)
+2019-11-28 20:44:56 INFO     Connection established with ('127.0.0.1', 50015)
+2019-11-28 20:45:04,207 INFO     Connection established with ('127.0.0.1', 50024)
+2019-11-28 20:45:04 INFO     Connection established with ('127.0.0.1', 50024)
+2019-11-28 20:46:52,854 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:46:52 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:46:52,855 INFO     Listening...
+2019-11-28 20:46:52 INFO     Listening...
+2019-11-28 20:47:01,904 INFO     Connection established with ('127.0.0.1', 50172)
+2019-11-28 20:47:01 INFO     Connection established with ('127.0.0.1', 50172)
+2019-11-28 20:47:16,525 INFO     Connection established with ('127.0.0.1', 50189)
+2019-11-28 20:47:16 INFO     Connection established with ('127.0.0.1', 50189)
+2019-11-28 20:47:16,830 WARNING  Client disconnected: <socket.socket fd=1304, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 50172)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 20:47:16 WARNING  Client disconnected: <socket.socket fd=1304, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 50172)> | Exception: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 20:49:40,495 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:49:40 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-11-28 20:49:40,495 INFO     Listening...
+2019-11-28 20:49:40 INFO     Listening...
+2019-11-28 20:49:48,287 INFO     Connection established with ('127.0.0.1', 50364)
+2019-11-28 20:49:48 INFO     Connection established with ('127.0.0.1', 50364)
+2019-11-28 20:49:51,565 INFO     Connection established with ('127.0.0.1', 50369)
+2019-11-28 20:49:51 INFO     Connection established with ('127.0.0.1', 50369)

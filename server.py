@@ -35,6 +35,7 @@ player2_win = False
 PLAYER_COUNT = 0
 
 clock = pygame.time.Clock()
+lock = threading.RLock()
 
 SCORE = [0, 0]
 
@@ -44,6 +45,7 @@ class PongServer():
         self.ip = ip
         self.port = port
         self.connected_clients = []
+        self.ball = Ball()
 
         try:
             self.server = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
@@ -76,11 +78,25 @@ class PongServer():
             server_log.log(LogLevels.WARNING.value, "Interrupted form keyboard")
 
 
-    def add_client(self, client):
+    def add_client(self, conn):
         global PLAYER_COUNT
-        
-        self.connected_clients.append(client)
+
+        self.send_initial_state(conn)
+
+        self.connected_clients.append(conn)
+
         PLAYER_COUNT += 1
+
+        
+    def send_initial_state(self, conn):
+        global PLAYER_COUNT
+
+        if PLAYER_COUNT == 0:
+            # the first player, no other waiting
+            conn.send(make_pkt(MsgTypes.STATE.value, States.WAITING.value))
+        else:
+            # the second player, already other player waiting
+            conn.send(make_pkt(MsgTypes.STATE.value, States.STARTING.value))
 
 
     def try_run_game(self):
@@ -89,7 +105,7 @@ class PongServer():
         if PLAYER_COUNT == 2:
             self.run_game()
         
-        elif PLAYER_COUNT < 2: # only one player, tells it to wait
+        elif PLAYER_COUNT == 1: # only one player, tells it to wait
             self.send_wait_msg(self.connected_clients[0])
 
         else:
@@ -97,11 +113,9 @@ class PongServer():
 
 
     def run_game(self):
-        ball = Ball()
-
         threads = []
         for conn_id, conn in enumerate(self.connected_clients):
-            threads.append( threading.Thread(target=self.run_client, args=(conn, conn_id, ball, )) )
+            threads.append( threading.Thread(target=self.run_client, args=(conn, conn_id, )) )
             
         for t in threads:    
             t.start()
@@ -129,7 +143,7 @@ class PongServer():
 
         print("start sent ")
 
-        conn.send(make_pkt(config.MsgTypes.START.value))
+        conn.send(make_pkt(MsgTypes.START.value))
 
 
     def send_initial_positions(self, conn, player_num):
@@ -144,9 +158,9 @@ class PongServer():
         conn.send(make_pkt(MsgTypes.POS.value, opposite_pos))
 
 
-    def run_client(self, conn, player_num, ball):
+    def run_client(self, conn, player_num):
         import errno
-        global clock, players_pos, SCORE
+        global lock, players_pos, SCORE
 
         self.send_start(conn)        
 
@@ -155,45 +169,69 @@ class PongServer():
         
         self.send_initial_positions(conn, player_num)
 
+        print("ball position = ", self.ball.get_pos())
+        
         # Runs the game
         run = True
+        dt = FPS
         while run:
             try:
-                dt = clock.tick(FPS)
+                print("dt = ", dt)
 
                 # if self.game_end():
                 #     conn.send()
 
                 # First, deal with collisions
-                nx, ny = ball.try_update(dt)
+
+                lock.acquire()
+
+                nx, ny = self.ball.try_update(dt)
 
                 print("nx = ", nx)
                 print("ny = ", ny)
 
-                ball.check_paddle_left(players_pos[0][0], players_pos[0][1], nx, ny)
-                ball.check_paddle_right(players_pos[1][0], players_pos[1][1], nx, ny)
-                score = ball.edges(nx, ny)
+                self.ball.check_paddle_left(players_pos[0][0], players_pos[0][1], nx, ny)
+                self.ball.check_paddle_right(players_pos[1][0], players_pos[1][1], nx, ny)
+                score = self.ball.edges(nx, ny)
 
-                ball.update(dt)
+                self.ball.update(dt)
 
-                ball_pos = ball.get_pos()
+                lock.release()
+
+                ball_pos = self.ball.get_pos()
+
                 print("server ball_pos = ", ball_pos)
                 conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
                 
+                lock.acquire()
+
                 self.update_score(score)
+
+                lock.release()
 
                 conn.send(make_pkt(MsgTypes.SCORE.value, SCORE))
 
-                data = unmake_pkt(conn.recv(BUFF_SIZE))
+                data = unmake_pkt(conn.recv(POS_MSG_SIZE))
 
                 if not data:
                     server_log.log(LogLevels.WARNING.value, "Client {} disconnected with no data".format(conn))
                 else:
+                    lock.acquire()
+
                     players_pos[player_num] = data
+
+                    lock.release()
                 
+                lock.acquire()
+
                 opposite_pos = players_pos[not player_num]
+
+                lock.release()
+
                 print("Sending: ", opposite_pos)
                 conn.send(make_pkt(MsgTypes.POS.value, opposite_pos))
+                
+                dt = clock.tick(FPS)
                 
             except socket.error as se:
                 if se.errno == errno.WSAECONNRESET:

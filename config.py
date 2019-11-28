@@ -10,7 +10,11 @@ PORT = 60000
 # 2 bytes message type +
 # 4 bytes float / int +
 # 4 bytes float / int
-BUFF_SIZE = 10
+POS_MSG_SIZE = 10
+SCORE_MSG_SIZE = 10
+STATE_MSG_SIZE = 4
+WAIT_MSG_SIZE = 6
+START_MSG_SIZE = 2
 
 """ Window """
 WINDOW_WIDTH = 1024
@@ -26,12 +30,17 @@ BALL_SIZE = 10
 
 """ Network """
 class MsgTypes(Enum):
-    POS = 1
-    WAIT = 2
-    SCORE = 3
-    START = 4
-    STATE = 5
-    START_ACK = 6
+    START = 1
+    START_ACK = 2
+    WAIT = 3
+    POS = 4
+    SCORE = 5
+    STATE = 6
+
+""" Game states """
+class States(Enum):
+    STARTING = 1
+    WAITING = 3
 
 """ Log """
 class LogLevels(Enum):

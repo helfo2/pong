@@ -38,11 +38,10 @@ class Ball():
         if random.randrange(0, 1) < 0.5:
             self.xspeed *= -1
 
-    def draw(self, window):
-        pygame.draw.rect(window, (255,255,255), self.rect)
 
     def get_pos(self):
         return [self.x, self.y]
+
 
     def try_update(self, dt):
         x = self.x + self.xspeed * dt
@@ -54,7 +53,6 @@ class Ball():
         self.x += self.xspeed * dt
         self.y += self.yspeed * dt
     
-        self.rect = (self.x, self.y, self.size, self.size)
 
     def check_paddle_left(self, paddle_x, paddle_y, nx, ny):
         paddle_height = config.PADDLE_SIZE[1]

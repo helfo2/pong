@@ -10,3 +10,265 @@
 2019-11-27 11:54:56 INFO     Connected to ('127.0.0.1', 60000)
 2019-11-27 11:55:00,266 INFO     Connected to ('127.0.0.1', 60000)
 2019-11-27 11:55:00 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:29:24,466 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:29:24 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:30:27,189 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:30:27 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:30:59,738 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:30:59 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:35:01,009 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:35:01 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:55:06,622 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:55:06 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:55:06 ERROR    Game finished before start
+2019-11-28 13:55:58,113 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:55:58 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:56:01 ERROR    Game finished while WAITING: no connection from other player
+2019-11-28 13:56:11 INFO     Game finished: no game
+2019-11-28 13:56:26,100 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:56:26 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:56:29 ERROR    Game finished while WAITING: no connection from other player
+2019-11-28 13:56:32,120 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:56:32 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 13:56:39 INFO     Game finished: no game
+2019-11-28 14:53:59,821 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 14:53:59 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 14:54:02 ERROR    Game finished while WAITING: no connection from other player
+2019-11-28 14:54:08,473 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 14:54:08 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 14:54:19 INFO     Game finished: no game
+2019-11-28 15:17:55,938 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:17:55 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:17:58 ERROR    Game finished while WAITING: no connection from other player
+2019-11-28 15:18:00,736 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:18:00 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:18:12 INFO     Game finished: no game
+2019-11-28 15:20:34,278 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:20:34 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:20:37 ERROR    Game finished while WAITING: no connection from other player
+2019-11-28 15:20:42,253 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:20:42 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:20:51 INFO     Game finished: no game
+2019-11-28 15:23:12,636 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:23:12 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:23:21,346 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:23:21 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:24:16,893 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:24:16 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:24:20,561 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:24:20 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:33:37,259 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:33:37 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:33:43,908 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:33:43 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:34:25,833 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:34:25 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:34:29,124 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:34:29 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:34:50,431 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:34:50 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:34:53,596 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:34:53 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:34:53,858 ERROR    Error sending [994.0, 200.0]: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:34:53 ERROR    Error sending [994.0, 200.0]: [WinError 10054] An existing connection was forcibly closed by the remote host
+2019-11-28 15:34:54,491 ERROR    Error sending [20.0, 200.0]: [WinError 10053] An established connection was aborted by the software in your host machine
+2019-11-28 15:34:54 ERROR    Error sending [20.0, 200.0]: [WinError 10053] An established connection was aborted by the software in your host machine
+2019-11-28 15:45:49,923 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:45:49 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:45:58,078 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:45:58 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:46:38,691 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:46:38 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:46:44,958 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:46:44 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:52:32,131 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:52:32 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:52:37,182 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:52:37 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:52:37,197 ERROR    Timed out
+2019-11-28 15:52:37 ERROR    Timed out
+2019-11-28 15:53:15 INFO     Game finished
+2019-11-28 15:57:34,019 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:57:34 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:57:42,938 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:57:42 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 15:57:42,940 ERROR    Timed out
+2019-11-28 15:57:42 ERROR    Timed out
+2019-11-28 16:10:13,602 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:10:13 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:10:16,133 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:10:16 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:10:16,135 ERROR    Timed out
+2019-11-28 16:10:16 ERROR    Timed out
+2019-11-28 16:12:41,756 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:12:41 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:12:47,915 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:12:47 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:12:47,918 ERROR    Timed out
+2019-11-28 16:12:47 ERROR    Timed out
+2019-11-28 16:14:09,108 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:14:09 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:14:12,240 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:14:12 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:14:12,243 ERROR    Timed out
+2019-11-28 16:14:12 ERROR    Timed out
+2019-11-28 16:15:47,910 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:15:47 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:15:51,676 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:15:51 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:15:51,678 ERROR    Timed out
+2019-11-28 16:15:51 ERROR    Timed out
+2019-11-28 16:16:16,514 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:16:16 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:16:19,676 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:16:19 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:16:19,679 ERROR    Timed out
+2019-11-28 16:16:19 ERROR    Timed out
+2019-11-28 16:28:17,457 ERROR    Could not connect to ('127.0.0.1', 60000): [WinError 10061] No connection could be made because the target machine actively refused it
+2019-11-28 16:28:17 ERROR    Could not connect to ('127.0.0.1', 60000): [WinError 10061] No connection could be made because the target machine actively refused it
+2019-11-28 16:28:33,950 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:28:33 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:28:41,911 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:28:41 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:28:56 INFO     Game finished: no game
+2019-11-28 16:29:24,276 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:29:24 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:29:29,520 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:29:29 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:29:29,522 ERROR    Timed out
+2019-11-28 16:29:29 ERROR    Timed out
+2019-11-28 16:38:30,883 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:38:30 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:38:38,715 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:38:38 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:38:38,719 ERROR    Timed out
+2019-11-28 16:38:38 ERROR    Timed out
+2019-11-28 16:39:23,652 ERROR    Could not connect to ('127.0.0.1', 60000): [WinError 10061] No connection could be made because the target machine actively refused it
+2019-11-28 16:39:23 ERROR    Could not connect to ('127.0.0.1', 60000): [WinError 10061] No connection could be made because the target machine actively refused it
+2019-11-28 16:39:46,707 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:39:46 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:39:51,216 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:39:51 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 16:39:51,217 ERROR    Timed out
+2019-11-28 16:39:51 ERROR    Timed out
+2019-11-28 17:22:42,554 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 17:22:42 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 17:22:46,840 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 17:22:46 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 17:22:46,842 ERROR    Timed out
+2019-11-28 17:22:46 ERROR    Timed out
+2019-11-28 18:25:06,025 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 18:25:06 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 18:25:11,003 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 18:25:11 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 18:25:11,004 ERROR    Timed out
+2019-11-28 18:25:11 ERROR    Timed out
+2019-11-28 18:26:21,291 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 18:26:21 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 18:26:27,914 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 18:26:27 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 18:26:27,916 ERROR    Timed out
+2019-11-28 18:26:27 ERROR    Timed out
+2019-11-28 18:45:25,999 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 18:45:25 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 18:45:32,162 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 18:45:32 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 18:45:32,163 ERROR    Timed out
+2019-11-28 18:45:32 ERROR    Timed out
+2019-11-28 19:19:24,835 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:19:24 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:19:33,332 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:19:33 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:19:33,334 ERROR    Timed out
+2019-11-28 19:19:33 ERROR    Timed out
+2019-11-28 19:29:01,865 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:29:01 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:29:06,715 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:29:06 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:29:06,716 ERROR    Timed out
+2019-11-28 19:29:06 ERROR    Timed out
+2019-11-28 19:35:02,998 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:35:02 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:35:07,111 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:35:07 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:35:07,113 ERROR    Timed out
+2019-11-28 19:35:07 ERROR    Timed out
+2019-11-28 19:37:52,094 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:37:52 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:37:57,707 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:37:57 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:40:44,961 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:40:44 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:40:50,135 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:40:50 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:42:17,226 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:42:17 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:42:20,336 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:42:20 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:42:20,337 ERROR    Timed out
+2019-11-28 19:42:20 ERROR    Timed out
+2019-11-28 19:44:53,065 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:44:53 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:44:58,253 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:44:58 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:44:58,255 ERROR    Timed out
+2019-11-28 19:44:58 ERROR    Timed out
+2019-11-28 19:46:56,022 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:46:56 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:46:57,471 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:46:57 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 19:46:57,472 ERROR    Timed out
+2019-11-28 19:46:57 ERROR    Timed out
+2019-11-28 20:02:34,283 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:02:34 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:02:41,821 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:02:41 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:02:41,823 ERROR    Timed out
+2019-11-28 20:02:41 ERROR    Timed out
+2019-11-28 20:10:43,598 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:10:43 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:19:16,499 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:19:16 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:19:19,767 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:19:19 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:19:19,768 ERROR    Timed out
+2019-11-28 20:19:19 ERROR    Timed out
+2019-11-28 20:31:50,979 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:31:50 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:31:56,265 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:31:56 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:31:56,267 ERROR    Timed out
+2019-11-28 20:31:56 ERROR    Timed out
+2019-11-28 20:35:03,444 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:35:03 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:35:11,176 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:35:11 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:35:11,177 ERROR    Timed out
+2019-11-28 20:35:11 ERROR    Timed out
+2019-11-28 20:38:23,904 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:38:23 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:38:31,414 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:38:31 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:38:31,418 ERROR    Timed out
+2019-11-28 20:38:31 ERROR    Timed out
+2019-11-28 20:42:55,587 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:42:55 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:43:06,762 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:43:06 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:43:16 INFO     Game finished: no game
+2019-11-28 20:44:56,561 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:44:56 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:45:04,205 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:45:04 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:45:04,208 ERROR    Timed out
+2019-11-28 20:45:04 ERROR    Timed out
+2019-11-28 20:47:01,904 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:47:01 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:47:16,522 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:47:16 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:49:48,287 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:49:48 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:49:51,564 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:49:51 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:49:51,566 ERROR    Timed out
+2019-11-28 20:49:51 ERROR    Timed out

@@ -21,56 +21,43 @@ class Client():
 
             client_log.log(config.LogLevels.INFO.value, "Connected to {}".format(self.serverAddr))
 
-            return self.recv_msg()
+            return self.recv_state_msg()
 
         except socket.error as e:
             client_log.log(config.LogLevels.ERROR.value, "Could not connect to {}: {}".format(self.serverAddr, e))
             sys.exit(1)
 
-    def recv_msg(self):
-        # raw_msg = self.recv_all(2)
-        # if not raw_msg:
-        #     return None
 
-        # msg_type = struct.unpack("H", raw_msg)[0]
+    def recv_state_msg(self):
+        return packet.unmake_pkt(self.client.recv(config.STATE_MSG_SIZE))
 
-        # msg_sz = packet.msg_size_from_type(msg_type)
+    def recv_wait_msg(self):
+        return packet.unmake_pkt(self.client.recv(config.WAIT_MSG_SIZE))
 
-        # msg = self.recv_all(msg_sz)
+    def recv_start_msg(self):
+        return packet.unmake_pkt(self.client.recv(config.START_MSG_SIZE))
 
-        data = packet.unmake_pkt(self.client.recv(config.BUFF_SIZE))
+    def recv_pos_msg(self):
+        return packet.unmake_pkt(self.client.recv(config.POS_MSG_SIZE))
 
-        return data
+    def recv_score_msg(self):
+        return packet.unmake_pkt(self.client.recv(config.POS_MSG_SIZE))
 
-    def recv_msg_timeout(self, timeout):
+    def recv_msg_with_timeout(self, timeout):
         """ Deals with the start of the game """
         try:
             ready = select.select([self.client], [], [], timeout)
 
             if ready[0]:
-                data = packet.unmake_pkt(self.client.recv(config.BUFF_SIZE))
+                data = packet.unmake_pkt(self.recv_start_msg())
                 
                 # self.client.send(packet.make_pkt(config.MsgTypes.START_ACK.value))
-
-                print("received correct START")
+                # print("data: ", data)
+                # print("received correct START")
                 # only accepted payload for START is zero
                 return data == 0
         except:
             client_log.log(config.LogLevels.ERROR.value, "Timed out")
-    
-
-    def recv_all(self, n):
-        data = bytearray()
-
-        while len(data) < n:
-            packet = self.client.recv(n-len(data))
-            print("packet ", packet)
-            if not packet:
-                return None
-
-            data.extend(packet)
-
-        return data
 
 
     def send_pos(self, data):
@@ -78,7 +65,7 @@ class Client():
             pkt = packet.make_pkt(config.MsgTypes.POS.value, data)
 
             self.client.send(pkt)
-            return self.recv_msg()
+            return self.recv_pos_msg()
             
         except socket.error as e:
             client_log.log(config.LogLevels.ERROR.value, "Error sending {}: {}".format(data, e))

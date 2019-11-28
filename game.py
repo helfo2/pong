@@ -7,6 +7,11 @@ from log import Log
 import time
 import threading
 
+""" Game states """
+class States(Enum):
+    STARTING = 1
+    WAITING = 3
+
 WINDOW_CENTER = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2)
 BELLOW_WINDOW_CENTER = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2 + 40)
 LEFT_SCORE_POSITION = (WINDOW_WIDTH // 4, WINDOW_HEIGHT // 4)
@@ -65,10 +70,6 @@ def redraw_window(player1, player2, ball_pos, score):
     pygame.display.update()
 
 
-def is_wait_state(time_wait):
-    return time_wait is not 0
-
-
 def wait_display(seconds):
     global START
 
@@ -102,7 +103,6 @@ def wait_display(seconds):
         return True
 
 
-
 def no_game_display():
     """ creates a reset screen """
     while True:
@@ -120,104 +120,115 @@ def no_game_display():
         display_surface.blit(text, text_rect)
 
         pygame.display.flip()
-    
-
-def wait_start(client, timeout):
-    global START
-
-    if client.recv_msg_timeout(timeout) is not True:
-        game_log.log(LogLevels.ERROR.value, "Game finished while WAITING: no connection from other player")
-        client.close()
-        
-    else:
-        START = True
-
-        print("received START from server")
         
 
 def init_paddles(client):
-    current_player = Paddle(client.recv_msg())
+    current_player = Paddle(client.recv_pos_msg())
     print("current pos: ", current_player.get_pos())
 
-    opposite_player = Paddle(client.recv_msg())
+    opposite_player = Paddle(client.recv_pos_msg())
     print("opposite_pos: ", opposite_player.get_pos())
 
     return current_player, opposite_player
 
 
 def main():
-    global WAIT, START
-
     # gets the initial state
     client = Client()
+
+    handle_state(client)
+
+    if START is True:
+        start_pong(client)
+    
+    else:
+        game_log.log(LogLevels.ERROR.value, "Game finished before start")
+        client.close()
+    
+
+def handle_state(client):
+    global WAIT, START
 
     initial_state = client.get_state()
     print("initial state = ", initial_state)
 
-    if is_wait_state(initial_state):
+    if initial_state is States.WAITING.value:
         WAIT = True
 
-        wait_start_thread = threading.Thread(target=wait_start, args=(client, initial_state, ))
-        wait_start_thread.start()
+        print("WAITING")
 
-        wait_display(initial_state) # timer
+        timeout = client.recv_wait_msg()
+
+        print("timeout: ", timeout)
+
+        wait_thread = threading.Thread(target=wait, args=(client, timeout, ))
+        wait_thread.start()
+
+        wait_display(timeout) # timer
+
+        wait_thread.join()
+        
+    elif initial_state is States.STARTING.value:
+        start = client.recv_start_msg() # recv wait message with 0 timeout
+        print("STARTING")
+
+        if start == 0:
+            START = True
+
+
+def wait(client, timeout):
+    global START
+
+    if client.recv_msg_with_timeout(timeout) is False:
+        game_log.log(LogLevels.ERROR.value, "Game finished while WAITING: no connection from other player")
+        client.close()
+        
+        print("TIMEOUT")
     else:
         START = True
 
-    start_pong(client)
-    
+        print("received START from server")
+
 
 def start_pong(client):
     global WAIT, START
 
     clock = pygame.time.Clock()
-
-    print("is wait state: ", WAIT)
-    print("can start: ", START)
-
-    # if WAIT is False:
-    #     start = client.recv_msg() # receive the start message in case it was not waiting
-
-    #     print("start = ", start)
-
-    #     if start is not 0:
-    #         game_log.log(LogLevels.ERROR.value, "START malformed")
-    #         client.close()
-    #         pygame.quit()
-    #         exit(1)
-
     
-    if START:
-        current_player, opposite_player = init_paddles(client)
+    current_player, opposite_player = init_paddles(client)
 
-        # Game event
-        run = True
-        while(run):
-            dt = clock.tick(FPS)
+    print("have players")
+    
+    # Game event
+    run = True
+    while(run):
+        dt = clock.tick(FPS)
 
-            print("rady to recv ball_pos")
-            ball_pos = client.recv_msg()
-            print("ball_pos = ", ball_pos)
+        print("rady to recv ball_pos")
+        ball_pos = client.recv_pos_msg()
+        print("ball_pos = ", ball_pos)
 
-            score = client.recv_msg()
+        
+        
+        score = client.recv_score_msg()
 
-            opposite_pos = client.send_pos(current_player.get_pos())
-            print("player2_pos: ", opposite_pos)
-            opposite_player.update(opposite_pos)
+        opposite_pos = client.send_pos(current_player.get_pos())
+        print("player2_pos: ", opposite_pos)
+        opposite_player.update(opposite_pos)
 
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    run = False
-                    client.close()
-                    pygame.quit()
-                    game_log.log(LogLevels.INFO.value, "Game finished")
-                    exit(0)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+                client.close()
+                pygame.quit()
+                game_log.log(LogLevels.INFO.value, "Game finished")
+                exit(0)
 
-            current_player.move(dt)
+        current_player.move(dt)
 
-            print("player1_pos: ", current_player.get_pos())
-            
-            redraw_window(current_player, opposite_player, ball_pos, score)
+        print("player1_pos: ", current_player.get_pos())
+        
+        redraw_window(current_player, opposite_player, ball_pos, score)
 
 
 if __name__ == "__main__":

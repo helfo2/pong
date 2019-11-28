@@ -1,9 +1,13 @@
 import config
 import logging
 import struct
+import threading
 
 MSG_TYPE_SIZE = 2
+
 # BUFF_SIZE = 10
+
+lock = threading.Lock()
 
 def make_pkt(msg_type, data=None):
     if msg_type is not config.MsgTypes.START.value and data is None:
@@ -27,6 +31,9 @@ def make_pkt(msg_type, data=None):
     elif msg_type is config.MsgTypes.START_ACK.value:
         return struct.pack("!H", msg_type)
 
+    elif msg_type is config.MsgTypes.STATE.value:
+        return struct.pack("!HH", msg_type, data)
+
     else:
         logging.error("make_pkt: Don't know the type of message")
 
@@ -34,8 +41,8 @@ def make_pkt(msg_type, data=None):
 def unmake_pkt(data):
     msg_type, payload = solve_msg_type(data)
 
-    print("msg type is ", str(msg_type))
-    print("payload len is ", str(len(payload)))
+    # print("msg type is ", str(msg_type))
+    # print("payload len is ", str(len(payload)))
 
     if msg_type is config.MsgTypes.WAIT.value:
         """ payload is the sleep time in seconds to wait for second player """
@@ -62,6 +69,13 @@ def unmake_pkt(data):
         msg = struct.unpack("!II", payload)
 
         return [msg[0], msg[1]] # left score and right score
+
+    elif msg_type is config.MsgTypes.STATE.value:
+        """ payload is the state: start right away or wait """
+
+        msg = struct.unpack("!H", payload)[0]
+
+        return msg
 
     else:
         logging.error("unmake_pkt: Don't know the type of message")

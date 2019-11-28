@@ -97,3 +97,17 @@
 2019-11-27 09:35:20,748 ERROR    START malformed
 2019-11-27 09:52:57,272 ERROR    START malformed
 2019-11-27 11:27:11,582 ERROR    START malformed
+2019-11-28 13:55:06,623 ERROR    Game finished before start
+2019-11-28 13:56:01,116 ERROR    Game finished while WAITING: no connection from other player
+2019-11-28 13:56:11,789 INFO     Game finished: no game
+2019-11-28 13:56:29,106 ERROR    Game finished while WAITING: no connection from other player
+2019-11-28 13:56:39,370 INFO     Game finished: no game
+2019-11-28 14:54:02,822 ERROR    Game finished while WAITING: no connection from other player
+2019-11-28 14:54:19,210 INFO     Game finished: no game
+2019-11-28 15:17:58,943 ERROR    Game finished while WAITING: no connection from other player
+2019-11-28 15:18:12,757 INFO     Game finished: no game
+2019-11-28 15:20:37,280 ERROR    Game finished while WAITING: no connection from other player
+2019-11-28 15:20:51,633 INFO     Game finished: no game
+2019-11-28 15:53:15,467 INFO     Game finished
+2019-11-28 16:28:56,501 INFO     Game finished: no game
+2019-11-28 20:43:16,269 INFO     Game finished: no game
