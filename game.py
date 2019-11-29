@@ -198,7 +198,7 @@ def start_pong(client):
     current_player, opposite_player = init_paddles(client)
 
     print("have players")
-    
+
     # Game event
     run = True
     while(run):
@@ -207,8 +207,6 @@ def start_pong(client):
         print("rady to recv ball_pos")
         ball_pos = client.recv_pos_msg()
         print("ball_pos = ", ball_pos)
-
-        
         
         score = client.recv_score_msg()
 

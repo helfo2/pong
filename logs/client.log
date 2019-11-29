@@ -272,3 +272,37 @@
 2019-11-28 20:49:51 INFO     Connected to ('127.0.0.1', 60000)
 2019-11-28 20:49:51,566 ERROR    Timed out
 2019-11-28 20:49:51 ERROR    Timed out
+2019-11-28 20:58:55,995 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:58:55 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:59:01,641 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:59:01 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 20:59:01,642 ERROR    Timed out
+2019-11-28 20:59:01 ERROR    Timed out
+2019-11-28 21:03:29,951 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:03:29 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:03:35,998 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:03:35 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:03:35,999 ERROR    Timed out
+2019-11-28 21:03:35 ERROR    Timed out
+2019-11-28 21:08:05,210 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:08:05 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:08:15 INFO     Game finished: no game
+2019-11-28 21:08:55,511 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:08:55 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:09:04,598 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:09:04 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:09:04,599 ERROR    Timed out
+2019-11-28 21:09:04 ERROR    Timed out
+2019-11-28 21:09:56 INFO     Game finished: no game
+2019-11-28 21:14:44,619 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:14:44 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:14:50,304 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:14:50 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:14:50,306 ERROR    Timed out
+2019-11-28 21:14:50 ERROR    Timed out
+2019-11-28 21:16:23,149 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:16:23 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:16:27,243 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:16:27 INFO     Connected to ('127.0.0.1', 60000)
+2019-11-28 21:16:27,244 ERROR    Timed out
+2019-11-28 21:16:27 ERROR    Timed out

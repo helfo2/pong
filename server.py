@@ -128,10 +128,13 @@ class PongServer():
 
 
     def update_score(self, score):
-        global SCORE
+        global lock
 
-        SCORE[0] += score[0]
-        SCORE[1] += score[1]
+        with lock:
+            global SCORE
+
+            SCORE[0] += score[0]
+            SCORE[1] += score[1]
 
 
     def game_end(self):
@@ -149,6 +152,8 @@ class PongServer():
     def send_initial_positions(self, conn, player_num):
         """ After starting the game, send initial position of both players """
 
+        lock.acquire()
+
         initial_pos = players_pos[player_num]
 
         print("sending initial position of ", initial_pos)
@@ -156,6 +161,8 @@ class PongServer():
 
         opposite_pos = players_pos[not player_num]
         conn.send(make_pkt(MsgTypes.POS.value, opposite_pos))
+
+        lock.release()
 
 
     def run_client(self, conn, player_num):
@@ -167,7 +174,11 @@ class PongServer():
         print("player #:", player_num)
         print("player (x, y): {}".format(players_pos[player_num]))
         
+        lock.acquire()
+
         self.send_initial_positions(conn, player_num)
+
+        lock.release()
 
         print("ball position = ", self.ball.get_pos())
         
@@ -203,11 +214,7 @@ class PongServer():
                 print("server ball_pos = ", ball_pos)
                 conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
                 
-                lock.acquire()
-
                 self.update_score(score)
-
-                lock.release()
 
                 conn.send(make_pkt(MsgTypes.SCORE.value, SCORE))
 
