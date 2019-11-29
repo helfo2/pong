@@ -12,6 +12,7 @@ import time
 from ball import Ball
 import collision
 import pygame 
+from queue import Queue
 
 server_log = Log("server.log")
 
@@ -38,6 +39,8 @@ clock = pygame.time.Clock()
 lock = threading.RLock()
 
 SCORE = [0, 0]
+
+queue = Queue()
 
 class PongServer():
 
@@ -113,9 +116,11 @@ class PongServer():
 
 
     def run_game(self):
+        threading.Thread(target=self.produce_game_events, ).start()
+
         threads = []
         for conn_id, conn in enumerate(self.connected_clients):
-            threads.append( threading.Thread(target=self.run_client, args=(conn, conn_id, )) )
+            threads.append( threading.Thread(target=self.run_client2, args=(conn, conn_id, )) )
             
         for t in threads:    
             t.start()
@@ -151,9 +156,6 @@ class PongServer():
 
     def send_initial_positions(self, conn, player_num):
         """ After starting the game, send initial position of both players """
-
-        lock.acquire()
-
         initial_pos = players_pos[player_num]
 
         print("sending initial position of ", initial_pos)
@@ -162,23 +164,62 @@ class PongServer():
         opposite_pos = players_pos[not player_num]
         conn.send(make_pkt(MsgTypes.POS.value, opposite_pos))
 
-        lock.release()
+    
+    def produce_game_events(self):
+        global queue
 
+        # Runs the game
+        run = True
+        dt = FPS
+        while run:
+            print("dt = ", dt)
 
-    def run_client(self, conn, player_num):
+            # if self.game_end():
+            #     conn.send()
+
+            # First, deal with collisions
+            nx, ny = self.ball.try_update(dt)
+
+            print("nx = ", nx)
+            print("ny = ", ny)
+
+            lock.acquire()
+
+            self.ball.check_paddle_left(players_pos[0][0], players_pos[0][1], nx, ny)
+            self.ball.check_paddle_right(players_pos[1][0], players_pos[1][1], nx, ny)
+            score = self.ball.edges(nx, ny)
+
+            self.ball.update(dt)
+
+            ball_pos = self.ball.get_pos()
+
+            lock.release()
+
+            queue.put(ball_pos)
+
+            lock.acquire()
+
+            self.update_score(score)
+
+            lock.release()
+
+            queue.put(SCORE)
+
+            dt = clock.tick(FPS)
+
+    
+    def run_client2(self, conn, player_num):
+        """ Consumes game events and sends them all to the each client """
+
         import errno
-        global lock, players_pos, SCORE
+        global queue, players_pos, SCORE
 
         self.send_start(conn)        
 
         print("player #:", player_num)
         print("player (x, y): {}".format(players_pos[player_num]))
         
-        lock.acquire()
-
         self.send_initial_positions(conn, player_num)
-
-        lock.release()
 
         print("ball position = ", self.ball.get_pos())
         
@@ -194,7 +235,79 @@ class PongServer():
 
                 # First, deal with collisions
 
-                lock.acquire()
+                ball_pos = queue.get()
+
+                print("server ball_pos = ", ball_pos)
+                conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
+                
+                score = queue.get()
+
+                print("score = ", score)
+
+                conn.send(make_pkt(MsgTypes.SCORE.value, score))
+
+                data = unmake_pkt(conn.recv(POS_MSG_SIZE))
+
+                if not data:
+                    server_log.log(LogLevels.WARNING.value, "Client {} disconnected with no data".format(conn))
+                else:
+                    lock.acquire()
+                    players_pos[player_num] = data
+                    lock.release()
+               
+                opposite_pos = players_pos[not player_num]
+
+                print("Sending: ", opposite_pos)
+                conn.send(make_pkt(MsgTypes.POS.value, opposite_pos))
+                
+            except socket.error as se:
+                if se.errno == errno.WSAECONNRESET:
+                    server_log.log(LogLevels.WARNING.value, "Client disconnected: {} | Exception: {}".format(conn, se))
+                else:
+                    server_log.log(LogLevels.ERROR.value, "Socket error: {}".format(se))
+                conn.close()
+                self.server.close()
+                sys.exit(1)
+
+            except KeyboardInterrupt:
+                print("Finishing server from Keyboard...")
+                self.server.close()
+                sys.exit(0)
+                
+            except Exception as e:
+                print("Exception occurred at the server. Check logs")
+                server_log.log(LogLevels.ERROR.value, "Error at run_client(): {}".format(e))
+                self.server.close()
+                sys.exit(1)
+
+
+
+    def run_client(self, conn, player_num):
+        """ Consumes game events and sends them all to the each client """
+
+        import errno
+        global lock, players_pos, SCORE
+
+        self.send_start(conn)        
+
+        print("player #:", player_num)
+        print("player (x, y): {}".format(players_pos[player_num]))
+        
+        self.send_initial_positions(conn, player_num)
+
+        print("ball position = ", self.ball.get_pos())
+        
+        # Runs the game
+        run = True
+        dt = FPS
+        while run:
+            try:
+                print("dt = ", dt)
+
+                # if self.game_end():
+                #     conn.send()
+
+                # First, deal with collisions
 
                 nx, ny = self.ball.try_update(dt)
 
@@ -206,8 +319,6 @@ class PongServer():
                 score = self.ball.edges(nx, ny)
 
                 self.ball.update(dt)
-
-                lock.release()
 
                 ball_pos = self.ball.get_pos()
 
@@ -223,17 +334,9 @@ class PongServer():
                 if not data:
                     server_log.log(LogLevels.WARNING.value, "Client {} disconnected with no data".format(conn))
                 else:
-                    lock.acquire()
-
                     players_pos[player_num] = data
-
-                    lock.release()
-                
-                lock.acquire()
-
+               
                 opposite_pos = players_pos[not player_num]
-
-                lock.release()
 
                 print("Sending: ", opposite_pos)
                 conn.send(make_pkt(MsgTypes.POS.value, opposite_pos))
