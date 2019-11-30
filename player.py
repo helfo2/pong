@@ -2,6 +2,7 @@ import pygame
 from config import *
 from pygame.locals import *
 import logging
+import threading
 
 pygame.init()
 
@@ -12,7 +13,7 @@ class Paddle():
         self.width = PADDLE_SIZE[0]
         self.height = PADDLE_SIZE[1]
         
-        self.color = WHITE
+        self.color = (255,255,255)
         self.rect = (self.x, self.y, self.width, self.height)
         self.vel = 0.5
 

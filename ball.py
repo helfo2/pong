@@ -1,43 +1,48 @@
-from config import *
-from math import *
-from random import *
+import config
+import math
+import random
 from log import Log
 import pygame
 import math
 import random
 import collision as col
 from datetime import datetime
+import sys
 
 pygame.init()
 
+random.seed(datetime.now())
+
 class Ball():
     def __init__(self):
-        self.x = 0
-        self.y = 0
-        self.size = BALL_SIZE
-        self.color = WHITE
+        self.x = config.WINDOW_WIDTH/2
+        self.y = config.WINDOW_HEIGHT/2
+        self.size = 10
+        self.speed = 0.2
+        self.xspeed = self.speed
+        self.yspeed = self.speed
+
         self.rect = (self.x, self.y, self.size, self.size)
 
         self.reset()
         
+
     def reset(self):
-        self.x = WINDOW_WIDTH/2
-        self.y = WINDOW_HEIGHT/2
+        self.x = config.WINDOW_WIDTH/2
+        self.y = config.WINDOW_HEIGHT/2
 
-        angle = uniform(pi/4, -pi/4)
+        angle = random.uniform(math.pi/4, -math.pi/4)
 
-        self.xspeed = 0.2 * cos(angle)
-        self.yspeed = 0.2 * sin(angle)
+        self.xspeed = self.speed * math.cos(angle)
+        self.yspeed = self.speed * math.sin(angle)
 
-        random.seed(datetime.now())
-        if randrange(0, 1) < 0.5:
+        if random.randrange(0, 1) < 0.5:
             self.xspeed *= -1
 
-    def draw(self, window):
-        pygame.draw.rect(window, self.color, self.rect)
 
     def get_pos(self):
         return [self.x, self.y]
+
 
     def try_update(self, dt):
         x = self.x + self.xspeed * dt
@@ -45,15 +50,15 @@ class Ball():
 
         return x, y
 
+
     def update(self, dt):
         self.x += self.xspeed * dt
         self.y += self.yspeed * dt
     
-        self.rect = (self.x, self.y, self.size, self.size)
 
     def check_paddle_left(self, paddle_x, paddle_y, nx, ny):
-        paddle_height = PADDLE_SIZE[1]
-        paddle_width = PADDLE_SIZE[0]
+        paddle_height = config.PADDLE_SIZE[1]
+        paddle_width = config.PADDLE_SIZE[0]
 
         collision_point = col.get_segment_intersection(self.x, self.y, nx, ny, paddle_x + paddle_width, paddle_y, paddle_x + paddle_width, paddle_y + paddle_height)
         if collision_point is not None:
@@ -66,8 +71,8 @@ class Ball():
 
             angle = normalized * col.BOUNCE_ANGLE # multiply by acceleration here
     
-            self.xspeed = 0.2 * cos(angle)
-            self.yspeed = 0.2 * -sin(angle)
+            self.xspeed = self.speed * math.cos(angle)
+            self.yspeed = self.speed * -math.sin(angle)
 
             self.x = paddle_x + paddle_width
 
@@ -77,29 +82,10 @@ class Ball():
 
 
     def check_paddle_right(self, paddle_x, paddle_y, nx, ny):
-        paddle_height = PADDLE_SIZE[1]
-        paddle_width = PADDLE_SIZE[0]
+        paddle_height = config.PADDLE_SIZE[1]
+        paddle_width = config.PADDLE_SIZE[0]
 
-        # if self.x < paddle_x + paddle_width and self.y < paddle_y + paddle_height and self.x + self.size > paddle_x and self.y + self.size > paddle_y:
-        #     diff = self.y - (paddle_y - paddle_height/2)
-        #     angle = interpolate(diff, 0, paddle_height, radians(225), radians(135))
-        #     self.xspeed = 5 * cos(angle)
-        #     self.yspeed = 5 * sin(angle)
-
-        #     self.x = paddle_x - paddle_width/2 - self.size
-
-        # if self.y - self.size < paddle_y + paddle_height/2 and self.y + self.size > paddle_y - paddle_height/2 and (self.x + self.size > paddle_x - paddle_width/2):
-        #     if self.x < paddle_x:
-        #         diff = self.y - (paddle_y - paddle_height/2)
-        #         angle = col.interpolate(diff, 0, paddle_height, radians(225), radians(135))
-        #         self.xspeed = 0.2 * cos(angle)
-        #         self.yspeed = 0.2 * sin(angle)
-
-        #         self.x = paddle_x - paddle_width/2 - self.size
-
-        #         return True
-
-        collision_point = col.get_segment_intersection(self.x + BALL_SIZE, self.y, nx + BALL_SIZE, ny, paddle_x, paddle_y, paddle_x, paddle_y + paddle_height)
+        collision_point = col.get_segment_intersection(self.x + self.size, self.y, nx + self.size, ny, paddle_x, paddle_y, paddle_x, paddle_y + paddle_height)
         if collision_point is not None:
             # https://gamedev.stackexchange.com/questions/4253/in-pong-how-do-you-calculate-the-balls-direction-when-it-bounces-off-the-paddl
             print("collided with right paddle")
@@ -110,86 +96,74 @@ class Ball():
 
             angle = normalized * col.BOUNCE_ANGLE # multiply by acceleration here
 
-            self.xspeed = 0.2 * -cos(angle)
-            self.yspeed = 0.2 * -sin(angle)
+            self.xspeed = self.speed * math.cos(angle)
+            self.yspeed = self.speed * -math.sin(angle)
 
-            self.x = paddle_x - BALL_SIZE - paddle_width
+            self.x = paddle_x - self.size - paddle_width
 
             return True
 
         return False
 
+
     def edges(self, nx, ny):
         left_score = 0
         right_score = 0
 
-        p1 = [self.x, self.y]
-        q1 = [nx, ny]
-
         top1 = col.LEFT_WINDOW_TOP
         top2 = col.RIGHT_WINDOW_TOP
 
+        bottom1 = col.LEFT_WINDOW_BOTTOM
+        bottom2 = col.RIGHT_WINDOW_BOTTOM
+
         # check if ball intersects at the top edge
-        #if col.do_intersect(p1, q1, top1, top2):
         collision_point = col.get_segment_intersection(self.x, self.y, nx, ny, top1[0], top1[1], top2[0], top2[1])
         if collision_point is not None:
             print("top edge")
             self.yspeed *= -1
             self.y = collision_point[1]+1
 
-            return True
+            return [0, 0]
+        elif ny <= 0:
+            print("top edge")
+            self.yspeed *= -1
+            self.y = 1
 
-        p1 = [self.x, self.y + BALL_SIZE]
-        q1 = [nx, ny + BALL_SIZE]
-
-        bottom1 = col.LEFT_WINDOW_BOTTOM
-        bottom2 = col.RIGHT_WINDOW_BOTTOM
+            return [0, 0]
 
         # check if ball intersects at the bottom edge
-        collision_point = col.get_segment_intersection(self.x, self.y + BALL_SIZE, nx, ny + BALL_SIZE, bottom1[0], bottom1[1], bottom2[0], bottom2[1])
+        collision_point = col.get_segment_intersection(self.x, self.y, nx, ny + self.size, bottom1[0], bottom1[1], bottom2[0], bottom2[1])
         if collision_point is not None:
-        #if col.do_intersect(p1, q1, bottom1, bottom2):
             print("collision with bottom")
             self.yspeed *= -1
-            self.y = collision_point[1]-BALL_SIZE
+            self.y = collision_point[1]-self.size-1
 
-            return True
+            return [0, 0]
+        elif ny >= config.WINDOW_HEIGHT:
+            self.yspeed *= -1
+            self.y = config.WINDOW_HEIGHT-self.size-1
 
-        # p1 = [self.x, self.y]
-        # q1 = [nx, ny]
-
-        # left1 = col.LEFT_WALL_TOP
-        # left2 = col.LEFT_WALL_BOTTOM
-
-        # # check if ball goes through left wall
-        # if col.do_intersect(p1, q1, left1, left2):
-        #     left_score += 1
-        #     self.reset()
-
-        # p1 = [self.x + BALL_SIZE, self.y]
-        # q1 = [nx + BALL_SIZE, ny]
-
-        # right1 = col.RIGHT_WALL_TOP
-        # right2 = col.RIGHT_WALL_BOTTOM
-
-        # # check if ball goes through right wall
-        # if col.do_intersect(p1, q1, right1, right2):
-        #     right_score += 1
-        #     self.reset()
-
-        if self.x - self.size > WINDOW_WIDTH:
+            return [0, 0]
+        
+        # check if ball intersects at the right edge
+        if nx + self.size >= config.WINDOW_WIDTH-config.WINDOW_MARGIN:
+            # left player scored
             left_score += 1
             self.reset()
-
-            return True
-
-        if self.x + self.size < 0:
+            print("left player scored")
+            
+            return [1, 0]
+        
+        # check if ball intersects at the left edge
+        if nx <= config.WINDOW_MARGIN:
+            # right player scored
             right_score += 1
             self.reset()
+            print("right player scored")
 
-            return True
+            return [0, 1]
 
-        return False
+        return [0, 0] # error
         
 
 
