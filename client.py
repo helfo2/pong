@@ -5,6 +5,7 @@ import struct
 import sys
 import packet
 import select
+import traceback
 
 client_log = Log("client.log")
 
@@ -38,7 +39,10 @@ class Client():
         return packet.unmake_pkt(self.client.recv(config.START_MSG_SIZE))
 
     def recv_pos_msg(self):
-        return packet.unmake_pkt(self.client.recv(config.POS_MSG_SIZE))
+        test = packet.unmake_pkt(self.client.recv(config.POS_MSG_SIZE))
+        print("waiting BALL msg: ", test)
+
+        return test
 
     def recv_score_msg(self):
         return packet.unmake_pkt(self.client.recv(config.POS_MSG_SIZE))
@@ -46,18 +50,20 @@ class Client():
     def recv_msg_with_timeout(self, timeout):
         """ Deals with the start of the game """
         try:
-            ready = select.select([self.client], [], [], timeout)
+            ready, _ , _ = select.select([self.client], [], [], timeout)
 
-            if ready[0]:
-                data = packet.unmake_pkt(self.recv_start_msg())
+            if ready:
+                data = self.recv_start_msg()
                 
                 # self.client.send(packet.make_pkt(config.MsgTypes.START_ACK.value))
                 # print("data: ", data)
                 # print("received correct START")
                 # only accepted payload for START is zero
                 return data == 0
-        except:
-            client_log.log(config.LogLevels.ERROR.value, "Timed out")
+        except Exception as e:
+            print("WHAAAAT ", e)
+            traceback.print_exc()
+            client_log.log(config.LogLevels.ERROR.value, "Timed out: {}".format(e))
 
 
     def send_pos(self, data):

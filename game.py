@@ -70,39 +70,6 @@ def redraw_window(player1, player2, ball_pos, score):
     pygame.display.update()
 
 
-def wait_display(seconds):
-    global START
-
-    counter = seconds
-    while START is False and counter > 0:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                
-                game_log.log(LogLevels.INFO.value, "Game finished while WAITING by user")
-
-        display_surface.fill(BLACK) 
-
-        wait_text, wait_text_rect = create_text("waiting", WINDOW_CENTER)
-        seconds_text, seconds_text_rect = create_text(str(counter), BELLOW_WINDOW_CENTER)
-
-        display_surface.blit(wait_text, wait_text_rect)
-        display_surface.blit(seconds_text, seconds_text_rect)
-
-        pygame.display.flip()
-
-        counter -= 1
-        time.sleep(1)
-
-    if counter == 0: # no other player joined the match
-        no_game_display()
-
-        return False
-    
-    else:
-        return True
-
-
 def no_game_display():
     """ creates a reset screen """
     while True:
@@ -190,6 +157,39 @@ def wait(client, timeout):
         print("received START from server")
 
 
+def wait_display(seconds):
+    global START
+
+    counter = seconds
+    while START is False and counter > 0:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                
+                game_log.log(LogLevels.INFO.value, "Game finished while WAITING by user")
+
+        display_surface.fill(BLACK) 
+
+        wait_text, wait_text_rect = create_text("waiting", WINDOW_CENTER)
+        seconds_text, seconds_text_rect = create_text(str(counter), BELLOW_WINDOW_CENTER)
+
+        display_surface.blit(wait_text, wait_text_rect)
+        display_surface.blit(seconds_text, seconds_text_rect)
+
+        pygame.display.flip()
+
+        counter -= 1
+        time.sleep(1)
+
+    if counter == 0: # no other player joined the match
+        no_game_display()
+
+        return False
+    
+    else:
+        return True
+
+
 def start_pong(client):
     global WAIT, START
 
@@ -208,8 +208,8 @@ def start_pong(client):
         ball_pos = client.recv_pos_msg()
         print("ball_pos = ", ball_pos)
         
-        score = client.recv_score_msg()
-
+        # score = client.recv_score_msg()
+        score = [0,0]
         opposite_pos = client.send_pos(current_player.get_pos())
         print("player2_pos: ", opposite_pos)
         opposite_player.update(opposite_pos)

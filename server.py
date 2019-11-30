@@ -21,11 +21,9 @@ FPS = 30
 WAIT_SECOND_PLAYER_TIME = 10
 
 """ Initial locations """
-PLAYER_1_POS = [float(WINDOW_MARGIN), float(WINDOW_HEIGHT/2 - 100)]
-PLAYER_2_POS = [float(WINDOW_WIDTH-WINDOW_MARGIN-PADDLE_SIZE[0]), float(WINDOW_HEIGHT/2 - 100)]
+LEFT_PLAYER_POS = [float(WINDOW_MARGIN), float(WINDOW_HEIGHT/2 - 100)]
+RIGHT_PLAYER_POS = [float(WINDOW_WIDTH-WINDOW_MARGIN-PADDLE_SIZE[0]), float(WINDOW_HEIGHT/2 - 100)]
 FLAG_POS = [-1.0,-1.0]
-
-players_pos = [PLAYER_1_POS, PLAYER_2_POS]
 
 player1_score = 0
 player2_score = 0
@@ -36,11 +34,12 @@ player2_win = False
 PLAYER_COUNT = 0
 
 clock = pygame.time.Clock()
-lock = threading.RLock()
+lock = threading.Lock()
 
 SCORE = [0, 0]
 
-queue = Queue()
+left_player_queue = Queue()
+right_player_queue = Queue()
 
 class PongServer():
 
@@ -117,13 +116,8 @@ class PongServer():
 
     def run_game(self):
         threading.Thread(target=self.produce_game_events, ).start()
-
-        threads = []
         for conn_id, conn in enumerate(self.connected_clients):
-            threads.append( threading.Thread(target=self.run_client2, args=(conn, conn_id, )) )
-            
-        for t in threads:    
-            t.start()
+            threading.Thread(target=self.run_client2, args=(conn, conn_id, )).start()
 
 
     def send_wait_msg(self, conn):
@@ -133,13 +127,17 @@ class PongServer():
 
 
     def update_score(self, score):
-        global lock
+        # global lock
+        
+        # with lock:
+        #     global SCORE
 
-        with lock:
-            global SCORE
+        #     SCORE[0] += score[0]
+        #     SCORE[1] += score[1]
+        global SCORE
 
-            SCORE[0] += score[0]
-            SCORE[1] += score[1]
+        SCORE[0] += score[0]
+        SCORE[1] += score[1]
 
 
     def game_end(self):
@@ -153,26 +151,41 @@ class PongServer():
 
         conn.send(make_pkt(MsgTypes.START.value))
 
+    
+    def is_left_player(self, player):
+        """ True if player is left, false if its right """
+
+        return player is 0
+    
 
     def send_initial_positions(self, conn, player_num):
         """ After starting the game, send initial position of both players """
-        initial_pos = players_pos[player_num]
+        if self.is_left_player(player_num):
+            initial_pos = LEFT_PLAYER_POS
+            opposite_pos = RIGHT_PLAYER_POS
+        else:
+            initial_pos = RIGHT_PLAYER_POS
+            opposite_pos = LEFT_PLAYER_POS
 
-        print("sending initial position of ", initial_pos)
-        conn.send(make_pkt(MsgTypes.POS.value, initial_pos))
-
-        opposite_pos = players_pos[not player_num]
-        conn.send(make_pkt(MsgTypes.POS.value, opposite_pos))
+        print("sending initial positions ")
+        conn.send( make_pkt(MsgTypes.POS.value, initial_pos) )
+        conn.send( make_pkt(MsgTypes.POS.value, opposite_pos) )
 
     
     def produce_game_events(self):
-        global queue
+        global left_player_queue, right_player_queue, SCORE
+
+        print("producing game events")
 
         # Runs the game
         run = True
         dt = FPS
         while run:
-            print("dt = ", dt)
+            # print("dt = ", dt)
+            
+            ball_pos = self.ball.get_pos()
+            left_player_queue.put(ball_pos)
+            right_player_queue.put(ball_pos)
 
             # if self.game_end():
             #     conn.send()
@@ -180,30 +193,21 @@ class PongServer():
             # First, deal with collisions
             nx, ny = self.ball.try_update(dt)
 
-            print("nx = ", nx)
-            print("ny = ", ny)
+            # print("nx = ", nx)
+            # print("ny = ", ny)
 
-            lock.acquire()
-
-            self.ball.check_paddle_left(players_pos[0][0], players_pos[0][1], nx, ny)
-            self.ball.check_paddle_right(players_pos[1][0], players_pos[1][1], nx, ny)
+            self.ball.check_paddle_left(LEFT_PLAYER_POS[0], LEFT_PLAYER_POS[1], nx, ny)
+            self.ball.check_paddle_right(RIGHT_PLAYER_POS[0], RIGHT_PLAYER_POS[1], nx, ny)
             score = self.ball.edges(nx, ny)
 
             self.ball.update(dt)
 
             ball_pos = self.ball.get_pos()
 
-            lock.release()
+            # self.update_score(score)
 
-            queue.put(ball_pos)
-
-            lock.acquire()
-
-            self.update_score(score)
-
-            lock.release()
-
-            queue.put(SCORE)
+            # left_player_queue.put(SCORE)
+            # right_player_queue.put(SCORE)
 
             dt = clock.tick(FPS)
 
@@ -212,12 +216,11 @@ class PongServer():
         """ Consumes game events and sends them all to the each client """
 
         import errno
-        global queue, players_pos, SCORE
+        global left_player_queue, right_player_queue, SCORE, RIGHT_PLAYER_POS, LEFT_PLAYER_POS
 
-        self.send_start(conn)        
+        self.send_start(conn)
 
         print("player #:", player_num)
-        print("player (x, y): {}".format(players_pos[player_num]))
         
         self.send_initial_positions(conn, player_num)
 
@@ -226,6 +229,7 @@ class PongServer():
         # Runs the game
         run = True
         dt = FPS
+        left = True
         while run:
             try:
                 print("dt = ", dt)
@@ -235,27 +239,48 @@ class PongServer():
 
                 # First, deal with collisions
 
-                ball_pos = queue.get()
+                if self.is_left_player(player_num):
+                    ball_pos = left_player_queue.get()
+                    left = True
+                else:
+                    ball_pos = right_player_queue.get()
+                    left = False
 
                 print("server ball_pos = ", ball_pos)
                 conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
+
+                if left is True:
+                    left_player_queue.task_done()
+                else:
+                    right_player_queue.task_done()
                 
-                score = queue.get()
+                # if self.is_left_player(player_num):
+                #     print("picking score ")
+                #     score = left_player_queue.get()
+                #     left_player_queue.task_done()
+                #     print("score done")
+                # else:
+                #     print("picking score")
+                #     score = right_player_queue.get()
+                #     right_player_queue.task_done()
+                #     print("score done")
 
-                print("score = ", score)
 
-                conn.send(make_pkt(MsgTypes.SCORE.value, score))
+                # conn.send(make_pkt(MsgTypes.SCORE.value, score))
 
                 data = unmake_pkt(conn.recv(POS_MSG_SIZE))
 
                 if not data:
                     server_log.log(LogLevels.WARNING.value, "Client {} disconnected with no data".format(conn))
                 else:
-                    lock.acquire()
-                    players_pos[player_num] = data
-                    lock.release()
-               
-                opposite_pos = players_pos[not player_num]
+                    print("recved position {}".format(player_num))
+                    if self.is_left_player(player_num):
+                        LEFT_PLAYER_POS = data
+                        opposite_pos = RIGHT_PLAYER_POS
+                    else:
+                        RIGHT_PLAYER_POS = data
+                        opposite_pos = LEFT_PLAYER_POS
+
 
                 print("Sending: ", opposite_pos)
                 conn.send(make_pkt(MsgTypes.POS.value, opposite_pos))
@@ -286,12 +311,11 @@ class PongServer():
         """ Consumes game events and sends them all to the each client """
 
         import errno
-        global lock, players_pos, SCORE
+        global lock, SCORE, RIGHT_PLAYER_POS, LEFT_PLAYER_POS
 
         self.send_start(conn)        
 
         print("player #:", player_num)
-        print("player (x, y): {}".format(players_pos[player_num]))
         
         self.send_initial_positions(conn, player_num)
 
@@ -314,8 +338,8 @@ class PongServer():
                 print("nx = ", nx)
                 print("ny = ", ny)
 
-                self.ball.check_paddle_left(players_pos[0][0], players_pos[0][1], nx, ny)
-                self.ball.check_paddle_right(players_pos[1][0], players_pos[1][1], nx, ny)
+                self.ball.check_paddle_left(LEFT_PLAYER_POS[0], LEFT_PLAYER_POS[1], nx, ny)
+                self.ball.check_paddle_right(RIGHT_PLAYER_POS[0], RIGHT_PLAYER_POS[1], nx, ny)
                 score = self.ball.edges(nx, ny)
 
                 self.ball.update(dt)
@@ -334,9 +358,14 @@ class PongServer():
                 if not data:
                     server_log.log(LogLevels.WARNING.value, "Client {} disconnected with no data".format(conn))
                 else:
-                    players_pos[player_num] = data
-               
-                opposite_pos = players_pos[not player_num]
+                    if self.is_left_player(player_num):
+                        LEFT_PLAYER_POS = data
+
+                        opposite_pos = RIGHT_PLAYER_POS
+                    else:
+                        RIGHT_PLAYER_POS = data
+                        
+                        opposite_pos = LEFT_PLAYER_POS
 
                 print("Sending: ", opposite_pos)
                 conn.send(make_pkt(MsgTypes.POS.value, opposite_pos))

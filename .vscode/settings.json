@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\FEHE\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
+    "python.pythonPath": "pongenv/bin/python",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
 }
