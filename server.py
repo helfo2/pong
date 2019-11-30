@@ -187,11 +187,14 @@ class PongServer():
             left_player_queue.put(ball_pos)
             right_player_queue.put(ball_pos)
 
+            print("coloca em ambas filas")
             # if self.game_end():
             #     conn.send()
 
             # First, deal with collisions
             nx, ny = self.ball.try_update(dt)
+
+            print("tenta atualizar bolinha")
 
             # print("nx = ", nx)
             # print("ny = ", ny)
@@ -200,14 +203,18 @@ class PongServer():
             self.ball.check_paddle_right(RIGHT_PLAYER_POS[0], RIGHT_PLAYER_POS[1], nx, ny)
             score = self.ball.edges(nx, ny)
 
+            print("colisao")
+
             self.ball.update(dt)
 
-            ball_pos = self.ball.get_pos()
+            print("bolinha atualizada")
 
-            # self.update_score(score)
+            #ball_pos = self.ball.get_pos()
 
-            # left_player_queue.put(SCORE)
-            # right_player_queue.put(SCORE)
+            self.update_score(score)
+
+            left_player_queue.put(SCORE)
+            right_player_queue.put(SCORE)
 
             dt = clock.tick(FPS)
 
@@ -237,8 +244,6 @@ class PongServer():
                 # if self.game_end():
                 #     conn.send()
 
-                # First, deal with collisions
-
                 if self.is_left_player(player_num):
                     ball_pos = left_player_queue.get()
                     left = True
@@ -247,26 +252,21 @@ class PongServer():
                     left = False
 
                 print("server ball_pos = ", ball_pos)
-                conn.send(make_pkt(MsgTypes.POS.value, ball_pos))
+                conn.send( make_pkt(MsgTypes.POS.value, ball_pos) ) # ok
 
                 if left is True:
                     left_player_queue.task_done()
                 else:
                     right_player_queue.task_done()
                 
-                # if self.is_left_player(player_num):
-                #     print("picking score ")
-                #     score = left_player_queue.get()
-                #     left_player_queue.task_done()
-                #     print("score done")
-                # else:
-                #     print("picking score")
-                #     score = right_player_queue.get()
-                #     right_player_queue.task_done()
-                #     print("score done")
+                if self.is_left_player(player_num):
+                    score = left_player_queue.get()
+                    left_player_queue.task_done()
+                else:
+                    score = right_player_queue.get()
+                    right_player_queue.task_done()
 
-
-                # conn.send(make_pkt(MsgTypes.SCORE.value, score))
+                conn.send( make_pkt(MsgTypes.SCORE.value, score) )
 
                 data = unmake_pkt(conn.recv(POS_MSG_SIZE))
 
@@ -283,7 +283,7 @@ class PongServer():
 
 
                 print("Sending: ", opposite_pos)
-                conn.send(make_pkt(MsgTypes.POS.value, opposite_pos))
+                conn.send( make_pkt(MsgTypes.POS.value, opposite_pos) ) # ok
                 
             except socket.error as se:
                 if se.errno == errno.WSAECONNRESET:

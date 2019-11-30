@@ -208,9 +208,9 @@ def start_pong(client):
         ball_pos = client.recv_pos_msg()
         print("ball_pos = ", ball_pos)
         
-        # score = client.recv_score_msg()
-        score = [0,0]
-        opposite_pos = client.send_pos(current_player.get_pos())
+        score = client.recv_score_msg()
+        
+        opposite_pos = client.send_pos( current_player.get_pos() )
         print("player2_pos: ", opposite_pos)
         opposite_player.update(opposite_pos)
 

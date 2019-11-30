@@ -40,7 +40,7 @@ class Client():
 
     def recv_pos_msg(self):
         test = packet.unmake_pkt(self.client.recv(config.POS_MSG_SIZE))
-        print("waiting BALL msg: ", test)
+        print("position msg: ", test)
 
         return test
 

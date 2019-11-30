@@ -26,6 +26,7 @@ class Ball():
 
         self.reset()
         
+
     def reset(self):
         self.x = config.WINDOW_WIDTH/2
         self.y = config.WINDOW_HEIGHT/2
@@ -48,6 +49,7 @@ class Ball():
         y = self.y + self.yspeed * dt
 
         return x, y
+
 
     def update(self, dt):
         self.x += self.xspeed * dt
@@ -94,7 +96,7 @@ class Ball():
 
             angle = normalized * col.BOUNCE_ANGLE # multiply by acceleration here
 
-            self.xspeed = self.speed * -math.cos(angle)
+            self.xspeed = self.speed * math.cos(angle)
             self.yspeed = self.speed * -math.sin(angle)
 
             self.x = paddle_x - self.size - paddle_width
@@ -102,6 +104,7 @@ class Ball():
             return True
 
         return False
+
 
     def edges(self, nx, ny):
         left_score = 0
@@ -141,7 +144,6 @@ class Ball():
             self.y = config.WINDOW_HEIGHT-self.size-1
 
             return [0, 0]
-
         
         # check if ball intersects at the right edge
         if nx + self.size >= config.WINDOW_WIDTH-config.WINDOW_MARGIN:
@@ -149,7 +151,7 @@ class Ball():
             left_score += 1
             self.reset()
             print("left player scored")
-            sys.exit(1)
+            
             return [1, 0]
         
         # check if ball intersects at the left edge
@@ -158,7 +160,6 @@ class Ball():
             right_score += 1
             self.reset()
             print("right player scored")
-            sys.exit(1)
 
             return [0, 1]
 
