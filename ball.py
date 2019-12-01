@@ -52,6 +52,8 @@ class Ball():
 
 
     def update(self, dt):
+        print("dt is ", dt)
+
         self.x += self.xspeed * dt
         self.y += self.yspeed * dt
     
@@ -96,7 +98,7 @@ class Ball():
 
             angle = normalized * col.BOUNCE_ANGLE # multiply by acceleration here
 
-            self.xspeed = self.speed * math.cos(angle)
+            self.xspeed = self.speed * -math.cos(angle)
             self.yspeed = self.speed * -math.sin(angle)
 
             self.x = paddle_x - self.size - paddle_width

@@ -160,3 +160,95 @@
 2019-11-30 18:33:47 INFO     Connection established with ('127.0.0.1', 51305)
 2019-11-30 18:33:59,285 WARNING  Interrupted form keyboard
 2019-11-30 18:33:59 WARNING  Interrupted form keyboard
+2019-12-01 11:50:54,876 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 11:50:54 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 11:50:54,890 INFO     Listening...
+2019-12-01 11:50:54 INFO     Listening...
+2019-12-01 11:51:29,342 INFO     Connection established with ('127.0.0.1', 52801)
+2019-12-01 11:51:29 INFO     Connection established with ('127.0.0.1', 52801)
+2019-12-01 11:51:37,802 INFO     Connection established with ('127.0.0.1', 52804)
+2019-12-01 11:51:37 INFO     Connection established with ('127.0.0.1', 52804)
+2019-12-01 11:52:06,949 WARNING  Client disconnected: <socket.socket fd=1492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 52801)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 11:52:06 WARNING  Client disconnected: <socket.socket fd=1492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 52801)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 11:52:18,433 WARNING  Client disconnected: <socket.socket fd=1496, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 52804)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 11:52:18 WARNING  Client disconnected: <socket.socket fd=1496, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 52804)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:00:27,836 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:00:27 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:00:27,878 INFO     Listening...
+2019-12-01 12:00:27 INFO     Listening...
+2019-12-01 12:07:38,194 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:07:38 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:07:38,195 INFO     Listening...
+2019-12-01 12:07:38 INFO     Listening...
+2019-12-01 12:07:43,818 INFO     Connection established with ('127.0.0.1', 52954)
+2019-12-01 12:07:43 INFO     Connection established with ('127.0.0.1', 52954)
+2019-12-01 12:07:49,482 INFO     Connection established with ('127.0.0.1', 52955)
+2019-12-01 12:07:49 INFO     Connection established with ('127.0.0.1', 52955)
+2019-12-01 12:08:19,213 WARNING  Client disconnected: <socket.socket fd=1540, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 52955)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:08:19 WARNING  Client disconnected: <socket.socket fd=1540, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 52955)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:08:33,821 WARNING  Client disconnected: <socket.socket fd=1420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 52954)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:08:33 WARNING  Client disconnected: <socket.socket fd=1420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 52954)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:09:18,307 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:09:18 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:09:18,309 INFO     Listening...
+2019-12-01 12:09:18 INFO     Listening...
+2019-12-01 12:09:23,630 INFO     Connection established with ('127.0.0.1', 52961)
+2019-12-01 12:09:23 INFO     Connection established with ('127.0.0.1', 52961)
+2019-12-01 12:09:32,147 INFO     Connection established with ('127.0.0.1', 52963)
+2019-12-01 12:09:32 INFO     Connection established with ('127.0.0.1', 52963)
+2019-12-01 12:10:07,551 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:10:07 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:10:07,551 INFO     Listening...
+2019-12-01 12:10:07 INFO     Listening...
+2019-12-01 12:10:12,171 INFO     Connection established with ('127.0.0.1', 52968)
+2019-12-01 12:10:12 INFO     Connection established with ('127.0.0.1', 52968)
+2019-12-01 12:10:17,306 INFO     Connection established with ('127.0.0.1', 52969)
+2019-12-01 12:10:17 INFO     Connection established with ('127.0.0.1', 52969)
+2019-12-01 12:13:40,492 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:13:40 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:13:40,493 INFO     Listening...
+2019-12-01 12:13:40 INFO     Listening...
+2019-12-01 12:13:46,233 INFO     Connection established with ('127.0.0.1', 52999)
+2019-12-01 12:13:46 INFO     Connection established with ('127.0.0.1', 52999)
+2019-12-01 12:13:53,272 INFO     Connection established with ('127.0.0.1', 53000)
+2019-12-01 12:13:53 INFO     Connection established with ('127.0.0.1', 53000)
+2019-12-01 12:14:58,739 WARNING  Client disconnected: <socket.socket fd=1500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 52999)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:14:58 WARNING  Client disconnected: <socket.socket fd=1500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 52999)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:15:00,518 WARNING  Client disconnected: <socket.socket fd=1564, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53000)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:15:00 WARNING  Client disconnected: <socket.socket fd=1564, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53000)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:15:32,000 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:15:32 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:15:32,001 INFO     Listening...
+2019-12-01 12:15:32 INFO     Listening...
+2019-12-01 12:15:37,151 INFO     Connection established with ('127.0.0.1', 53006)
+2019-12-01 12:15:37 INFO     Connection established with ('127.0.0.1', 53006)
+2019-12-01 12:15:42,474 INFO     Connection established with ('127.0.0.1', 53008)
+2019-12-01 12:15:42 INFO     Connection established with ('127.0.0.1', 53008)
+2019-12-01 12:17:41,846 WARNING  Client disconnected: <socket.socket fd=1596, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53008)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:17:41 WARNING  Client disconnected: <socket.socket fd=1596, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53008)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:17:43,454 WARNING  Client disconnected: <socket.socket fd=1528, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53006)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:17:43 WARNING  Client disconnected: <socket.socket fd=1528, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53006)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:19:35,691 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:19:35 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:19:35,692 INFO     Listening...
+2019-12-01 12:19:35 INFO     Listening...
+2019-12-01 12:19:42,387 INFO     Connection established with ('127.0.0.1', 53020)
+2019-12-01 12:19:42 INFO     Connection established with ('127.0.0.1', 53020)
+2019-12-01 12:19:47,731 INFO     Connection established with ('127.0.0.1', 53021)
+2019-12-01 12:19:47 INFO     Connection established with ('127.0.0.1', 53021)
+2019-12-01 12:19:52,735 WARNING  Client disconnected: <socket.socket fd=1528, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53021)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:19:52 WARNING  Client disconnected: <socket.socket fd=1528, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53021)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:19:57,322 WARNING  Client disconnected: <socket.socket fd=1572, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53020)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:19:57 WARNING  Client disconnected: <socket.socket fd=1572, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53020)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:20:17,071 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:20:17 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 12:20:17,071 INFO     Listening...
+2019-12-01 12:20:17 INFO     Listening...
+2019-12-01 12:20:23,804 INFO     Connection established with ('127.0.0.1', 53025)
+2019-12-01 12:20:23 INFO     Connection established with ('127.0.0.1', 53025)
+2019-12-01 12:20:29,400 INFO     Connection established with ('127.0.0.1', 53027)
+2019-12-01 12:20:29 INFO     Connection established with ('127.0.0.1', 53027)
+2019-12-01 12:21:34,431 WARNING  Client disconnected: <socket.socket fd=1500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53025)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:21:34 WARNING  Client disconnected: <socket.socket fd=1500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53025)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:21:35,999 WARNING  Client disconnected: <socket.socket fd=1544, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53027)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 12:21:35 WARNING  Client disconnected: <socket.socket fd=1544, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53027)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto

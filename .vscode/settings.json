@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "pongenv/bin/python",
+    "python.pythonPath": "C:\\Users\\elfo\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
 }
