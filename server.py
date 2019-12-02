@@ -127,13 +127,6 @@ class PongServer():
 
 
     def update_score(self, score):
-        # global lock
-        
-        # with lock:
-        #     global SCORE
-
-        #     SCORE[0] += score[0]
-        #     SCORE[1] += score[1]
         global SCORE
 
         SCORE[0] += score[0]
@@ -155,7 +148,7 @@ class PongServer():
     def is_left_player(self, player):
         """ True if player is left, false if its right """
 
-        return player is 0
+        return player == 0
     
 
     def send_initial_positions(self, conn, player_num):
@@ -181,35 +174,21 @@ class PongServer():
         run = True
         dt = FPS
         while run:
-            # print("dt = ", dt)
-            
+            if dt > FPS:
+                dt = FPS
+                
             ball_pos = self.ball.get_pos()
             left_player_queue.put(ball_pos)
             right_player_queue.put(ball_pos)
 
-            print("coloca em ambas filas")
-            # if self.game_end():
-            #     conn.send()
-
-            # First, deal with collisions
+            # Deal with collisions
             nx, ny = self.ball.try_update(dt)
-
-            print("tenta atualizar bolinha")
-
-            # print("nx = ", nx)
-            # print("ny = ", ny)
 
             self.ball.check_paddle_left(LEFT_PLAYER_POS[0], LEFT_PLAYER_POS[1], nx, ny)
             self.ball.check_paddle_right(RIGHT_PLAYER_POS[0], RIGHT_PLAYER_POS[1], nx, ny)
             score = self.ball.edges(nx, ny)
 
-            print("colisao")
-
             self.ball.update(dt)
-
-            print("bolinha atualizada")
-
-            #ball_pos = self.ball.get_pos()
 
             self.update_score(score)
 
