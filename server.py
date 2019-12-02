@@ -165,6 +165,10 @@ class PongServer():
         conn.send( make_pkt(MsgTypes.POS.value, opposite_pos) )
 
     
+    def send_end_game(self, conn):
+        conn.send( make_pkt(MsgTypes.END.value) )
+
+
     def produce_game_events(self):
         global left_player_queue, right_player_queue, SCORE
 
@@ -176,7 +180,7 @@ class PongServer():
         while run:
             if dt > FPS:
                 dt = FPS
-                
+
             ball_pos = self.ball.get_pos()
             left_player_queue.put(ball_pos)
             right_player_queue.put(ball_pos)
@@ -216,12 +220,14 @@ class PongServer():
         run = True
         dt = FPS
         left = True
-        while run:
+        end = False
+        while run and not end:
             try:
                 print("dt = ", dt)
 
                 # if self.game_end():
-                #     conn.send()
+                #     end = True
+                #     break
 
                 if self.is_left_player(player_num):
                     ball_pos = left_player_queue.get()
@@ -284,6 +290,9 @@ class PongServer():
                 self.server.close()
                 sys.exit(1)
 
+        if end is True:
+            conn.close()
+            server_log.log(LogLevels.ERROR.value, "Game ended with 15 points")
 
 
     def run_client(self, conn, player_num):

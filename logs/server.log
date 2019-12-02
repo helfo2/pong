@@ -252,3 +252,85 @@
 2019-12-01 12:21:34 WARNING  Client disconnected: <socket.socket fd=1500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53025)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
 2019-12-01 12:21:35,999 WARNING  Client disconnected: <socket.socket fd=1544, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53027)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
 2019-12-01 12:21:35 WARNING  Client disconnected: <socket.socket fd=1544, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53027)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 22:41:11,502 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:41:11 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:41:11,544 INFO     Listening...
+2019-12-01 22:41:11 INFO     Listening...
+2019-12-01 22:41:17,287 INFO     Connection established with ('127.0.0.1', 53630)
+2019-12-01 22:41:17 INFO     Connection established with ('127.0.0.1', 53630)
+2019-12-01 22:41:24,971 INFO     Connection established with ('127.0.0.1', 53631)
+2019-12-01 22:41:24 INFO     Connection established with ('127.0.0.1', 53631)
+2019-12-01 22:42:12,369 ERROR    Game ended with 15 points
+2019-12-01 22:42:12 ERROR    Game ended with 15 points
+2019-12-01 22:42:12,388 ERROR    Game ended with 15 points
+2019-12-01 22:42:12 ERROR    Game ended with 15 points
+2019-12-01 22:44:06,453 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:44:06 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:44:06,454 INFO     Listening...
+2019-12-01 22:44:06 INFO     Listening...
+2019-12-01 22:44:11,516 INFO     Connection established with ('127.0.0.1', 53632)
+2019-12-01 22:44:11 INFO     Connection established with ('127.0.0.1', 53632)
+2019-12-01 22:44:17,230 INFO     Connection established with ('127.0.0.1', 53633)
+2019-12-01 22:44:17 INFO     Connection established with ('127.0.0.1', 53633)
+2019-12-01 22:45:41,342 ERROR    Game ended with 15 points
+2019-12-01 22:45:41 ERROR    Game ended with 15 points
+2019-12-01 22:45:41,790 ERROR    Error at run_client(): unpack requires a buffer of 2 bytes
+2019-12-01 22:45:41 ERROR    Error at run_client(): unpack requires a buffer of 2 bytes
+2019-12-01 22:46:48,791 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:46:48 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:46:48,791 INFO     Listening...
+2019-12-01 22:46:48 INFO     Listening...
+2019-12-01 22:46:57,632 INFO     Connection established with ('127.0.0.1', 53634)
+2019-12-01 22:46:57 INFO     Connection established with ('127.0.0.1', 53634)
+2019-12-01 22:47:01,446 INFO     Connection established with ('127.0.0.1', 53635)
+2019-12-01 22:47:01 INFO     Connection established with ('127.0.0.1', 53635)
+2019-12-01 22:48:15,202 ERROR    Game ended with 15 points
+2019-12-01 22:48:15 ERROR    Game ended with 15 points
+2019-12-01 22:48:15,216 ERROR    Game ended with 15 points
+2019-12-01 22:48:15 ERROR    Game ended with 15 points
+2019-12-01 22:49:08,593 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:49:08 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:49:08,593 INFO     Listening...
+2019-12-01 22:49:08 INFO     Listening...
+2019-12-01 22:49:11,997 INFO     Connection established with ('127.0.0.1', 53636)
+2019-12-01 22:49:11 INFO     Connection established with ('127.0.0.1', 53636)
+2019-12-01 22:49:21,560 INFO     Connection established with ('127.0.0.1', 53637)
+2019-12-01 22:49:21 INFO     Connection established with ('127.0.0.1', 53637)
+2019-12-01 22:49:21,936 WARNING  Client disconnected: <socket.socket fd=1564, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53637)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 22:49:21 WARNING  Client disconnected: <socket.socket fd=1564, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53637)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 22:49:59,261 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:49:59 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:49:59,262 INFO     Listening...
+2019-12-01 22:49:59 INFO     Listening...
+2019-12-01 22:50:04,157 INFO     Connection established with ('127.0.0.1', 53638)
+2019-12-01 22:50:04 INFO     Connection established with ('127.0.0.1', 53638)
+2019-12-01 22:50:11,657 INFO     Connection established with ('127.0.0.1', 53639)
+2019-12-01 22:50:11 INFO     Connection established with ('127.0.0.1', 53639)
+2019-12-01 22:51:08,850 ERROR    Game ended with 15 points
+2019-12-01 22:51:08 ERROR    Game ended with 15 points
+2019-12-01 22:51:08,863 ERROR    Game ended with 15 points
+2019-12-01 22:51:08 ERROR    Game ended with 15 points
+2019-12-01 22:56:32,665 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:56:32 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:56:32,666 INFO     Listening...
+2019-12-01 22:56:32 INFO     Listening...
+2019-12-01 22:56:37,212 INFO     Connection established with ('127.0.0.1', 53641)
+2019-12-01 22:56:37 INFO     Connection established with ('127.0.0.1', 53641)
+2019-12-01 22:56:43,276 INFO     Connection established with ('127.0.0.1', 53642)
+2019-12-01 22:56:43 INFO     Connection established with ('127.0.0.1', 53642)
+2019-12-01 22:58:17,963 WARNING  Client disconnected: <socket.socket fd=1484, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53642)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 22:58:17 WARNING  Client disconnected: <socket.socket fd=1484, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53642)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 22:58:18,101 WARNING  Client disconnected: <socket.socket fd=1492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53641)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 22:58:18 WARNING  Client disconnected: <socket.socket fd=1492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53641)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 22:59:47,230 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:59:47 INFO     Initialized PONG server at 127.0.0.1:60000
+2019-12-01 22:59:47,231 INFO     Listening...
+2019-12-01 22:59:47 INFO     Listening...
+2019-12-01 22:59:52,291 INFO     Connection established with ('127.0.0.1', 53643)
+2019-12-01 22:59:52 INFO     Connection established with ('127.0.0.1', 53643)
+2019-12-01 22:59:57,979 INFO     Connection established with ('127.0.0.1', 53644)
+2019-12-01 22:59:57 INFO     Connection established with ('127.0.0.1', 53644)
+2019-12-01 23:01:23,682 WARNING  Client disconnected: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53643)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 23:01:23 WARNING  Client disconnected: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53643)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 23:01:24,816 WARNING  Client disconnected: <socket.socket fd=1572, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53644)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+2019-12-01 23:01:24 WARNING  Client disconnected: <socket.socket fd=1572, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60000), raddr=('127.0.0.1', 53644)> | Exception: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto

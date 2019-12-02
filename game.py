@@ -190,6 +190,36 @@ def wait_display(seconds):
         return True
 
 
+def winner(score):
+    if score[0] == 15:
+        return "left player"
+    elif score[1] == 15:
+        return "right player"
+    else:
+        return ""
+
+
+def end_display(winner_player):
+    global START
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                
+                game_log.log(LogLevels.INFO.value, "Game finished while WAITING by user")
+
+        display_surface.fill(BLACK) 
+
+        finish_text, finish_text_rect = create_text("game finished", WINDOW_CENTER)
+        winner_text, winner_text_rect = create_text(winner_player + " won", BELLOW_WINDOW_CENTER)
+
+        display_surface.blit(finish_text, finish_text_rect)
+        display_surface.blit(winner_text, winner_text_rect)
+
+        pygame.display.flip()
+
+
 def start_pong(client):
     global WAIT, START
 
@@ -201,15 +231,24 @@ def start_pong(client):
 
     # Game event
     run = True
-    while(run):
+    end = False
+    score = [0,0]
+    winner_player = ""
+    while run and not end:
         dt = clock.tick(FPS)
+
+        winner_player = winner(score) 
+        if len(winner_player) > 0:
+           end = True
+           print("we have a winner")
+           break
 
         print("rady to recv ball_pos")
         ball_pos = client.recv_pos_msg()
         print("ball_pos = ", ball_pos)
         
         score = client.recv_score_msg()
-        
+
         opposite_pos = client.send_pos( current_player.get_pos() )
         print("player2_pos: ", opposite_pos)
         opposite_player.update(opposite_pos)
@@ -228,6 +267,8 @@ def start_pong(client):
         
         redraw_window(current_player, opposite_player, ball_pos, score)
 
+    if end:
+        end_display(winner_player)
 
 if __name__ == "__main__":
     main()

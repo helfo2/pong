@@ -21,14 +21,12 @@ def make_pkt(msg_type, data=None):
 
     elif msg_type is config.MsgTypes.POS.value:
         """ data is location type [x,y] """
-
-        # print("packet made: ", msg_type, data[0], data[1])
         return struct.pack("!Hff", msg_type, data[0], data[1])
 
     elif msg_type is config.MsgTypes.SCORE.value:
         return struct.pack("!HII", msg_type, data[0], data[1])
 
-    elif msg_type is config.MsgTypes.START_ACK.value:
+    elif msg_type is config.MsgTypes.END.value:
         return struct.pack("!H", msg_type)
 
     elif msg_type is config.MsgTypes.STATE.value:
@@ -41,9 +39,6 @@ def make_pkt(msg_type, data=None):
 def unmake_pkt(data):
     msg_type, payload = solve_msg_type(data)
 
-    # print("msg type is ", str(msg_type))
-    # print("payload len is ", str(len(payload)))
-
     if msg_type is config.MsgTypes.WAIT.value:
         """ payload is the sleep time in seconds to wait for second player """
         wait_timeout = struct.unpack("!I", payload)[0]
@@ -53,15 +48,15 @@ def unmake_pkt(data):
         """ no payload. 0 wait time to the actual start of the game """
         return 0
 
-    elif msg_type is config.MsgTypes.START_ACK.value:
+    elif msg_type is config.MsgTypes.END.value:
         """ no payload. client confirmation """
-        return 0
+        return 1
 
     elif msg_type is config.MsgTypes.POS.value:
         """ payload is location type [x,y] """
         msg = struct.unpack("!ff", payload)
 
-        print("msg is ", str(msg))
+        # print("msg is ", str(msg))
 
         return [msg[0], msg[1]] # x and y
 
@@ -72,7 +67,6 @@ def unmake_pkt(data):
 
     elif msg_type is config.MsgTypes.STATE.value:
         """ payload is the state: start right away or wait """
-
         msg = struct.unpack("!H", payload)[0]
 
         return msg
@@ -84,7 +78,7 @@ def unmake_pkt(data):
 def solve_msg_type(msg):
     """ works with bytes to retrieve msg_type and payload of message """
 
-    print("whole msg ", msg)
+    # print("whole msg ", msg)
 
     msg_type, payload = split_msg(msg)
 

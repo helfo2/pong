@@ -31,7 +31,7 @@ BALL_SIZE = 10
 """ Network """
 class MsgTypes(Enum):
     START = 1
-    START_ACK = 2
+    END = 2
     WAIT = 3
     POS = 4
     SCORE = 5
