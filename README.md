@@ -1,6 +1,6 @@
 # Distributed Pong
 
-Video: access the video (pt-br) demonstrating the game here: https://youtu.be/u6hogayJ2PQ
+Video: access the video (pt-br) demonstrating the game [here](https://youtu.be/u6hogayJ2PQ) 
 
 ## Pre-requisites
 
