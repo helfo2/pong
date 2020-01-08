@@ -11,9 +11,9 @@ Distributed Pong works with the socket directive - purely sockets in Python 3.7+
 
 
 ## Summary
-This  project implements a distributed Pong game. Pong was the first profitable videogame in history, released by Atari in 1972. It is a sports game in 2-dimensions simulating table tennis. The player controls a paddle (vertical bar) moving it vertically in the left side of the screen, and competes with the computer or other player which controls the second paddle in the opposite side. Both players use their paddles to hi the puck (ball) and send it to the other side of the table.
+This  project implements a distributed Pong game. Pong was the first profitable videogame in history, released by Atari in 1972. It is a sports game in 2-dimensions simulating table tennis. The player controls a paddle (vertical bar) moving it vertically in the left side of the screen, and competes with the computer or other player which controls the second paddle in the opposite side. Both players use their paddles to hi the ball and send it to the other side of the table.
 
-You will find work on latency, collision detection in the graphics structure and game development logic. 
+You will find work on latency, collision detection in the graphics structure and game development logic to fullfill those requirements. 
 
 ## Features
 
