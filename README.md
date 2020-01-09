@@ -8,7 +8,22 @@ Distributed Pong works with the socket directive - purely sockets in Python 3.7+
 
 ## Files and code organization
 
+A brief description of each file and how concerns and responsibilities were separated in terms of user requirements:
 
+* ballp.py: Ball class. All logic for the ball functioning, most importantly the collision detection with edges and paddles;
+* client.py: Client class. network abstraction from the client's point of view. Connects with the server and mostly receives and treats data;
+* collision.py: functions for the geometry and maths behing collision. Used by the ball. The main approach to detect collision was by segment intersection, although not strictly necessary for Pong (due to its simplicity).
+* config.py: comprises all configuration info, for networking (message types, states to synchronize) and design (component sizes);
+* game.py: main file to run the game from a client. Uses the Client class to connect and pygame's directives to draw and get user input;
+* log.py: Log class for logging and help with debugging. Three available levels: info, warning and error. All logs are stored in the logs folder;
+* packet.py: functions responsible for packing and unpacking data, i.e. the byte encoders and decoders;
+* player.py: Paddle class, the visual element. Used by the game.py logic.
+* point.py: Point class. Abstraction for gemoetric operations. Honestly, not used yet because of time constraints, but would improve a lot the collision detection code;
+* server.py: PongServer class. The complete network abstraction for the TCP connection in the server side. Uses directives to mutithreading support and where all the game logic and state replication actually happens.
+
+The other files may be extra or temporary.
+
+Please note that this project was intended as a learning exercise, so everything was made from scratch (not even making use of Sprite objects or connection handlers, for example). Also, gains with speed and reliability would justify this approach, since for every 10 bytes packet of real-time important data, if we would compare that to Pickle-ing objects or using JSON serialization we are actually saving around 90% of bandwidth or even more.
 
 ## Summary
 This  project implements a distributed Pong game. Pong was the first profitable videogame in history, released by Atari in 1972. It is a sports game in 2-dimensions simulating table tennis. The player controls a paddle (vertical bar) moving it vertically in the left side of the screen, and competes with the computer or other player which controls the second paddle in the opposite side. Both players use their paddles to hi the ball and send it to the other side of the table.
