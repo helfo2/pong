@@ -13,7 +13,7 @@ Distributed Pong works with the socket directive - purely sockets in Python 3.7+
 ## Summary
 This  project implements a distributed Pong game. Pong was the first profitable videogame in history, released by Atari in 1972. It is a sports game in 2-dimensions simulating table tennis. The player controls a paddle (vertical bar) moving it vertically in the left side of the screen, and competes with the computer or other player which controls the second paddle in the opposite side. Both players use their paddles to hi the ball and send it to the other side of the table.
 
-You will find work on latency, collision detection in the graphics structure and game development logic to fullfill those requirements. 
+You will find code from scratch to deal with latency, collision detection in the graphics structure and game development logic to fullfill those requirements. 
 
 ## Features
 
@@ -49,7 +49,7 @@ marks the scores, with two integers, for the points of the player on the left an
 
 ***STATE (code 5)***
 
-keeps information about the initial state of the game. For the first connected player, it must be WAITING (for it to wait for the second one) and for the second connected player, STARTING (so that the game can already be started). Total lenght of 4 bytes.
+keeps information about the initial state of the game. For the first connected player, it must be WAITING (for it to wait for the second one) and for the second connected player, STARTING (so that the game can already be started). Used for synchronization. Total lenght of 4 bytes.
 
 ## How the game works
 
@@ -68,7 +68,7 @@ To play, it suffices to configure some server parameters in the file config.py, 
 
 * Support for more players
 * An explicit RESET state, enabling the possibility of not being necessary to reset the server. 
-* Maybe use of UDP protocol specially for real-time events, instead of TCP. This would avoid some overhead.
+* Maybe use of UDP protocol specially for real-time events, instead of TCP. This would avoid some overhead (20 bytes TCP header).
 * AI
 * Ball acceleration over time
 
